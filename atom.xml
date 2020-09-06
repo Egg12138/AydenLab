@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://https://github.com/Egg12138</id>
+    <title>Gridea</title>
+    <updated>2020-09-06T08:03:44.369Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://https://github.com/Egg12138"/>
+    <link rel="self" href="https://https://github.com/Egg12138/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://https://github.com/Egg12138/images/avatar.png</logo>
+    <icon>https://https://github.com/Egg12138/favicon.ico</icon>
+    <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[什么时候标记语言也开始不允许英式了？]]></title>
+        <id>https://https://github.com/Egg12138/post/shi-me-shi-hou-biao-ji-yu-yan-ye-kai-shi-bu-yun-xu-ying-shi-liao/</id>
+        <link href="https://https://github.com/Egg12138/post/shi-me-shi-hou-biao-ji-yu-yan-ye-kai-shi-bu-yun-xu-ying-shi-liao/">
+        </link>
+        <updated>2020-09-06T07:59:27.000Z</updated>
+        <content type="html"><![CDATA[<p><img src="https://https://github.com/Egg12138/post-images/1599379221038.png" alt="" loading="lazy"><br>
+<img src="https://https://github.com/Egg12138/post-images/1599379223699.png" alt="" loading="lazy"><br>
+我就一脸问号，不就是写了colour，怎么就不行了。难道语法只有一套吗？</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Testing Page]]></title>
+        <id>https://https://github.com/Egg12138/post/testing-page/</id>
+        <link href="https://https://github.com/Egg12138/post/testing-page/">
+        </link>
+        <updated>2020-09-06T07:15:16.000Z</updated>
+        <content type="html"><![CDATA[<p>[//] 这是注释<br>
+[commit]这也是注释</p>
+<blockquote>
+<pre><code>       2019年，中国SCI论文发表数量超过50万篇，位列世界第二。 
+       2000年，中国SCI期刊对中国学者论文的贡献是41%，到2018年下降到7.4%。  
+       也就是说，100篇论文中只有7篇发表在中国期刊上，另93篇都发在国外期刊上。
+      此外，中国的SCI期刊数量也与中国SCI论文发展不匹配，中国期刊越来越滞后于中国论文的发展。
+      9000多种SCI期刊中，中国期刊只有241种。
+</code></pre>
+<p><br />   <a href="https://mp.weixin.qq.com/s/kCWJ_KljRpf2qsUAlOM67w/" title="中国科学报官网、瞭望智库等">转自公众号</a></p>
+</blockquote>
+<h2 id="colorblue中文期刊的现状是小-散-弱同质化明显"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="blue"><mrow><mi mathvariant="normal">中</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">期</mi><mi mathvariant="normal">刊</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">现</mi><mi mathvariant="normal">状</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">小</mi><mi mathvariant="normal">、</mi><mi mathvariant="normal">散</mi><mi mathvariant="normal">、</mi><mi mathvariant="normal">弱</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">同</mi><mi mathvariant="normal">质</mi><mi mathvariant="normal">化</mi><mi mathvariant="normal">明</mi><mi mathvariant="normal">显</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{blue}{中文期刊的现状是小、散、弱，同质化明显}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord" style="color:blue;"><span class="mord cjk_fallback" style="color:blue;">中</span><span class="mord cjk_fallback" style="color:blue;">文</span><span class="mord cjk_fallback" style="color:blue;">期</span><span class="mord cjk_fallback" style="color:blue;">刊</span><span class="mord cjk_fallback" style="color:blue;">的</span><span class="mord cjk_fallback" style="color:blue;">现</span><span class="mord cjk_fallback" style="color:blue;">状</span><span class="mord cjk_fallback" style="color:blue;">是</span><span class="mord cjk_fallback" style="color:blue;">小</span><span class="mord cjk_fallback" style="color:blue;">、</span><span class="mord cjk_fallback" style="color:blue;">散</span><span class="mord cjk_fallback" style="color:blue;">、</span><span class="mord cjk_fallback" style="color:blue;">弱</span><span class="mord cjk_fallback" style="color:blue;">，</span><span class="mord cjk_fallback" style="color:blue;">同</span><span class="mord cjk_fallback" style="color:blue;">质</span><span class="mord cjk_fallback" style="color:blue;">化</span><span class="mord cjk_fallback" style="color:blue;">明</span><span class="mord cjk_fallback" style="color:blue;">显</span></span></span></span></span></h2>
+<p>*<strong>小</strong>即规模小，一本期刊大约发200篇文章；<br>
+*<strong>散</strong>即分布散，平均每个出版单位只有1.16种期刊；<br>
+*<strong>弱</strong>即影响力弱，大多出版单位只有一种期刊，很难做大做强。<br>
+*<strong>同质化严重</strong>，缺乏学科分布、学术定位的考虑。大学学报中，以大学学院命名的有519种，约占中文期刊的12%，而大学学报都是综合性的，很难体现特色。</p>
+<h2 id="colorblue优秀论文走向国外的一些原因"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="blue"><mrow><mi mathvariant="normal">优</mi><mi mathvariant="normal">秀</mi><mi mathvariant="normal">论</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">走</mi><mi mathvariant="normal">向</mi><mi mathvariant="normal">国</mi><mi mathvariant="normal">外</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">些</mi><mi mathvariant="normal">原</mi><mi mathvariant="normal">因</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{blue}{优秀论文走向国外的一些原因}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord" style="color:blue;"><span class="mord cjk_fallback" style="color:blue;">优</span><span class="mord cjk_fallback" style="color:blue;">秀</span><span class="mord cjk_fallback" style="color:blue;">论</span><span class="mord cjk_fallback" style="color:blue;">文</span><span class="mord cjk_fallback" style="color:blue;">走</span><span class="mord cjk_fallback" style="color:blue;">向</span><span class="mord cjk_fallback" style="color:blue;">国</span><span class="mord cjk_fallback" style="color:blue;">外</span><span class="mord cjk_fallback" style="color:blue;">的</span><span class="mord cjk_fallback" style="color:blue;">一</span><span class="mord cjk_fallback" style="color:blue;">些</span><span class="mord cjk_fallback" style="color:blue;">原</span><span class="mord cjk_fallback" style="color:blue;">因</span></span></span></span></span></h2>
+<ul>
+<li>**我们的科技发达程度不足以支撑打造一本该领域的一流国际期刊。**从中文期刊本身的原因来说</li>
+</ul>
+<blockquote>
+<pre><code>  学术共同体是分层次的，有些是引领性的，有些是跟随性的。引领性的不在中国，这种情况下国外期刊就是最好的选择。
+</code></pre>
+</blockquote>
+<ul>
+<li>**部分科研工作者要受到国际同行认可，需要国际舞台交流学术进展。**从科研人员的角度。  但是这一点并不于上一点矛盾，反而是加大了上一点的力度：“科研的舆论阵地”在国际上不以中国为主。</li>
+</ul>
+<blockquote>
+<pre><code>  如果哪一天中国的需求走在世界前沿，又能够在国内找到技术方案，那这些技术来自哪里，哪里就会形成新的舆论阵地。
+</code></pre>
+</blockquote>
+<h2 id="colourblue中文期刊发展的阻碍"><span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \colour at position 1: \̲c̲o̲l̲o̲u̲r̲{blue}{中文期刊发展的阻…'>\colour{blue}{中文期刊发展的阻碍}</span></h2>
+<ul>
+<li><strong>语言不通</strong></li>
+</ul>
+<blockquote>
+<pre><code>  语言是中文期刊国际化传播的劣势，大多数欧美一流学者是不懂中文的。而盲目办中文期刊的英文版是做无用功。 
+</code></pre>
+</blockquote>
+<p>你的群体已经被限制在中国了，定位又不清晰，出了英文版欧美国家的科研人员会看吗？</p>
+<ul>
+<li><strong>编辑“供不应求”,审稿速度迟缓，质量有限</strong></li>
+<li><strong>中文期刊收版权费从而限制了版面。</strong> 一般投稿到中文期刊的论文不能超过8页，使论文残缺，不完整，虎头蛇尾。</li>
+</ul>
+<h2 id="colorblue展望"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="blue"><mrow><mi mathvariant="normal">展</mi><mi mathvariant="normal">望</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{blue}{展望}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord" style="color:blue;"><span class="mord cjk_fallback" style="color:blue;">展</span><span class="mord cjk_fallback" style="color:blue;">望</span></span></span></span></span></h2>
+<blockquote>
+<p>94%的科研工作者认为需要中文期刊，同时对中文期刊的未来表示忧虑。所以必须搞好中文期刊，否则中国优秀论文终将离开本土<br>
+95%的科研工作者愿意为中文期刊做贡献，就是说中文期刊还是有潜力，可以发展好的。</p>
+</blockquote>
+<ul>
+<li>**破除”唯国外搞影响因子期刊SCI“观念。**要让肯转到影响因子较低的一些国内期刊上发论文的科研人员尝到甜头。</li>
+</ul>
+<blockquote>
+<p>应该说中文期刊在学术成果交流和人才培养中是十分重要的。<br>
+很多中文期刊的作者以研究生为主，也有期刊编辑或编委调侃中文期刊就是研究生的“作业本”，也就是说研究生最初的几篇文章都是通过审稿人的审稿、把关后在中文期刊发表的。<br>
+这个过程对于提升学生对研究的认识、提高学生的研究素养是很有帮助的。<br>
+所谓的研究能力培养，写文章和修改文章应该是最好的培养方式之一。<br>
+建议青年科学家更多、更早地参与到中文期刊的建设中，<br>
+如建立青年编委会或青年审稿人制度，让年轻有为的学者先参与进来，做期刊的审稿工作<br>
+----------------------------任胜利</p>
+</blockquote>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://https://github.com/Egg12138/post/hello-gridea/</id>
+        <link href="https://https://github.com/Egg12138/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="http://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
