@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://https://github.com/Egg12138</id>
     <title>Gridea</title>
-    <updated>2020-09-06T08:03:44.369Z</updated>
+    <updated>2020-09-06T09:13:16.388Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://https://github.com/Egg12138"/>
     <link rel="self" href="https://https://github.com/Egg12138/atom.xml"/>
@@ -11,25 +11,27 @@
     <icon>https://https://github.com/Egg12138/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[什么时候标记语言也开始不允许英式了？]]></title>
-        <id>https://https://github.com/Egg12138/post/shi-me-shi-hou-biao-ji-yu-yan-ye-kai-shi-bu-yun-xu-ying-shi-liao/</id>
-        <link href="https://https://github.com/Egg12138/post/shi-me-shi-hou-biao-ji-yu-yan-ye-kai-shi-bu-yun-xu-ying-shi-liao/">
+        <title type="html"><![CDATA[语言标准]]></title>
+        <id>https://https://github.com/Egg12138/post/comments-L-standard/</id>
+        <link href="https://https://github.com/Egg12138/post/comments-L-standard/">
         </link>
         <updated>2020-09-06T07:59:27.000Z</updated>
         <content type="html"><![CDATA[<p><img src="https://https://github.com/Egg12138/post-images/1599379221038.png" alt="" loading="lazy"><br>
 <img src="https://https://github.com/Egg12138/post-images/1599379223699.png" alt="" loading="lazy"><br>
-我就一脸问号，不就是写了colour，怎么就不行了。难道语法只有一套吗？</p>
+同样的在html中也是center != centre哦<br>
+w3c的标准是谁制订的？<br>
+谁先有能力制订标准的？<br>
+你家有了标准还会好好地让别人自己建一套标准浪费资源而且偷走你的利益吗？<br>
+标准就是那么一套，谁先谁订，人家的能力匹配得了，游戏规则就是这么简单😁</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Testing Page]]></title>
-        <id>https://https://github.com/Egg12138/post/testing-page/</id>
-        <link href="https://https://github.com/Egg12138/post/testing-page/">
+        <id>https://https://github.com/Egg12138/post/SCI-myths/</id>
+        <link href="https://https://github.com/Egg12138/post/SCI-myths/">
         </link>
         <updated>2020-09-06T07:15:16.000Z</updated>
-        <content type="html"><![CDATA[<p>[//] 这是注释<br>
-[commit]这也是注释</p>
-<blockquote>
+        <content type="html"><![CDATA[<blockquote>
 <pre><code>       2019年，中国SCI论文发表数量超过50万篇，位列世界第二。 
        2000年，中国SCI期刊对中国学者论文的贡献是41%，到2018年下降到7.4%。  
        也就是说，100篇论文中只有7篇发表在中国期刊上，另93篇都发在国外期刊上。
@@ -58,7 +60,7 @@
 <pre><code>  如果哪一天中国的需求走在世界前沿，又能够在国内找到技术方案，那这些技术来自哪里，哪里就会形成新的舆论阵地。
 </code></pre>
 </blockquote>
-<h2 id="colourblue中文期刊发展的阻碍"><span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \colour at position 1: \̲c̲o̲l̲o̲u̲r̲{blue}{中文期刊发展的阻…'>\colour{blue}{中文期刊发展的阻碍}</span></h2>
+<h2 id="colorblue中文期刊发展的阻碍"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="blue"><mrow><mi mathvariant="normal">中</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">期</mi><mi mathvariant="normal">刊</mi><mi mathvariant="normal">发</mi><mi mathvariant="normal">展</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">阻</mi><mi mathvariant="normal">碍</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{blue}{中文期刊发展的阻碍}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord" style="color:blue;"><span class="mord cjk_fallback" style="color:blue;">中</span><span class="mord cjk_fallback" style="color:blue;">文</span><span class="mord cjk_fallback" style="color:blue;">期</span><span class="mord cjk_fallback" style="color:blue;">刊</span><span class="mord cjk_fallback" style="color:blue;">发</span><span class="mord cjk_fallback" style="color:blue;">展</span><span class="mord cjk_fallback" style="color:blue;">的</span><span class="mord cjk_fallback" style="color:blue;">阻</span><span class="mord cjk_fallback" style="color:blue;">碍</span></span></span></span></span></h2>
 <ul>
 <li><strong>语言不通</strong></li>
 </ul>
@@ -73,20 +75,22 @@
 </ul>
 <h2 id="colorblue展望"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="blue"><mrow><mi mathvariant="normal">展</mi><mi mathvariant="normal">望</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{blue}{展望}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord" style="color:blue;"><span class="mord cjk_fallback" style="color:blue;">展</span><span class="mord cjk_fallback" style="color:blue;">望</span></span></span></span></span></h2>
 <blockquote>
-<p>94%的科研工作者认为需要中文期刊，同时对中文期刊的未来表示忧虑。所以必须搞好中文期刊，否则中国优秀论文终将离开本土<br>
-95%的科研工作者愿意为中文期刊做贡献，就是说中文期刊还是有潜力，可以发展好的。</p>
+<pre><code>  94%的科研工作者认为需要中文期刊，同时对中文期刊的未来表示忧虑。所以必须搞好中文期刊，否则中国优秀论文终将离开本土
+  95%的科研工作者愿意为中文期刊做贡献，就是说中文期刊还是有潜力，可以发展好的。
+</code></pre>
 </blockquote>
 <ul>
 <li>**破除”唯国外搞影响因子期刊SCI“观念。**要让肯转到影响因子较低的一些国内期刊上发论文的科研人员尝到甜头。</li>
 </ul>
 <blockquote>
-<p>应该说中文期刊在学术成果交流和人才培养中是十分重要的。<br>
-很多中文期刊的作者以研究生为主，也有期刊编辑或编委调侃中文期刊就是研究生的“作业本”，也就是说研究生最初的几篇文章都是通过审稿人的审稿、把关后在中文期刊发表的。<br>
-这个过程对于提升学生对研究的认识、提高学生的研究素养是很有帮助的。<br>
-所谓的研究能力培养，写文章和修改文章应该是最好的培养方式之一。<br>
-建议青年科学家更多、更早地参与到中文期刊的建设中，<br>
-如建立青年编委会或青年审稿人制度，让年轻有为的学者先参与进来，做期刊的审稿工作<br>
-----------------------------任胜利</p>
+<pre><code>  应该说中文期刊在学术成果交流和人才培养中是十分重要的。
+  很多中文期刊的作者以研究生为主，也有期刊编辑或编委调侃中文期刊就是研究生的“作业本”，也就是说研究生最初的几篇文章都是通过审稿人的审稿、把关后在中文期刊发表的。
+  这个过程对于提升学生对研究的认识、提高学生的研究素养是很有帮助的。
+  所谓的研究能力培养，写文章和修改文章应该是最好的培养方式之一。
+  建议青年科学家更多、更早地参与到中文期刊的建设中，
+  如建立青年编委会或青年审稿人制度，让年轻有为的学者先参与进来，做期刊的审稿工作
+  ----------------------------任胜利
+</code></pre>
 </blockquote>
 ]]></content>
     </entry>
