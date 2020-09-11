@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://https://github.com/Egg12138</id>
     <title>Gridea</title>
-    <updated>2020-09-10T16:07:49.733Z</updated>
+    <updated>2020-09-11T03:06:26.205Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://https://github.com/Egg12138"/>
     <link rel="self" href="https://https://github.com/Egg12138/atom.xml"/>
@@ -10,6 +10,64 @@
     <logo>https://https://github.com/Egg12138/images/avatar.png</logo>
     <icon>https://https://github.com/Egg12138/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[关于中大的一些信息]]></title>
+        <id>https://https://github.com/Egg12138/post/guan-yu-zhong-da-de-yi-xie-xin-xi/</id>
+        <link href="https://https://github.com/Egg12138/post/guan-yu-zhong-da-de-yi-xie-xin-xi/">
+        </link>
+        <updated>2020-09-11T02:49:48.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="注意事项">注意事项</h1>
+<h3 id="在疫情防控的背景下有些管理制度会发生变化">在疫情防控的背景下,有些管理制度会发生变化</h3>
+<blockquote>
+<p>革命尚未成功，同志们仍需努力！  来SYSU绝不可松懈</p>
+</blockquote>
+<h2 id="colorblue图书馆"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="blue"><mrow><mi mathvariant="normal">图</mi><mi mathvariant="normal">书</mi><mi mathvariant="normal">馆</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{blue}{图书馆}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord" style="color:blue;"><span class="mord cjk_fallback" style="color:blue;">图</span><span class="mord cjk_fallback" style="color:blue;">书</span><span class="mord cjk_fallback" style="color:blue;">馆</span></span></span></span></span></h2>
+<pre><code>- 周日闭馆,开馆时不对外开放
+
+-8：00 - 22：30
+
+-图书借阅期限30days
+
+- [图书馆网站](http://library.sysu.edu.cn)
+</code></pre>
+<h2 id="colorblue宿舍"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="blue"><mrow><mi mathvariant="normal">宿</mi><mi mathvariant="normal">舍</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{blue}{宿舍}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord" style="color:blue;"><span class="mord cjk_fallback" style="color:blue;">宿</span><span class="mord cjk_fallback" style="color:blue;">舍</span></span></span></span></span></h2>
+<pre><code>- 基础设施和保洁工作由物业负责
+
+- 宿舍来访时间8-22点
+</code></pre>
+<h2 id="colorblue奖惩"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="blue"><mrow><mi mathvariant="normal">奖</mi><mi mathvariant="normal">惩</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{blue}{奖惩}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord" style="color:blue;"><span class="mord cjk_fallback" style="color:blue;">奖</span><span class="mord cjk_fallback" style="color:blue;">惩</span></span></span></span></span></h2>
+<pre><code>- 国家奖学金、国家励志奖学金、中大励志奖学金不可兼得
+
+- 一个人最多一个校级奖学金
+
+- 同时获评按照单项最高金额发放
+
+- 情况：
+    * **中大优秀学生奖学金**
+    &gt;  &lt;5%,&lt;10%,&lt;15%:4000,3000,2000
+    * **中大励志奖学金**
+    &gt; 4000,3000
+    * **优秀毕业生**
+    &gt; 本科生三年在所在单位专业排名前30%,毕设良好及以上或实习经历鉴定结果良好以上。
+    &gt; 在校期间未受过任何处分
+    * **推选名额** 不超过5%
+</code></pre>
+<h2 id="colorblue医疗"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="blue"><mrow><mi mathvariant="normal">医</mi><mi mathvariant="normal">疗</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{blue}{医疗}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord" style="color:blue;"><span class="mord cjk_fallback" style="color:blue;">医</span><span class="mord cjk_fallback" style="color:blue;">疗</span></span></span></span></span></h2>
+<pre><code>- 珠海区 210元/人
+2020.7.1----2021.6.30
+-代扣
+</code></pre>
+<h2 id=""></h2>
+<pre><code>| 年代/类型  |	系数	| 实  例 |
+| ---------- | --------: | :-------: |
+| 1910及以前	| 60 | 10元（原文献价格）×60（系数）+20元（文献加工费）＝620元 |
+| 1911-49	    | 40 | 10元（原文献价格）×40（系数）+20元（文献加工费）＝420元   |
+| 1950-79	    | 20 | 10元（原文献价格）×20（系数）+20元（文献加工费）＝220元   |
+| 1980-89	    | 10 | 10元（原文献价格）×10（系数）+20元（文献加工费）＝120元   |
+| 1990-今	     | 5   | 10元（原文献价格）× 5（系数）+20元（文献加工费）＝70元         |
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[复制了Markdown的最基本语法]]></title>
         <id>https://https://github.com/Egg12138/post/fu-zhi-liao-markdown-de-zui-ji-ben-yu-fa/</id>
@@ -151,19 +209,19 @@ GFM a-tail link @pandao<br>
 </ol>
 <h4 id="gfm-task-list">GFM task list</h4>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7918212"><label class="task-list-item-label" for="task-item-7918212"> GFM task list 1</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8879727"><label class="task-list-item-label" for="task-item-8879727"> GFM task list 2</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-446415"><label class="task-list-item-label" for="task-item-446415"> GFM task list 3</label>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1589442"><label class="task-list-item-label" for="task-item-1589442"> GFM task list 1</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4651420"><label class="task-list-item-label" for="task-item-4651420"> GFM task list 2</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8772980"><label class="task-list-item-label" for="task-item-8772980"> GFM task list 3</label>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4704456"><label class="task-list-item-label" for="task-item-4704456"> GFM task list 3-1</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4405113"><label class="task-list-item-label" for="task-item-4405113"> GFM task list 3-2</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7734060"><label class="task-list-item-label" for="task-item-7734060"> GFM task list 3-3</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5640084"><label class="task-list-item-label" for="task-item-5640084"> GFM task list 3-1</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7687296"><label class="task-list-item-label" for="task-item-7687296"> GFM task list 3-2</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5222224"><label class="task-list-item-label" for="task-item-5222224"> GFM task list 3-3</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9834750"><label class="task-list-item-label" for="task-item-9834750"> GFM task list 4</label>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5439730"><label class="task-list-item-label" for="task-item-5439730"> GFM task list 4</label>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2583584"><label class="task-list-item-label" for="task-item-2583584"> GFM task list 4-1</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8729815"><label class="task-list-item-label" for="task-item-8729815"> GFM task list 4-2</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6556822"><label class="task-list-item-label" for="task-item-6556822"> GFM task list 4-1</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2747365"><label class="task-list-item-label" for="task-item-2747365"> GFM task list 4-2</label></li>
 </ul>
 </li>
 </ul>
@@ -310,14 +368,14 @@ GFM a-tail link @pandao<br>
 </blockquote>
 <h4 id="gfm-task-lists-emoji-fontawesome-icon-emoji-editormd-logo-emoji-editormd-logo-5x">GFM task lists &amp; Emoji &amp; fontAwesome icon emoji &amp; editormd logo emoji :editormd-logo-5x:</h4>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-838134"> 😃 @mentions, 😃 #refs, <a href="">links</a>, <strong>formatting</strong>, and <del>tags</del><label class="task-list-item-label" for="task-item-838134"> :smiley: @mentions, :smiley: #refs, [links](), **formatting**, and <del>tags</del> supported :editormd-logo:;</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3664639"><label class="task-list-item-label" for="task-item-3664639"> list syntax required (any unordered or ordered list supported) :editormd-logo-3x:;</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5816452"><label class="task-list-item-label" for="task-item-5816452"> [ ] :smiley: this is a complete item :smiley:;</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8461818"> []this is an incomplete item <a href="#">test link</a><label class="task-list-item-label" for="task-item-8461818"> []this is an incomplete item [test link](#) :fa-star: @pandao;</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5727283"><label class="task-list-item-label" for="task-item-5727283"> [ ]this is an incomplete item :fa-star: :fa-gear:;</label>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6896199"> 😃 @mentions, 😃 #refs, <a href="">links</a>, <strong>formatting</strong>, and <del>tags</del><label class="task-list-item-label" for="task-item-6896199"> :smiley: @mentions, :smiley: #refs, [links](), **formatting**, and <del>tags</del> supported :editormd-logo:;</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6981307"><label class="task-list-item-label" for="task-item-6981307"> list syntax required (any unordered or ordered list supported) :editormd-logo-3x:;</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7932430"><label class="task-list-item-label" for="task-item-7932430"> [ ] :smiley: this is a complete item :smiley:;</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1118457"> []this is an incomplete item <a href="#">test link</a><label class="task-list-item-label" for="task-item-1118457"> []this is an incomplete item [test link](#) :fa-star: @pandao;</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1390111"><label class="task-list-item-label" for="task-item-1390111"> [ ]this is an incomplete item :fa-star: :fa-gear:;</label>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6598865"> 😃 this is an incomplete item <a href="#">test link</a><label class="task-list-item-label" for="task-item-6598865"> :smiley: this is an incomplete item [test link](#) :fa-star: :fa-gear:;</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6192159"> 😃 this is  :fa-star: :fa-gear: an incomplete item <a href="#">test link</a><label class="task-list-item-label" for="task-item-6192159"> :smiley: this is  :fa-star: :fa-gear: an incomplete item [test link](#);</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1586560"> 😃 this is an incomplete item <a href="#">test link</a><label class="task-list-item-label" for="task-item-1586560"> :smiley: this is an incomplete item [test link](#) :fa-star: :fa-gear:;</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3613484"> 😃 this is  :fa-star: :fa-gear: an incomplete item <a href="#">test link</a><label class="task-list-item-label" for="task-item-3613484"> :smiley: this is  :fa-star: :fa-gear: an incomplete item [test link](#);</label></li>
 </ul>
 </li>
 </ul>
@@ -381,91 +439,6 @@ Andrew-&gt;&gt;China: I am good thanks!
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[20200910]]></title>
-        <id>https://https://github.com/Egg12138/post/20200910/</id>
-        <link href="https://https://github.com/Egg12138/post/20200910/">
-        </link>
-        <updated>2020-09-10T13:59:24.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="我想要明确一下短期内要干什么">我想要明确一下短期内要干什么</h3>
-<h2 id="colorred现状"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mrow><mi mathvariant="normal">现</mi><mi mathvariant="normal">状</mi><mo>:</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{red}{现状:}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord" style="color:red;"><span class="mord cjk_fallback" style="color:red;">现</span><span class="mord cjk_fallback" style="color:red;">状</span><span class="mspace" style="color:red;margin-right:0.2777777777777778em;"></span><span class="mrel" style="color:red;">:</span></span></span></span></span></h2>
-<ul>
-<li>太放纵了
-<ul>
-<li>许多习惯被抛弃</li>
-<li>作息不够规律了，且睡点变迟</li>
-<li>专注力下降，被频繁分散了。精力不集中，睡眠时间更长但是出现疲倦感</li>
-<li></li>
-</ul>
-</li>
-<li>能力没有进步
-<ul>
-<li>英语阅读能力提高，只是因为英文文段看得多了一点</li>
-<li>英语听力能力明显下降，暑假的听力拔高完全没有进行，** 还是只听得懂会的部分 **</li>
-<li>高数没有进修，大物相当危险</li>
-<li>程序设计练习不够，一些题库也没做，别人的代码也没学</li>
-<li>大物没有进展</li>
-<li>饮食近期失控了！！！</li>
-<li>身体素质出现一定的弱化</li>
-</ul>
-</li>
-</ul>
-<h2 id="colorred短期措施"><span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 8: \{color}̲{red}{短期措施:}'>\{color}{red}{短期措施:}</span></h2>
-<ul>
-<li>应付分班考试
-<ul>
-<li>
-<p>英语听力，利用9，10，11，12四天集中突击</p>
-<ul>
-<li>强迫听写</li>
-<li>短篇重复</li>
-<li>口跟复述</li>
-</ul>
-</li>
-<li>
-<p>英语阅读，碎片化即可。然后每天突击一下阅读</p>
-<ul>
-<li>TownsendPress在宿舍内10，11，12进行</li>
-<li>手机碎片化背单词（反正暑假没背完该背的……）</li>
-<li>Thomas Caculus阅读，正好复习一下</li>
-<li>每天做些四六级考题</li>
-</ul>
-</li>
-<li>
-<p>健康管理之饮食</p>
-<h6 id="在宿舍之后确定一下这些方案是否可行">(在宿舍之后确定一下这些方案是否可行)</h6>
-<ul>
-<li>早餐控制在室内进行，粗加工燕麦片+蛋白质</li>
-<li>尽量不进入甜品店</li>
-<li>礼品食物分给室友……</li>
-<li>我酒精过敏！</li>
-</ul>
-</li>
-<li>
-<p>健康管理之锻炼</p>
-<ul>
-<li>力量训练优先</li>
-<li>（补充上一点）利用时间进行长跑和羽毛球（只打一种球类运动）</li>
-</ul>
-</li>
-<li>
-<p>计算机学习</p>
-<ul>
-<li>过阵子再专门学校git和linux</li>
-<li>先学习python and C</li>
-</ul>
-</li>
-<li>
-<p>专业课和公共课</p>
-<ul>
-<li>认真搞</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[# Blog的再一次练笔——短期规划]]></title>
         <id>https://https://github.com/Egg12138/post/blog-de-zai-yi-ci-lian-bi-duan-qi-gui-hua/</id>
         <link href="https://https://github.com/Egg12138/post/blog-de-zai-yi-ci-lian-bi-duan-qi-gui-hua/">
@@ -495,7 +468,7 @@ Andrew-&gt;&gt;China: I am good thanks!
 </ul>
 </li>
 </ul>
-<h2 id="colorred短期措施"><span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 8: \{color}̲{red}{短期措施:}'>\{color}{red}{短期措施:}</span></h2>
+<h2 id="colorred短期措施"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mrow><mi mathvariant="normal">短</mi><mi mathvariant="normal">期</mi><mi mathvariant="normal">措</mi><mi mathvariant="normal">施</mi><mo>:</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{red}{短期措施:}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord" style="color:red;"><span class="mord cjk_fallback" style="color:red;">短</span><span class="mord cjk_fallback" style="color:red;">期</span><span class="mord cjk_fallback" style="color:red;">措</span><span class="mord cjk_fallback" style="color:red;">施</span><span class="mspace" style="color:red;margin-right:0.2777777777777778em;"></span><span class="mrel" style="color:red;">:</span></span></span></span></span></h2>
 <ul>
 <li>应付分班考试
 <ul>
