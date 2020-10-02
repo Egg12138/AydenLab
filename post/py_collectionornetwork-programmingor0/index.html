@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<title>关于社团/会的问题 - Gridea</title>
+<title>Py_Collection||Network Programming||0 - Gridea</title>
 <meta name="description" content="温故而知新">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -130,60 +130,87 @@
                     <div class="col-12 col-lg-10">
                       <div class="layout-post-main m-right m-md-right">
                         <div class="layout-post-header">
-                          <h1 class="layout-post-title">关于社团/会的问题</h1>
+                          <h1 class="layout-post-title">Py_Collection||Network Programming||0</h1>
                           <div class="layout-post-meta">
                             <div class="item">
-                               <a href="https://https://github.com/Egg12138/tag/gao-xiao/" class="post--keyword"
-                                data-title="高校" data-type="post_tag" data-term-id="39">高校</a>
-                               <a href="https://https://github.com/Egg12138/tag/she-hui-guan-xi/" class="post--keyword"
-                                data-title="社会关系" data-type="post_tag" data-term-id="39">社会关系</a>
-                               <a href="https://https://github.com/Egg12138/tag/shi-jian/" class="post--keyword"
-                                data-title="实践" data-type="post_tag" data-term-id="39">实践</a>
-                               <a href="https://https://github.com/Egg12138/tag/fan-si/" class="post--keyword"
-                                data-title="反思" data-type="post_tag" data-term-id="39">反思</a>
-                               <a href="https://https://github.com/Egg12138/tag/ji-lu/" class="post--keyword"
-                                data-title="记录" data-type="post_tag" data-term-id="39">记录</a>
                               
                             </div>
                             <div class="item">
-                              <span>2020-09-16</span>
+                              <span>2020-09-29</span>
                             </div>
                           </div>
                         </div>
                         <div class="layout-post-content">
                           <div class="layout-post-item">
                             
-                            <p class="with-img"><img src="https://https://github.com/Egg12138/post-images/guan-yu-she-tuan-hui-de-wen-ti.png"
-                                class="attachment-full size-full wp-post-image" alt="关于社团/会的问题" /></p>
-                            
-                            <h2 id="首先我要明确我要加入大约两个忙碌程度中等的社团">首先，我要明确我要加入大约两个忙碌程度中等的社团。</h2>
-<h2 id="其次我需要明确还有哪些约式的爱好者社团将这些社团安排好使适应1-2个的主社团部门和课业安排">其次，我需要明确还有哪些”约“式的爱好者社团，将这些社团安排好，使适应1-2个的主社团/部门和课业安排</h2>
-<h3 id="组织策划办事的">组织策划办事的</h3>
-<pre><code>* 物天学生会的学术部门
-*  中大GBT的活动策划（舞台控制等等a）------特点是考试周一般没有活动
-*  团委 志愿组(活动不少)
+                            <p>现在准备从Onenote把精要转过来（Md的编辑其实远远没有Onenote方便）。以前的东西国庆期间再来转移。</p>
+<h2 id="requests-packages">Requests Packages</h2>
+<p>pip install即可。<br>
+import 时，发现载入更花（相对）时间——这个库比较大。<br>
+help(requests)</p>
+<blockquote>
+<pre><code>  Help on package requests:
 </code></pre>
-<h3 id="后台编辑的但是没有程序设计和网站运维的">后台编辑的（但是没有程序设计和网站运维的……）</h3>
-<pre><code>* 物天新媒体 的编辑
-* 中大GBT的宣传，-----
+</blockquote>
+<pre><code>            NAME
+                requests
+
+            DESCRIPTION
+                Requests HTTP Library
+              ~~~~~~~~~~~~~~~~~~~~~
+
+                Requests is an HTTP library, written in Python, for human beings.
+                Basic GET usage:
+
+                &gt;&gt;&gt; import requests
+                &gt;&gt;&gt; r = requests.get('https://www.python.org')
+                &gt;&gt;&gt; r.status_code
+                200
+                &gt;&gt;&gt; b'Python is a programming language' in r.content
+                True
+
+                ... or POST:
+
+                &gt;&gt;&gt; payload = dict(key1='value1', key2='value2')
+                &gt;&gt;&gt; r = requests.post('https://httpbin.org/post',data=payload)
+                &gt;&gt;&gt; print(r.text)
+                {
+                    ...
+                    &quot;form&quot;: {
+                    &quot;key1&quot;: &quot;value1&quot;,
+                    &quot;key2&quot;: &quot;value2&quot;
+                    },
+                    ...
+                }
 </code></pre>
-<h3 id="学习性的">学习性的</h3>
-<pre><code>* 物天新媒体中心 ，编辑稿件
-* 中大GBT的制作方面,------&gt;Photoshop等图像处理
+<h3 id="font-colorblue-package-contentsfont"><font color='blue'> PACKAGE CONTENTS</font></h3>
+<pre><code>__version__
+_internal_utils
+adapters
+api
+auth
+certs
+compat
+cookies
+exceptions
+help
+hooks
+models
+packages
+sessions
+status_codes
+structures
+utils
 </code></pre>
-<h3 id="爱好">爱好</h3>
-<pre><code>* 辩论(! 时间花费很多 !)
-* 跑步的(零散时间，可以)
-* 羽毛球队（进去多被虐虐，可以）
-* Happy Coding!(没什么项目……，可以加吧)
-* （ 游泳千万别忘了）</code></pre>
+<p>先看初级help的几个内容<br>
+get()函数时再很多库中都有。r = request.get(URL)来获取网络资源</p>
 
                           </div>
                         </div>
                         <div class="layout-post-social">
                           <div class="item reader">
-                            <div id="/post/guan-yu-she-tuan-hui-de-wen-ti/" class="leancloud-visitors view"
-                              data-flag-title="关于社团/会的问题">
+                            <div id="/post/py_collectionornetwork-programmingor0/" class="leancloud-visitors view"
+                              data-flag-title="Py_Collection||Network Programming||0">
                               <span class="post-meta-item-text">阅读 </span>
                               <span class="leancloud-visitors-count"></span>
                             </div>
@@ -195,14 +222,14 @@
                             
                             <div class="post-card row">
                               
-                              <div class="card-content col-12">
+                              <div class="card-content col-8 col-md-9">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/py_collectionornetwork-programmingor0/" class="title">
-                                      <h4>Py_Collection||Network Programming||0</h4>
+                                    <a href="https://https://github.com/Egg12138/post/zhai-or-jia-mou-0/" class="title">
+                                      <h4>摘|| 加缪的去英雄主义</h4>
                                     </a>
                                   </div>
-                                  <div class="inner">
+                                  <div class="inner d-none d-sm-block">
                                     <div class="abstract">
                                       
                                     </div>
@@ -210,7 +237,13 @@
                                 </div>
                                 <div class="card-footer">
                                   <div class="item"><span>上一篇</span></div>
-                                  <div class="item">2020-09-29</div>
+                                  <div class="item">2020-09-30</div>
+                                </div>
+                              </div>
+                              <div class="card-thumb col-4 col-md-3">
+                                <div class="thumb">
+                                  <a href="https://https://github.com/Egg12138/post/zhai-or-jia-mou-0/"
+                                    style="background-image: url('https://https://github.com/Egg12138/post-images/zhai-or-jia-mou-0.jpg');"></a>
                                 </div>
                               </div>
                               
@@ -218,14 +251,14 @@
 
                             <div class="post-card row">
                               
-                              <div class="card-content col-12">
+                              <div class="card-content col-8 col-md-9">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/guan-yu-zhong-da-de-yi-xie-xin-xi/" class="title">
-                                      <h4>关于中大的一些信息</h4>
+                                    <a href="https://https://github.com/Egg12138/post/guan-yu-she-tuan-hui-de-wen-ti/" class="title">
+                                      <h4>关于社团/会的问题</h4>
                                     </a>
                                   </div>
-                                  <div class="inner">
+                                  <div class="inner d-none d-sm-block">
                                     <div class="abstract">
                                       
                                     </div>
@@ -233,7 +266,13 @@
                                 </div>
                                 <div class="card-footer">
                                   <div class="item"><span>下一篇</span></div>
-                                  <div class="item">2020-09-11</div>
+                                  <div class="item">2020-09-16</div>
+                                </div>
+                              </div>
+                              <div class="card-thumb col-4 col-md-3">
+                                <div class="thumb">
+                                  <a href="https://https://github.com/Egg12138/post/guan-yu-she-tuan-hui-de-wen-ti/"
+                                    style="background-image: url('https://https://github.com/Egg12138/post-images/guan-yu-she-tuan-hui-de-wen-ti.png');"></a>
                                 </div>
                               </div>
                               
@@ -254,13 +293,9 @@
                           <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E9%A6%96%E5%85%88%E6%88%91%E8%A6%81%E6%98%8E%E7%A1%AE%E6%88%91%E8%A6%81%E5%8A%A0%E5%85%A5%E5%A4%A7%E7%BA%A6%E4%B8%A4%E4%B8%AA%E5%BF%99%E7%A2%8C%E7%A8%8B%E5%BA%A6%E4%B8%AD%E7%AD%89%E7%9A%84%E7%A4%BE%E5%9B%A2">首先，我要明确我要加入大约两个忙碌程度中等的社团。</a></li>
-<li><a href="#%E5%85%B6%E6%AC%A1%E6%88%91%E9%9C%80%E8%A6%81%E6%98%8E%E7%A1%AE%E8%BF%98%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BA%A6%E5%BC%8F%E7%9A%84%E7%88%B1%E5%A5%BD%E8%80%85%E7%A4%BE%E5%9B%A2%E5%B0%86%E8%BF%99%E4%BA%9B%E7%A4%BE%E5%9B%A2%E5%AE%89%E6%8E%92%E5%A5%BD%E4%BD%BF%E9%80%82%E5%BA%941-2%E4%B8%AA%E7%9A%84%E4%B8%BB%E7%A4%BE%E5%9B%A2%E9%83%A8%E9%97%A8%E5%92%8C%E8%AF%BE%E4%B8%9A%E5%AE%89%E6%8E%92">其次，我需要明确还有哪些”约“式的爱好者社团，将这些社团安排好，使适应1-2个的主社团/部门和课业安排</a>
+<li><a href="#requests-packages">Requests Packages</a>
 <ul>
-<li><a href="#%E7%BB%84%E7%BB%87%E7%AD%96%E5%88%92%E5%8A%9E%E4%BA%8B%E7%9A%84">组织策划办事的</a></li>
-<li><a href="#%E5%90%8E%E5%8F%B0%E7%BC%96%E8%BE%91%E7%9A%84%E4%BD%86%E6%98%AF%E6%B2%A1%E6%9C%89%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%92%8C%E7%BD%91%E7%AB%99%E8%BF%90%E7%BB%B4%E7%9A%84">后台编辑的（但是没有程序设计和网站运维的……）</a></li>
-<li><a href="#%E5%AD%A6%E4%B9%A0%E6%80%A7%E7%9A%84">学习性的</a></li>
-<li><a href="#%E7%88%B1%E5%A5%BD">爱好</a></li>
+<li><a href="#font-colorblue-package-contentsfont"><font color='blue'> PACKAGE CONTENTS</font></a></li>
 </ul>
 </li>
 </ul>
