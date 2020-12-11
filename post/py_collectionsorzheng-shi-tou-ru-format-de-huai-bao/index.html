@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<title>摘|| 加缪的去英雄主义 - Gridea</title>
+<title>Py_collections|字符串相关 - Gridea</title>
 <meta name="description" content="温故而知新">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -130,45 +130,85 @@
                     <div class="col-12 col-lg-10">
                       <div class="layout-post-main m-right m-md-right">
                         <div class="layout-post-header">
-                          <h1 class="layout-post-title">摘|| 加缪的去英雄主义</h1>
+                          <h1 class="layout-post-title">Py_collections|字符串相关</h1>
                           <div class="layout-post-meta">
                             <div class="item">
-                               <a href="https://https://github.com/Egg12138/tag/zhai/" class="post--keyword"
-                                data-title="摘" data-type="post_tag" data-term-id="39">摘</a>
-                               <a href="https://https://github.com/Egg12138/tag/jia-mou/" class="post--keyword"
-                                data-title="加缪" data-type="post_tag" data-term-id="39">加缪</a>
-                               <a href="https://https://github.com/Egg12138/tag/wen-xue/" class="post--keyword"
-                                data-title="文学" data-type="post_tag" data-term-id="39">文学</a>
-                               <a href="https://https://github.com/Egg12138/tag/ren-xing/" class="post--keyword"
-                                data-title="人性" data-type="post_tag" data-term-id="39">人性</a>
-                               <a href="https://https://github.com/Egg12138/tag/fan-si/" class="post--keyword"
-                                data-title="反思" data-type="post_tag" data-term-id="39">反思</a>
                               
                             </div>
                             <div class="item">
-                              <span>2020-09-30</span>
+                              <span>2020-11-27</span>
                             </div>
                           </div>
                         </div>
                         <div class="layout-post-content">
                           <div class="layout-post-item">
                             
-                            <p class="with-img"><img src="https://https://github.com/Egg12138/post-images/zhai-or-jia-mou-0.jpg"
-                                class="attachment-full size-full wp-post-image" alt="摘|| 加缪的去英雄主义" /></p>
-                            
-                            <blockquote>
-<pre><code>  但是笔者更愿意相信，过分重视高尚行为，结果反而会变成对罪恶简洁而有力的褒扬。因为那样做会让人猜想，高尚行为如此可贵只因它寥若晨星，所以狠心和冷漠才是人类行为更经常的动力。而这种想法正式笔者不能苟同的。人世间的 罪恶几乎总是由愚昧造成，人如果缺乏教育，好心也可能同恶意一样造成损害。好人比恶人多，而实际上那并非症结之所在。人有无知和更无知的区别，着'就叫道德或不道德，最令人厌恶的不道德是愚昧无知，无知的人认为自己无所不知，因而自认有权杀人。杀人凶手的心灵是盲目的，而没有远见卓识就不会有真正的善和高尚的爱—《鼠疫》
+                            <h2 id="正式投入format怀抱">正式投入format怀抱</h2>
+<blockquote></blockquote>
+<pre><code>在一次getsocketbyname()的测试中，我先用Format来运行，很正常，然后输出了hostname + ip,很明显不是string,
+然后我用%s试了一次……果然报错了。不过这个案例不重要……
+这篇文章也不会是我自己主笔，靠的ctrl+C和Ctrl+v (2333333333)
 </code></pre>
+<p>string objs have one uni BIOperation :the % modulo.,which is also known<br>
+as 'formatting or interpolation' operator.</p>
+<p>If format requires a single argument, values may be a single non-tuple object. 5 Otherwise, values must be a tuple with exactly the number of items specified by the format string, or a single mapping object (for example, a dictionary.</p>
+<p>it's syntax is complicated...<br>
+print('%(language)s has %(number)03d quote types.' %<br>
+{'language': &quot;Python&quot;, &quot;number&quot;: 2})<br>
+Python has 002 quote types.</p>
+<p>here 03d is familiar,right?  03d ==&gt; 3fig  integer, #我们总要声明%格式化对象的类型</p>
+<p>文章主体来自一个国内blog,和python doc</p>
+<!-- For more -->
+<blockquote>
+<p>自从Python2.6引入了format这个格式化字符串的方法之后，我认为%还是format这根本就不算个问题。<br>
+# 定义一个坐标值<br>
+c = (250, 250)<br>
+# 使用%来格式化<br>
+s1 = &quot;敌人坐标：%s&quot; % c<br>
+上面的代码很明显会抛出一个如下的TypeError：</p>
 </blockquote>
-<p>如果善都需要过分地强调与歌颂，那是很虚伪的、很没有温情的！因为善是我们都应该做的，不是需要克服多少艰难就应该被表现出来的的。里厄医生等人，他们的所作所为是职责之所在，是当下之最优解，不需要捧起来说英雄。</p>
-<p>对抗疫情，医生上前，这就是医生的职责，我们尊重他们，传承善，而不需要将别人高高捧起，这不是冷漠，这是人文情怀</p>
+<pre><code>TypeError: not all arguments converted during string formatting
+
+像这类格式化的需求我们需要写成下面的格式才行：
+# 定义一个坐标值
+c = (250, 250)
+# 使用%丑陋的格式化...
+s1 = &quot;敌人坐标：%s&quot; % (c,)
+而使用format就不会存在上面的问题：　　
+
+# 定义一个坐标值
+c = (250, 250)
+# 使用format格式化
+s2 = &quot;敌人坐标：{}&quot;.format(c)
+很显然，format比%方便多了。　　
+</code></pre>
+<p>blogger输入一个tuple c，用%(c)格式化的时候%s,无法be converted!<br>
+%(c,)才行 ，它 传递一个元组</p>
+<blockquote>
+<p>在使用%插入多个变量时，tuple是不可避免的，这样会让代码冗杂<br>
+它还不能正确地现实元组和字典</p>
+</blockquote>
+<p>而format语法：<br>
+print(&quot;{}:{}&quot;.format(host, gethostbyname()))清晰易读<br>
+注意，在不是f-strings的时候，不能在{}内输入东西？<br>
+f-strings把变量放在里面，大大提高了代码可读性</p>
+<h5 id="f-strings">f-strings</h5>
+<p>name = 'xxx'<br>
+age = 18<br>
+uni = 'SYSU'<br>
+city = 'Zhuhal','China'</p>
+<p>可以看一下<br>
+text0 =&quot;My name is %s,aged%d.I am educated in %s, %s&quot;%(name,age,uni,city)<br>
+text1='Ma name is {},aged{}.I am educated in {},{}'.format(name,age,uni,city)<br>
+textf = f&quot;My name is {name},aged{age}.I am educated in {uni},{city}&quot;</p>
+<hr>
 
                           </div>
                         </div>
                         <div class="layout-post-social">
                           <div class="item reader">
-                            <div id="/post/zhai-or-jia-mou-0/" class="leancloud-visitors view"
-                              data-flag-title="摘|| 加缪的去英雄主义">
+                            <div id="/post/py_collectionsorzheng-shi-tou-ru-format-de-huai-bao/" class="leancloud-visitors view"
+                              data-flag-title="Py_collections|字符串相关">
                               <span class="post-meta-item-text">阅读 </span>
                               <span class="leancloud-visitors-count"></span>
                             </div>
@@ -183,8 +223,8 @@
                               <div class="card-content col-12">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/bian-or2019-xin-guo-bian-dong-wu-ai-ding-bao-qian-ban-bu-fen-de-jian-dan-hui-gu/" class="title">
-                                      <h4>辩||2019新国辩 东吴-爱丁堡前半部分的简单回顾</h4>
+                                    <a href="https://https://github.com/Egg12138/post/py_collectionsor310-de-lei-xing-zhu-shi-geng-xin/" class="title">
+                                      <h4>Py_collections|3.10的类型注释更新</h4>
                                     </a>
                                   </div>
                                   <div class="inner">
@@ -195,7 +235,7 @@
                                 </div>
                                 <div class="card-footer">
                                   <div class="item"><span>上一篇</span></div>
-                                  <div class="item">2020-10-17</div>
+                                  <div class="item">2020-11-29</div>
                                 </div>
                               </div>
                               
@@ -206,8 +246,8 @@
                               <div class="card-content col-12">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/py_collectionornetwork-programmingor0/" class="title">
-                                      <h4>Py_Collection||Network Programming||0</h4>
+                                    <a href="https://https://github.com/Egg12138/post/orcai-gou-suan-fa-ru-men-orkai-xin-shu/" class="title">
+                                      <h4>|菜狗算法入门|开心数</h4>
                                     </a>
                                   </div>
                                   <div class="inner">
@@ -218,7 +258,7 @@
                                 </div>
                                 <div class="card-footer">
                                   <div class="item"><span>下一篇</span></div>
-                                  <div class="item">2020-09-29</div>
+                                  <div class="item">2020-11-24</div>
                                 </div>
                               </div>
                               
@@ -236,7 +276,17 @@
                     <div class="col-12 col-lg-2 d-none d-lg-block">
                       <div class="layout-post-sidebar">
                         <div class="layout-sidebar-item">
-                          
+                          <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%AD%A3%E5%BC%8F%E6%8A%95%E5%85%A5format%E6%80%80%E6%8A%B1">正式投入format怀抱</a><br>
+*<br>
+*<br>
+* <a href="#f-strings">f-strings</a></li>
+</ul>
+</li>
+</ul>
+
                         </div>
                       </div>
                     </div>

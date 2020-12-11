@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<title>|算法| 两数和，哈希表优化时间复杂度 - Gridea</title>
+<title>|菜狗算法| 时间复杂度 - Gridea</title>
 <meta name="description" content="温故而知新">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -33,7 +33,7 @@
 						<div class="logo">
 							<a href="https://https://github.com/Egg12138">
 								<img class="logo"
-									src="https://https://github.com/Egg12138/media/images/site_avatar.png?v=1606062258037"
+									src="https://https://github.com/Egg12138/media/images/site_avatar.png?v=1607687513531"
 									alt="">
 							</a>
 						</div>
@@ -72,7 +72,7 @@
 							<div class="search-lightbox">
 								<div class="search-body">
 
-									<form id="gridea-search-form" data-update="1606062258037" action="/search/" class="search-form">
+									<form id="gridea-search-form" data-update="1607687513531" action="/search/" class="search-form">
 										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
 										<button type="submit" class="submit" aria-label="Submit">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -130,9 +130,17 @@
                     <div class="col-12 col-lg-10">
                       <div class="layout-post-main m-right m-md-right">
                         <div class="layout-post-header">
-                          <h1 class="layout-post-title">|算法| 两数和，哈希表优化时间复杂度</h1>
+                          <h1 class="layout-post-title">|菜狗算法| 时间复杂度</h1>
                           <div class="layout-post-meta">
                             <div class="item">
+                               <a href="https://https://github.com/Egg12138/tag/suan-fa/" class="post--keyword"
+                                data-title="算法" data-type="post_tag" data-term-id="39">算法</a>
+                               <a href="https://https://github.com/Egg12138/tag/ha-xi-zi-dian/" class="post--keyword"
+                                data-title="哈希字典" data-type="post_tag" data-term-id="39">哈希字典</a>
+                               <a href="https://https://github.com/Egg12138/tag/shu-he/" class="post--keyword"
+                                data-title="数和" data-type="post_tag" data-term-id="39">数和</a>
+                               <a href="https://https://github.com/Egg12138/tag/you-hua/" class="post--keyword"
+                                data-title="优化" data-type="post_tag" data-term-id="39">优化</a>
                               
                             </div>
                             <div class="item">
@@ -143,7 +151,9 @@
                         <div class="layout-post-content">
                           <div class="layout-post-item">
                             
-                            <p>先看一下leetcode提供的一个解法。<br>
+                            <!-- more -->
+<h2 id="两数和哈希表优化时间复杂度">两数和，哈希表优化时间复杂度</h2>
+<p>先看一下leetcode提供的一个解法。<br>
 我也是这个思路（因为考虑到暴力枚举连代码行数都很多……）</p>
 <p>但是这里有一个优化，就是在返回序列上面，<br>
 leetcode提供 的答案里面直接用enumerate(nums) &gt;&gt;return 一个hashtable<br>
@@ -165,15 +175,49 @@ leetcode提供 的答案里面直接用enumerate(nums) &gt;&gt;return 一个hash
   链接：https://leetcode-cn.com/problems/two-sum/solution/
    liang-shu-zhi-he-by-leetcode-solution/
   来源：力扣（LeetCode）
-  著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</code></pre>
+  著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+</code></pre>
 </blockquote>
+<h2 id="队列有筛选表">队列有筛选表</h2>
+<p>from collections import deque<br>
+from time import time<br>
+def main1(n):<br>
+leftadd = n+100<br>
+q = []<br>
+q.append(n^3)<br>
+q.append(n^2)<br>
+print(q)<br>
+q.append('_')<br>
+for i in range(len(q)-1):<br>
+q[-i-1] = q[-i-2]<br>
+q[0] = leftadd</p>
+<h1 id="像左部添加元素的操作就需要遍历数组on">像左部添加元素的操作就需要遍历数组，O(n)</h1>
+<p>def main(n):<br>
+q = deque()<br>
+q.append(n^3)<br>
+q.append(n^2)<br>
+print(q)<br>
+q.appendleft(n+100)<br>
+q.popleft()</p>
+<h1 id="这几个单独的操作时间复杂度都是o1">这几个单独的操作时间复杂度都是O(1)</h1>
+<p>s = time()<br>
+for i in range(10):<br>
+main(i)<br>
+e = time()<br>
+print(e-s)<br>
+s=time()<br>
+for i in range(10):<br>
+main1(i)<br>
+e=time()<br>
+print(e-s)<br>
+p</p>
 
                           </div>
                         </div>
                         <div class="layout-post-social">
                           <div class="item reader">
                             <div id="/post/orsuan-fa-or-liang-shu-he-ha-xi-biao-you-hua-shi-jian-fu-za-du/" class="leancloud-visitors view"
-                              data-flag-title="|算法| 两数和，哈希表优化时间复杂度">
+                              data-flag-title="|菜狗算法| 时间复杂度">
                               <span class="post-meta-item-text">阅读 </span>
                               <span class="leancloud-visitors-count"></span>
                             </div>
@@ -183,6 +227,29 @@ leetcode提供 的答案里面直接用enumerate(nums) &gt;&gt;return 一个hash
                         <div class="layout-post-navigation">
                           <div class="navigation-list">
                             
+                            <div class="post-card row">
+                              
+                              <div class="card-content col-12">
+                                <div class="card-body">
+                                  <div class="header">
+                                    <a href="https://https://github.com/Egg12138/post/orcai-gou-suan-fa-ru-men-orkai-xin-shu/" class="title">
+                                      <h4>|菜狗算法入门|开心数</h4>
+                                    </a>
+                                  </div>
+                                  <div class="inner">
+                                    <div class="abstract">
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="item"><span>上一篇</span></div>
+                                  <div class="item">2020-11-24</div>
+                                </div>
+                              </div>
+                              
+                            </div>
+
                             <div class="post-card row">
                               
                               <div class="card-content col-12">
@@ -264,6 +331,7 @@ leetcode提供 的答案里面直接用enumerate(nums) &gt;&gt;return 一个hash
                               </div>
                               
                             </div>
+
                             
                           </div>
                         </div>
@@ -276,7 +344,17 @@ leetcode提供 的答案里面直接用enumerate(nums) &gt;&gt;return 一个hash
                     <div class="col-12 col-lg-2 d-none d-lg-block">
                       <div class="layout-post-sidebar">
                         <div class="layout-sidebar-item">
-                          
+                          <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%A4%E6%95%B0%E5%92%8C%E5%93%88%E5%B8%8C%E8%A1%A8%E4%BC%98%E5%8C%96%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">两数和，哈希表优化时间复杂度</a></li>
+<li><a href="#%E9%98%9F%E5%88%97%E6%9C%89%E7%AD%9B%E9%80%89%E8%A1%A8">队列有筛选表</a></li>
+</ul>
+</li>
+<li><a href="#%E5%83%8F%E5%B7%A6%E9%83%A8%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0%E7%9A%84%E6%93%8D%E4%BD%9C%E5%B0%B1%E9%9C%80%E8%A6%81%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84on">像左部添加元素的操作就需要遍历数组，O(n)</a></li>
+<li><a href="#%E8%BF%99%E5%87%A0%E4%B8%AA%E5%8D%95%E7%8B%AC%E7%9A%84%E6%93%8D%E4%BD%9C%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E9%83%BD%E6%98%AFo1">这几个单独的操作时间复杂度都是O(1)</a></li>
+</ul>
+
                         </div>
                       </div>
                     </div>
