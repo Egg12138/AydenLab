@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<title>Py_Collection||Network Programming||0 - Gridea</title>
+<title>Py_collections||命令行参数 - Gridea</title>
 <meta name="description" content="温故而知新">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -130,87 +130,215 @@
                     <div class="col-12 col-lg-10">
                       <div class="layout-post-main m-right m-md-right">
                         <div class="layout-post-header">
-                          <h1 class="layout-post-title">Py_Collection||Network Programming||0</h1>
+                          <h1 class="layout-post-title">Py_collections||命令行参数</h1>
                           <div class="layout-post-meta">
                             <div class="item">
                               
                             </div>
                             <div class="item">
-                              <span>2020-09-29</span>
+                              <span>2020-12-29</span>
                             </div>
                           </div>
                         </div>
                         <div class="layout-post-content">
                           <div class="layout-post-item">
                             
-                            <p>现在准备从Onenote把精要转过来（Md的编辑其实远远没有Onenote方便）。以前的东西国庆期间再来转移。</p>
-<h2 id="requests-packages">Requests Packages</h2>
-<p>pip install即可。<br>
-import 时，发现载入更花（相对）时间——这个库比较大。<br>
-help(requests)</p>
-<blockquote>
-<pre><code>  Help on package requests:
+                            <p>'''python<br>
+#!/user/Shaw/Python38 python3<br>
+import argparse<br>
+'''<br>
+'import argparse'</p>
+<hr>
+<h3 id="命令行参数复习">命令行参数复习</h3>
+<pre><code>* positional arguments
+* optional arguments 
 </code></pre>
-</blockquote>
-<pre><code>            NAME
-                requests
+<h3 id="argparse模块">ARGPARSE模块</h3>
+<p>先讨论 'argparse'<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>库，这个词是解析器的意思，顾名思义</p>
+<h5 id="框架">框架</h5>
+<pre><code>'''python3
+import argparse
 
-            DESCRIPTION
-                Requests HTTP Library
-              ~~~~~~~~~~~~~~~~~~~~~
+parser = argparse.ArgumentParser(description='Process some integers.')
+parser.add_argument('integers', metavar='N', type=int, nargs='+',
+                    help='an integer for the accumulator')
+parser.add_argument('--sum', dest='accumulate', action='store_const',
+                    const=sum, default=max,
+                    help='sum the integers (default: find the max)')
 
-                Requests is an HTTP library, written in Python, for human beings.
-                Basic GET usage:
-
-                &gt;&gt;&gt; import requests
-                &gt;&gt;&gt; r = requests.get('https://www.python.org')
-                &gt;&gt;&gt; r.status_code
-                200
-                &gt;&gt;&gt; b'Python is a programming language' in r.content
-                True
-
-                ... or POST:
-
-                &gt;&gt;&gt; payload = dict(key1='value1', key2='value2')
-                &gt;&gt;&gt; r = requests.post('https://httpbin.org/post',data=payload)
-                &gt;&gt;&gt; print(r.text)
-                {
-                    ...
-                    &quot;form&quot;: {
-                    &quot;key1&quot;: &quot;value1&quot;,
-                    &quot;key2&quot;: &quot;value2&quot;
-                    },
-                    ...
-                }
+args = parser.parse_args()
+print(args.accumulate(args.integers))'''
 </code></pre>
-<h3 id="font-colorblue-package-contentsfont"><font color='blue'> PACKAGE CONTENTS</font></h3>
-<pre><code>__version__
-_internal_utils
-adapters
-api
-auth
-certs
-compat
-cookies
-exceptions
-help
-hooks
-models
-packages
-sessions
-status_codes
-structures
-utils
+<p>如上示例，argparse模块的基本使用包含5个步骤：</p>
+<p>import模块：import argparse<br>
+获解析器对象：argparse.ArgumentParser<br>
+利用解析器对象内建方法，添加参数解析规则：add_argument<br>
+利用解析器对象内建方法，开始解析参数，获取解析结果对象：parse_args<br>
+从解析结果对象中，获取参数值：parse_args<br>
+<br></br><br>
+usage: PROG [-h] [--foo [FOO]] bar [bar ...]  #prog程序名 and usage</p>
+<pre><code>bar help                                    #description功能描述
+
+positional arguments:              #required
+bar          bar help
+
+optional arguments:                 #optional 
+-h, --help   show this help message and exit
+--foo [FOO]  foo help
+
+And that's how you'd foo a bar #epilog补充描述字段，拿来收尾也很好
 </code></pre>
-<p>先看初级help的几个内容<br>
-get()函数时再很多库中都有。r = request.get(URL)来获取网络资源</p>
+<table>
+<thead>
+<tr>
+<th>解析器对象的属性</th>
+<th>默认值</th>
+<th>功能</th>
+<th>大致方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prog</td>
+<td>sys.argv[0]</td>
+<td>'-h' 时显示程序名称</td>
+<td>...</td>
+</tr>
+<tr>
+<td>usage</td>
+<td>-</td>
+<td>usage字段描述</td>
+<td>...</td>
+</tr>
+<tr>
+<td>description</td>
+<td>None</td>
+<td>des描述</td>
+<td>...</td>
+</tr>
+<tr>
+<td>epilog</td>
+<td>None</td>
+<td>补充字段描述</td>
+<td>...</td>
+</tr>
+<tr>
+<td>parents</td>
+<td>None</td>
+<td>从父解析器中继承所有参数选项</td>
+<td>...</td>
+</tr>
+<tr>
+<td>formatter_class</td>
+<td>None</td>
+<td>定制说明文本的显示风格</td>
+<td>...</td>
+</tr>
+<tr>
+<td>prefix_class</td>
+<td>-</td>
+<td>定制前缀字符，例如前缀&quot;-b&quot;改为“+b&quot;</td>
+<td>...</td>
+</tr>
+<tr>
+<td>add_help</td>
+<td>True</td>
+<td>是否使能显示参数 -h --help</td>
+<td>...</td>
+</tr>
+<tr>
+<td>allow_abbrev</td>
+<td>True</td>
+<td>是否支持长参数</td>
+<td>...</td>
+</tr>
+<tr>
+<td>fromfile_prefix_chars</td>
+<td>None</td>
+<td>略</td>
+<td>...</td>
+</tr>
+<tr>
+<td>argument_default</td>
+<td>None</td>
+<td>略</td>
+<td>...</td>
+</tr>
+<tr>
+<td>conflict_handler</td>
+<td>None</td>
+<td>略</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<h5 id="代码部分">代码部分</h5>
+<ul>
+<li>
+<p>构建解析器实例对象</p>
+<ul>
+<li>`parser = argparse.ArugumentParser(description='Optional参数')<br>生成这个对象之后就可以给parser对象添加参数属性</br></li>
+<li>class argparse.ArgumentParser(prog=None, usage=None, description=None, epilog=None, parents=[], formatter_class=argparse.HelpFormatter, prefix_chars='-', fromfile_prefix_chars=None, argument_default=None, conflict_handler='error', add_help=True, allow_abbrev=True)</li>
+<li>自带的可选形参列表：<br>创建实例部分</br>
+<ul>
+<li>description&amp;epilog<br>epilog搞additional descriptions，在’HELP之尾部</br><br>
+#实例创建的这几个参数不是位置参数，但是习惯上prog&gt;usage&gt;des&gt;epilog,因为help呈现的顺序就是这样</li>
+<li>prog=... ，默认是用sys.argv[0]，但是可以自定义，为-h显示时的程序名。</li>
+<li>usage=...,默认呈现-,但是可以自定义，<br>
+<br>  可以用filename.py -h来调出这个des，也可以用' parser.print_help()'<br></li>
+<li>parents会提取ArgumeentParser的所有参数列表，并且获取其中所有的positional and optional actions 然后让其他的解析器可以继承参数。</li>
+<li>
+<pre><code>  `parser = argpaarse.ArugumentParser(description='Des',epilog='Additional words')
+</code></pre>
+</li>
+</ul>
+</li>
+<li>metavar</li>
+<li>name or flags：也就是在使用参数的时候使用的符号，--foo 或者 -f</li>
+<li>action：根据我的理解，这个属性可以选择参数在只提供符号而不输入实际的值的时候给予一个默认的值</li>
+<li>nargs：这个属性规定了参数可以输入的个数</li>
+<li>const：这属性跟 action 属性一起使用</li>
+<li>default：这属性就是给参数设置一个默认值</li>
+<li>type：这个属性规定了参数的数据类型</li>
+<li>choices：这个属性给参数限定了一个选择的迭代，参数只能在这个范围内选择参数的值，否则报错</li>
+<li>required：参数的值为必填</li>
+</ul>
+</li>
+<li>
+<p>filling 一个parser</p>
+<ul>
+<li>making calls to add_argument():</li>
+</ul>
+</li>
+<li>
+<p>基本info的存储和使用的调用</p>
+<ul>
+<li>making calls to parse_args()</li>
+<li>args=parer.parse_args()</li>
+</ul>
+</li>
+<li>
+<p>prefix_chars</p>
+<ul>
+<li>+a: add_argument('+a')会出现在positional arguments一栏，</li>
+<li>++a:同+a理</li>
+</ul>
+</li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>argparse是一个多数py版本都会自带的一个命令行参数解析库 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
                           </div>
                         </div>
                         <div class="layout-post-social">
                           <div class="item reader">
-                            <div id="/post/py_collectionornetwork-programmingor0/" class="leancloud-visitors view"
-                              data-flag-title="Py_Collection||Network Programming||0">
+                            <div id="/post/py_collectionsorming-ling-xing-can-shu/" class="leancloud-visitors view"
+                              data-flag-title="Py_collections||命令行参数">
                               <span class="post-meta-item-text">阅读 </span>
                               <span class="leancloud-visitors-count"></span>
                             </div>
@@ -222,43 +350,14 @@ get()函数时再很多库中都有。r = request.get(URL)来获取网络资源<
                             
                             <div class="post-card row">
                               
-                              <div class="card-content col-8 col-md-9">
+                              <div class="card-content col-12">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/zhai-or-jia-mou-0/" class="title">
-                                      <h4>摘|| 加缪的去英雄主义</h4>
+                                    <a href="https://https://github.com/Egg12138/post/bian-or-guan-lun/" class="title">
+                                      <h4>辩|| 灌论</h4>
                                     </a>
                                   </div>
-                                  <div class="inner d-none d-sm-block">
-                                    <div class="abstract">
-                                      
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="card-footer">
-                                  <div class="item"><span>上一篇</span></div>
-                                  <div class="item">2020-09-30</div>
-                                </div>
-                              </div>
-                              <div class="card-thumb col-4 col-md-3">
-                                <div class="thumb">
-                                  <a href="https://https://github.com/Egg12138/post/zhai-or-jia-mou-0/"
-                                    style="background-image: url('https://https://github.com/Egg12138/post-images/zhai-or-jia-mou-0.jpg');"></a>
-                                </div>
-                              </div>
-                              
-                            </div>
-
-                            <div class="post-card row">
-                              
-                              <div class="card-content col-8 col-md-9">
-                                <div class="card-body">
-                                  <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/guan-yu-she-tuan-hui-de-wen-ti/" class="title">
-                                      <h4>关于社团/会的问题</h4>
-                                    </a>
-                                  </div>
-                                  <div class="inner d-none d-sm-block">
+                                  <div class="inner">
                                     <div class="abstract">
                                       
                                     </div>
@@ -266,18 +365,11 @@ get()函数时再很多库中都有。r = request.get(URL)来获取网络资源<
                                 </div>
                                 <div class="card-footer">
                                   <div class="item"><span>下一篇</span></div>
-                                  <div class="item">2020-09-16</div>
-                                </div>
-                              </div>
-                              <div class="card-thumb col-4 col-md-3">
-                                <div class="thumb">
-                                  <a href="https://https://github.com/Egg12138/post/guan-yu-she-tuan-hui-de-wen-ti/"
-                                    style="background-image: url('https://https://github.com/Egg12138/post-images/guan-yu-she-tuan-hui-de-wen-ti.png');"></a>
+                                  <div class="item">2020-12-29</div>
                                 </div>
                               </div>
                               
                             </div>
-
                             
                           </div>
                         </div>
@@ -293,9 +385,16 @@ get()函数时再很多库中都有。r = request.get(URL)来获取网络资源<
                           <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#requests-packages">Requests Packages</a>
+<li>
 <ul>
-<li><a href="#font-colorblue-package-contentsfont"><font color='blue'> PACKAGE CONTENTS</font></a></li>
+<li><a href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E5%A4%8D%E4%B9%A0">命令行参数复习</a></li>
+<li><a href="#argparse%E6%A8%A1%E5%9D%97">ARGPARSE模块</a><br>
+*
+<ul>
+<li><a href="#%E6%A1%86%E6%9E%B6">框架</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86">代码部分</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
