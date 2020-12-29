@@ -1,22 +1,149 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://https://github.com/Egg12138</id>
-    <title>Gridea</title>
-    <updated>2020-12-29T16:24:12.110Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://https://github.com/Egg12138"/>
-    <link rel="self" href="https://https://github.com/Egg12138/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://https://github.com/Egg12138/images/avatar.png</logo>
-    <icon>https://https://github.com/Egg12138/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
-    <entry>
-        <title type="html"><![CDATA[力学||简单汇编一下振动的微分方程的几种解]]></title>
-        <id>https://https://github.com/Egg12138/post/li-xue-orjian-dan-hui-bian-yi-xia-zu-ni-zhen-dong-de-wei-fen-fang-cheng-de-ji-chong-jie/</id>
-        <link href="https://https://github.com/Egg12138/post/li-xue-orjian-dan-hui-bian-yi-xia-zu-ni-zhen-dong-de-wei-fen-fang-cheng-de-ji-chong-jie/">
-        </link>
-        <updated>2020-12-29T13:47:09.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="阻尼震动">阻尼震动</h2>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+<title>力学||简单汇编一下振动的微分方程的几种解 - Gridea</title>
+<meta name="description" content="温故而知新">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link type='text/css' rel='stylesheet' href='https://https://github.com/Egg12138/styles/main.css' media='screen' />
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src='https://https://github.com/Egg12138/media/scripts/jquery.js'></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</head>
+
+<body>
+  <div class="layout theme-dark">
+    <div class="layout-header">
+
+	<div class="layout-header-main">
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+
+					<div class="navbar">
+
+						<div class="logo">
+							<a href="https://https://github.com/Egg12138">
+								<img class="logo"
+									src="https://https://github.com/Egg12138/media/images/site_avatar.png?v=1609259039905"
+									alt="">
+							</a>
+						</div>
+
+						<div class="menu d-md-inline-block d-none">
+							<ul class="layout-navigation-list">
+								
+								<li class="layout-navigation-item"><a title="首页"
+										href="https://https://github.com/Egg12138">首页</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="归档"
+										href="/archives">归档</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="标签"
+										href="/tags">标签</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="关于"
+										href="/post/about">关于</a>
+								</li>
+								
+							</ul>
+						</div>
+
+						<div class="item d-md-inline-block d-none">
+							<div class="search-icon">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</div>
+						</div>
+
+
+
+						<div class="d-md-inline-block d-none">
+							<div class="search-lightbox">
+								<div class="search-body">
+
+									<form id="gridea-search-form" data-update="1609259039905" action="/search/" class="search-form">
+										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
+										<button type="submit" class="submit" aria-label="Submit">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</form>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="nav d-md-none d-inline-block">
+							<div class="trigger">
+								<i class="fa fa-bars layout-btn-toggle" aria-hidden="true"></i>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+</div>
+    <div class="layout-collapse d-md-none">
+	<div class="layout-collapse-main">
+		<ul class="layout-collapse-list">
+			
+			<li class="layout-collapse-item"><a title="首页" href="https://https://github.com/Egg12138">首页</a></li>
+			
+			<li class="layout-collapse-item"><a title="归档" href="/archives">归档</a></li>
+			
+			<li class="layout-collapse-item"><a title="标签" href="/tags">标签</a></li>
+			
+			<li class="layout-collapse-item"><a title="关于" href="/post/about">关于</a></li>
+			
+
+		</ul>
+	</div>
+</div>
+
+    <div class="layout-content">
+      <div class="layout-content-main">
+        <div class="container">
+          <div class="row justify-content-lg-center">
+            <div class="col-12 col-lg-9">
+              <div class="layout-post">
+                <div class="layout-post-body">
+                  <div class="row">
+
+                    <div class="col-12 col-lg-10">
+                      <div class="layout-post-main m-right m-md-right">
+                        <div class="layout-post-header">
+                          <h1 class="layout-post-title">力学||简单汇编一下振动的微分方程的几种解</h1>
+                          <div class="layout-post-meta">
+                            <div class="item">
+                              
+                            </div>
+                            <div class="item">
+                              <span>2020-12-29</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="layout-post-content">
+                          <div class="layout-post-item">
+                            
+                            <h2 id="阻尼震动">阻尼震动</h2>
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>在有阻尼的情况下：</mtext><mspace linebreak="newline"></mspace><msub><mi>f</mi><mi>γ</mi></msub><mo>=</mo><mo>−</mo><mi>γ</mi><mi>v</mi><mo separator="true">,</mo><mtext>策动力</mtext><msub><mi>F</mi><mn>0</mn></msub><mo>=</mo><msub><mi>F</mi><mn>0</mn></msub><mrow><mo fence="true">(</mo><mi>t</mi><mo fence="true">)</mo></mrow><mspace linebreak="newline"></mspace><mtext>先考察</mtext><msub><mi>F</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn><mtext>的情况：</mtext><mspace linebreak="newline"></mspace><mi>m</mi><mover accent="true"><mi>x</mi><mo>¨</mo></mover><mo>=</mo><mo>−</mo><mi>k</mi><mi>x</mi><mo>−</mo><mi>γ</mi><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mo>⇒</mo><mi>m</mi><mover accent="true"><mi>x</mi><mo>¨</mo></mover><mo>+</mo><mi>γ</mi><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mo>+</mo><mi>k</mi><mi>x</mi><mo>=</mo><mn>0</mn><mo>⇒</mo><mover accent="true"><mi>x</mi><mo>¨</mo></mover><mo>+</mo><mfrac><mi>γ</mi><mi>m</mi></mfrac><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mo>+</mo><mfrac><mi>k</mi><mi>m</mi></mfrac><mi>x</mi><mo>=</mo><mn>0</mn><mspace linebreak="newline"></mspace><mtext>又</mtext><msqrt><mfrac><mi>k</mi><mi>m</mi></mfrac></msqrt><mo>=</mo><msub><mi>ω</mi><mn>0</mn></msub><mo separator="true">,</mo><mtext>我们可以对偶地设一个量</mtext><mi>β</mi><mo>=</mo><mfrac><mi>γ</mi><mi>m</mi></mfrac><mo separator="true">,</mo><mtext>当然量纲为平方倍</mtext><mspace linebreak="newline"></mspace><mover accent="true"><mi>x</mi><mo>¨</mo></mover><mo>+</mo><mn>2</mn><mi>β</mi><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mo>+</mo><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mi>x</mi><mo>=</mo><mn>0</mn><mo>⇒</mo><mtext> </mtext><mtext> </mtext><mi>x</mi><mo mathvariant="normal">′</mo><mo mathvariant="normal">′</mo><mo>+</mo><mn>2</mn><mi>β</mi><mi>x</mi><mo mathvariant="normal">′</mo><mo>+</mo><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mi>x</mi><mo>=</mo><mn>0</mn><mtext>一个二阶常系数线性齐次微分方程</mtext><mspace linebreak="newline"></mspace><mtext>看到特征方程</mtext><msup><mi>λ</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>β</mi><mi>λ</mi><mo>+</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>=</mo><mn>0</mn><mspace linebreak="newline"></mspace><mi>λ</mi><mo>=</mo><mfrac><mrow><mo>−</mo><mn>2</mn><mi>β</mi><mo>±</mo><msqrt><mrow><mn>4</mn><msup><mi>β</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup></mrow></msqrt></mrow><mn>2</mn></mfrac><mo>=</mo><mo>−</mo><mi>β</mi><mo>±</mo><msqrt><mrow><msup><mi>β</mi><mn>2</mn></msup><mo>−</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></msqrt><mspace linebreak="newline"></mspace><mtext>两个实根</mtext><msub><mi>λ</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>λ</mi><mn>2</mn></msub><mo>⇒</mo><mtext>解空间</mtext><mi>S</mi><mo>=</mo><mi>s</mi><mi>p</mi><mi>a</mi><mi>n</mi><mrow><mo fence="true">(</mo><msup><mi>e</mi><mrow><msub><mi>λ</mi><mn>1</mn></msub><mi>x</mi></mrow></msup><mo separator="true">,</mo><msup><mi>e</mi><mrow><msub><mi>λ</mi><mn>2</mn></msub><mi>x</mi></mrow></msup><mo fence="true">)</mo></mrow><mspace linebreak="newline"></mspace><mtext>重根</mtext><mi>λ</mi><mo>⇒</mo><mi>S</mi><mo>=</mo><mi>s</mi><mi>p</mi><mi>a</mi><mi>n</mi><mrow><mo fence="true">(</mo><msup><mi>e</mi><mrow><mi>λ</mi><mi>x</mi></mrow></msup><mo separator="true">,</mo><mi>x</mi><msup><mi>e</mi><mrow><mi>λ</mi><mi>x</mi></mrow></msup><mo fence="true">)</mo></mrow><mspace linebreak="newline"></mspace><mtext>共轭负根</mtext><msub><mi>λ</mi><mrow><mn>1</mn><mo separator="true">,</mo><mn>2</mn></mrow></msub><mo>=</mo><mi>a</mi><mo>±</mo><mi>b</mi><mi>i</mi><mo separator="true">,</mo><mtext>即</mtext><mi>λ</mi><mo>=</mo><mfrac><mrow><mo>−</mo><mn>2</mn><mi>β</mi><mo>±</mo><mn>2</mn><msqrt><mrow><msup><mi>β</mi><mn>2</mn></msup><mo>−</mo><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup></mrow></msqrt></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mo>−</mo><mn>2</mn><mi>β</mi><mo>±</mo><mn>2</mn><mi>i</mi><msqrt><mrow><msup><mi>ω</mi><mn>2</mn></msup><mo>−</mo><msup><mi>β</mi><mn>2</mn></msup></mrow></msqrt><mtext> </mtext><mtext> </mtext></mrow><mn>2</mn></mfrac><mo>=</mo><mo>−</mo><mi>β</mi><mo>±</mo><msqrt><mrow><msup><mi>ω</mi><mn>2</mn></msup><mo>−</mo><msup><mi>β</mi><mn>2</mn></msup></mrow></msqrt><mi>i</mi><mspace linebreak="newline"></mspace><mi>S</mi><mo>=</mo><msup><mi>e</mi><mrow><mi>a</mi><mi>x</mi></mrow></msup><mrow><mo fence="true">(</mo><mi>s</mi><mi>p</mi><mi>a</mi><mi>n</mi><mrow><mo fence="true">(</mo><mi>cos</mi><mo>⁡</mo><mi>b</mi><mi>x</mi><mo separator="true">,</mo><mi>sin</mi><mo>⁡</mo><mi>b</mi><mi>x</mi><mo fence="true">)</mo></mrow><mo fence="true">)</mo></mrow><mo>=</mo><mtext>再由欧拉公式展开</mtext><mspace linebreak="newline"></mspace><mspace linebreak="newline"></mspace><mspace linebreak="newline"></mspace><mtext>我们统一采用振动的复数表示：</mtext><mspace linebreak="newline"></mspace><mover accent="true"><mi>x</mi><mo>~</mo></mover><mo>=</mo><mover accent="true"><mi>A</mi><mo>~</mo></mover><msup><mi>e</mi><mrow><mi>i</mi><mi>ω</mi><mi>t</mi></mrow></msup><mo>=</mo><mover accent="true"><mi>A</mi><mo>~</mo></mover><mrow><mo fence="true">(</mo><mi>cos</mi><mo>⁡</mo><mi>ω</mi><mi>t</mi><mo>+</mo><mi>i</mi><mi>sin</mi><mo>⁡</mo><mi>ω</mi><mi>t</mi><mo fence="true">)</mo></mrow><mspace linebreak="newline"></mspace><mover accent="true"><mover accent="true"><mi>x</mi><mo>~</mo></mover><mo>˙</mo></mover><mo>=</mo><mover accent="true"><mi>A</mi><mo>~</mo></mover><msup><mi>e</mi><mrow><mi>i</mi><mi>ω</mi><mi>t</mi></mrow></msup><mi>i</mi><mi>ω</mi><mo separator="true">,</mo><mover accent="true"><mover accent="true"><mi>x</mi><mo>~</mo></mover><mo>¨</mo></mover><mo>=</mo><mo>−</mo><mover accent="true"><mi>A</mi><mo>~</mo></mover><msup><mi>e</mi><mrow><mi>i</mi><mi>ω</mi><mi>t</mi></mrow></msup><msup><mi>ω</mi><mn>2</mn></msup><mrow><mo fence="true">(</mo><mo>=</mo><mover accent="true"><mi>ω</mi><mo>⃗</mo></mover><mo>×</mo><mrow><mo fence="true">(</mo><mover accent="true"><mi>ω</mi><mo>⃗</mo></mover><mo>×</mo><mover accent="true"><mi>x</mi><mo>⃗</mo></mover><mo fence="true">)</mo></mrow><mo fence="true">)</mo></mrow><mspace linebreak="newline"></mspace><mo>⇒</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>−</mo><mi>i</mi><mtext> </mtext><mtext> </mtext><mn>2</mn><mi>β</mi><mi>ω</mi><mo>−</mo><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mtext>一切都变得更简单了</mtext><mspace linebreak="newline"></mspace><mspace linebreak="newline"></mspace><mtext>继续：</mtext><mspace linebreak="newline"></mspace><mtext>弱阻尼</mtext><mi>β</mi><mo>≪</mo><mi>ω</mi><mo separator="true">,</mo><mi>γ</mi><mtext>小的时候，</mtext><mi>x</mi><mo>=</mo><msub><mi>A</mi><mn>0</mn></msub><mrow><mo fence="true">(</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mi>t</mi></mrow></msup><mi>cos</mi><mo>⁡</mo><mrow><mo fence="true">(</mo><mi>ω</mi><mi>t</mi><mo>+</mo><msub><mi>φ</mi><mn>0</mn></msub><mo fence="true">)</mo></mrow><mo fence="true">)</mo></mrow><mspace linebreak="newline"></mspace><mtext>临界阻尼</mtext><mi>β</mi><mo>≈</mo><mi>ω</mi><mo separator="true">,</mo><mi>x</mi><mo>=</mo><mrow><mo fence="true">(</mo><msub><mi>C</mi><mn>1</mn></msub><mo>+</mo><msub><mi>C</mi><mn>2</mn></msub><mi>t</mi><mo fence="true">)</mo></mrow><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mi>t</mi></mrow></msup><mspace linebreak="newline"></mspace><mtext>过阻尼</mtext><mi>β</mi><mo>&gt;</mo><mi>ω</mi><mo separator="true">,</mo><mi>x</mi><mo>=</mo><msub><mi>C</mi><mn>1</mn></msub><msup><mi>e</mi><mrow><msqrt><mrow><msup><mi>β</mi><mn>2</mn></msup><mo>−</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></msqrt><mi>t</mi><mo>−</mo><mi>β</mi></mrow></msup><mi>t</mi><mo>+</mo><msub><mi>C</mi><mn>2</mn></msub><msup><mi>e</mi><mrow><mo>−</mo><msqrt><mrow><msup><mi>β</mi><mn>2</mn></msup><mo>−</mo><msup><mi>ω</mi><mrow><mn>2</mn><mi>t</mi></mrow></msup></mrow></msqrt><mo>−</mo><mi>β</mi><mi>t</mi></mrow></msup><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mi>t</mi></mrow></msup><mrow><mo fence="true">(</mo><msub><mi>C</mi><mn>1</mn></msub><msup><mi>e</mi><mrow><mi>p</mi><mi>t</mi></mrow></msup><mo>+</mo><msub><mi>C</mi><mn>2</mn></msub><msup><mi>e</mi><mrow><mo>−</mo><mi>p</mi><mi>t</mi></mrow></msup><mo fence="true">)</mo></mrow><mo separator="true">,</mo><mi>p</mi><mo>=</mo><msqrt><mrow><msup><mi>β</mi><mn>2</mn></msup><mo>−</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></msqrt><mspace linebreak="newline"></mspace><mspace linebreak="newline"></mspace></mrow><annotation encoding="application/x-tex">\text{在有阻尼的情况下：}
 \\
 f_{\gamma}=-\gamma v,  \text{策动力}F_0=F_0\left( t \right) 
@@ -194,650 +321,129 @@ c-8,0,-12,-0.7,-12,-2z M1001 80H400000v40H1014z'/></svg></span></span></span><sp
 c169.3,-717.3,254.7,-1077.7,256,-1081c4,-6.7,10,-10,18,-10H400000v40H1014.6
 s-87.3,378.7,-272.6,1166c-185.3,787.3,-279.3,1182.3,-282,1185c-2,6,-10,9,-24,9
 c-8,0,-12,-0.7,-12,-2z M1001 80H400000v40H1014z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9050100000000003em;"><span></span></span></span></span></span></span></span><span style="top:-3.7649899999999996em;"><span class="pstrut" style="height:3.5349899999999996em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-4.21199em;"><span class="pstrut" style="height:3.5349899999999996em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.33em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord cjk_fallback">不稳定状态</span></span></span><span class="mspace newline"></span><span class="mspace newline"></span><span class="mspace newline"></span><span class="mspace newline"></span></span></span></span></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Py_collections||命令行参数]]></title>
-        <id>https://https://github.com/Egg12138/post/py_collectionsorming-ling-xing-can-shu/</id>
-        <link href="https://https://github.com/Egg12138/post/py_collectionsorming-ling-xing-can-shu/">
-        </link>
-        <updated>2020-12-29T06:24:15.000Z</updated>
-        <content type="html"><![CDATA[<p>'''python<br>
-#!/user/Shaw/Python38 python3<br>
-import argparse<br>
-'''<br>
-'import argparse'</p>
-<hr>
-<h3 id="命令行参数复习">命令行参数复习</h3>
-<pre><code>* positional arguments
-* optional arguments 
-</code></pre>
-<h3 id="argparse模块">ARGPARSE模块</h3>
-<p>先讨论 'argparse'<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>库，这个词是解析器的意思，顾名思义</p>
-<h5 id="框架">框架</h5>
-<pre><code>'''python3
-import argparse
 
-parser = argparse.ArgumentParser(description='Process some integers.')
-parser.add_argument('integers', metavar='N', type=int, nargs='+',
-                    help='an integer for the accumulator')
-parser.add_argument('--sum', dest='accumulate', action='store_const',
-                    const=sum, default=max,
-                    help='sum the integers (default: find the max)')
+                          </div>
+                        </div>
+                        <div class="layout-post-social">
+                          <div class="item reader">
+                            <div id="/post/li-xue-orjian-dan-hui-bian-yi-xia-zu-ni-zhen-dong-de-wei-fen-fang-cheng-de-ji-chong-jie/" class="leancloud-visitors view"
+                              data-flag-title="力学||简单汇编一下振动的微分方程的几种解">
+                              <span class="post-meta-item-text">阅读 </span>
+                              <span class="leancloud-visitors-count"></span>
+                            </div>
+                          </div>
+                        </div>
 
-args = parser.parse_args()
-print(args.accumulate(args.integers))'''
-</code></pre>
-<p>如上示例，argparse模块的基本使用包含5个步骤：</p>
-<p>import模块：import argparse<br>
-获解析器对象：argparse.ArgumentParser<br>
-利用解析器对象内建方法，添加参数解析规则：add_argument<br>
-利用解析器对象内建方法，开始解析参数，获取解析结果对象：parse_args<br>
-从解析结果对象中，获取参数值：parse_args<br>
-<br></br><br>
-usage: PROG [-h] [--foo [FOO]] bar [bar ...]  #prog程序名 and usage</p>
-<pre><code>bar help                                    #description功能描述
+                        <div class="layout-post-navigation">
+                          <div class="navigation-list">
+                            
+                            <div class="post-card row">
+                              
+                              <div class="card-content col-12">
+                                <div class="card-body">
+                                  <div class="header">
+                                    <a href="https://https://github.com/Egg12138/post/py_collectionsorming-ling-xing-can-shu/" class="title">
+                                      <h4>Py_collections||命令行参数</h4>
+                                    </a>
+                                  </div>
+                                  <div class="inner">
+                                    <div class="abstract">
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="item"><span>下一篇</span></div>
+                                  <div class="item">2020-12-29</div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                            
+                          </div>
+                        </div>
 
-positional arguments:              #required
-bar          bar help
+                        <div class="layout-comments"></div>
+                        
+                      </div>
+                    </div>
 
-optional arguments:                 #optional 
--h, --help   show this help message and exit
---foo [FOO]  foo help
-
-And that's how you'd foo a bar #epilog补充描述字段，拿来收尾也很好
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>解析器对象的属性</th>
-<th>默认值</th>
-<th>功能</th>
-<th>大致方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>prog</td>
-<td>sys.argv[0]</td>
-<td>'-h' 时显示程序名称</td>
-<td>...</td>
-</tr>
-<tr>
-<td>usage</td>
-<td>-</td>
-<td>usage字段描述</td>
-<td>...</td>
-</tr>
-<tr>
-<td>description</td>
-<td>None</td>
-<td>des描述</td>
-<td>...</td>
-</tr>
-<tr>
-<td>epilog</td>
-<td>None</td>
-<td>补充字段描述</td>
-<td>...</td>
-</tr>
-<tr>
-<td>parents</td>
-<td>None</td>
-<td>从父解析器中继承所有参数选项</td>
-<td>...</td>
-</tr>
-<tr>
-<td>formatter_class</td>
-<td>None</td>
-<td>定制说明文本的显示风格</td>
-<td>...</td>
-</tr>
-<tr>
-<td>prefix_class</td>
-<td>-</td>
-<td>定制前缀字符，例如前缀&quot;-b&quot;改为“+b&quot;</td>
-<td>...</td>
-</tr>
-<tr>
-<td>add_help</td>
-<td>True</td>
-<td>是否使能显示参数 -h --help</td>
-<td>...</td>
-</tr>
-<tr>
-<td>allow_abbrev</td>
-<td>True</td>
-<td>是否支持长参数</td>
-<td>...</td>
-</tr>
-<tr>
-<td>fromfile_prefix_chars</td>
-<td>None</td>
-<td>略</td>
-<td>...</td>
-</tr>
-<tr>
-<td>argument_default</td>
-<td>None</td>
-<td>略</td>
-<td>...</td>
-</tr>
-<tr>
-<td>conflict_handler</td>
-<td>None</td>
-<td>略</td>
-<td>...</td>
-</tr>
-</tbody>
-</table>
-<h5 id="代码部分">代码部分</h5>
-<ul>
+                    <div class="col-12 col-lg-2 d-none d-lg-block">
+                      <div class="layout-post-sidebar">
+                        <div class="layout-sidebar-item">
+                          <ul class="markdownIt-TOC">
 <li>
-<p>构建解析器实例对象</p>
 <ul>
-<li>`parser = argparse.ArugumentParser(description='Optional参数')<br>生成这个对象之后就可以给parser对象添加参数属性</br></li>
-<li>class argparse.ArgumentParser(prog=None, usage=None, description=None, epilog=None, parents=[], formatter_class=argparse.HelpFormatter, prefix_chars='-', fromfile_prefix_chars=None, argument_default=None, conflict_handler='error', add_help=True, allow_abbrev=True)</li>
-<li>自带的可选形参列表：<br>创建实例部分</br>
-<ul>
-<li>description&amp;epilog<br>epilog搞additional descriptions，在’HELP之尾部</br><br>
-#实例创建的这几个参数不是位置参数，但是习惯上prog&gt;usage&gt;des&gt;epilog,因为help呈现的顺序就是这样</li>
-<li>prog=... ，默认是用sys.argv[0]，但是可以自定义，为-h显示时的程序名。</li>
-<li>usage=...,默认呈现-,但是可以自定义，<br>
-<br>  可以用filename.py -h来调出这个des，也可以用' parser.print_help()'<br></li>
-<li>parents会提取ArgumeentParser的所有参数列表，并且获取其中所有的positional and optional actions 然后让其他的解析器可以继承参数。</li>
-<li>
-<pre><code>  `parser = argpaarse.ArugumentParser(description='Des',epilog='Additional words')
-</code></pre>
-</li>
-</ul>
-</li>
-<li>metavar</li>
-<li>name or flags：也就是在使用参数的时候使用的符号，--foo 或者 -f</li>
-<li>action：根据我的理解，这个属性可以选择参数在只提供符号而不输入实际的值的时候给予一个默认的值</li>
-<li>nargs：这个属性规定了参数可以输入的个数</li>
-<li>const：这属性跟 action 属性一起使用</li>
-<li>default：这属性就是给参数设置一个默认值</li>
-<li>type：这个属性规定了参数的数据类型</li>
-<li>choices：这个属性给参数限定了一个选择的迭代，参数只能在这个范围内选择参数的值，否则报错</li>
-<li>required：参数的值为必填</li>
-</ul>
-</li>
-<li>
-<p>filling 一个parser</p>
-<ul>
-<li>making calls to add_argument():</li>
-</ul>
-</li>
-<li>
-<p>基本info的存储和使用的调用</p>
-<ul>
-<li>making calls to parse_args()</li>
-<li>args=parer.parse_args()</li>
-</ul>
-</li>
-<li>
-<p>prefix_chars</p>
-<ul>
-<li>+a: add_argument('+a')会出现在positional arguments一栏，</li>
-<li>++a:同+a理</li>
+<li><a href="#%E9%98%BB%E5%B0%BC%E9%9C%87%E5%8A%A8">阻尼震动</a></li>
+<li><a href="#%E5%8F%97%E8%BF%AB%E6%8C%AF%E5%8A%A8">受迫振动</a></li>
 </ul>
 </li>
 </ul>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>argparse是一个多数py版本都会自带的一个命令行参数解析库 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[辩|| 灌论]]></title>
-        <id>https://https://github.com/Egg12138/post/bian-or-guan-lun/</id>
-        <link href="https://https://github.com/Egg12138/post/bian-or-guan-lun/">
-        </link>
-        <updated>2020-12-29T06:19:10.000Z</updated>
-        <content type="html"><![CDATA[<pre><code>&gt;   关键一、是由于自己想的论点，前因后果，自己最明白。故自己提问，往往会质疑的「太有水准」。
-那些（对你而言）太基本、太天真、太粗糙、太琐碎或答案太理所当然的问题，你当然不会问。
-于是，队友也不会答。
-好比你说：「比起行万里路，读万卷书的好处，是知识比较全面。」
-然后，你开始跟队友（学弟妹）们攻防起书本里的知识哪里哪里全面？全面有什么什么好处？可
-以怎么怎么解决人类生死存亡的大问题……行万里路，又是如何如何的见树不见林？
-结果比赛时，对手搔搔头，问到：「抱歉，请问您方所谓的『知识』，到底是什么意思？」
-信不信，恰恰正是这种蠢问题，会让你的宝贝队友（学弟妹）听完一愣！
-当下，他们只好凭一己之常识，临场回应——而同队中，这或许重要或许不重要的常识落差，便
-是口径不统一，弹道走偏的开始。
-常常，我们会觉得队友（学弟妹）很笨，不能理解他们怎么会**「在这么简单的问题上」**犯错？
-有时，实在冤枉
-</code></pre>
-<p>少爷讲的这段话确实很对。以后的备赛和学习，都要回归到最基础的地方去。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Py_collections|一些内置关键字 模块]]></title>
-        <id>https://https://github.com/Egg12138/post/py_collectionsoryi-xie-nei-zhi-guan-jian-zi/</id>
-        <link href="https://https://github.com/Egg12138/post/py_collectionsoryi-xie-nei-zhi-guan-jian-zi/">
-        </link>
-        <updated>2020-12-10T23:04:41.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="yield与生成器">yield与生成器</h2>
-<blockquote>
-<pre><code>  “不执行函数代码，而是返回一个generator对象，这个对象是可迭代对象，
-      具有next()方法，调用一次next方法执行到yield那里的时候暂停一下，返回一次计算的值(用法类似return)，
-      当再次调用next()方法时，接着yield下面代码循环执行知直到又碰到yield，
-      返回下一个循环计算的值从而实现动态生成值。
-</code></pre>
-</blockquote>
-<p>在Pythoncookbook4.3中，作者给出了比较好的机制展示：</p>
-<p><code>def c(n):</code>while n &gt; 0:<br>
-<code>print(&quot;Count from:&quot;,n)</code>n -= 1<br>
-<code>print('Done')</code>c(5)<br>
-这是定义一个常规的函数，当然用for最快，此处是为了对比<br>
-现在：</p>
-<p><code>def countdown(n):</code>        print(&quot;Countfrom:&quot;, n)<br>
-<code>while n&gt;0:</code>            yield n<br>
-<code>n -= 1</code>        print('Done')</p>
-<h2 id="sys-module">sys module</h2>
-<p>常用单元<br>
-sys.argv：以列表的方式获取运行 Python 程序的命令行参数存放其中。其中 sys.argv[0] 通常就是指该 Python程序本身，sys.argv[1] 代表第一个参数，sys.argv[2] 代表第二个参数，以此类推。类似于 Shell 中的 $0、$1、$2</p>
-<p>import sys<br>
-print('程序名称为：{}，第一个参数为：{}，第二个参数为：{}'.format(sys.argv[0], sys.argv[1], sys.argv[2]))<br>
-sys.byteorder：显示本地字节序的指示符。如果本地字节序的大端模式，则该属性返回big，否则返回little</p>
-<p>sys.copyright：该属性返回与 Python 解释器有关的版权信息</p>
-<p>sys.executable：该属性返回 Python 解释器在磁盘上的存储路径</p>
-<p>sys.exit()：通过引发SystemExit异常来退出程序，将其放在try块中不能阻止finally块的执行。</p>
-<p>sys.flags：该只读属性返回运行Python命令时指定的旗标</p>
-<p>sys.getfilesystemencodiing()：返回在当前系统中保存文件所用的字符集</p>
-<p>sys.getrefcount()：返回指定对象的引用计数。</p>
-<p>sys.getrecursionlimit()：返回Python解释器当前支持的递归深度。该属性可通过setrecursionlimit()方法重新设置</p>
-<p>sys.getswitchinterval()：返回在当前Python解释器中线程切换的时间间隔。该属性可通过setswitchinterval()函数改变</p>
-<p>sys.implementation：返回当前Python解释器的实现</p>
-<p>sys.maxsize：返回Python整数支持的最大值。在32位平台上，该属性值为 2 ×× 31-1；在64位平台上，该属性值为 2 ×× 63-1</p>
-<p>sys.path：该属性指定Python查找模块的路径列表。程序可通过修改该属性来动态增加Python加载模块的路径</p>
-<p>sys.platfrom：返回Python解释器所在的平台的标识符</p>
-<p>sys.stdin：返回系统的标准输入流——一个类文件对象</p>
-<p>sys.stdout：返回系统的标准输出流——一个类文件对象</p>
-<p>sys.stderr：返回系统的错误输出流——一个类文件对象</p>
-<p>sys.version：返回当前Python解释器的版本信息</p>
-<p>sys.winver：返回当前Python解释器的主版本号</p>
-<p>sys.copyright：返回当前Python解释器的版权信息</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[半定量物理|量纲]]></title>
-        <id>https://https://github.com/Egg12138/post/ban-ding-liang-wu-li-orliang-gang/</id>
-        <link href="https://https://github.com/Egg12138/post/ban-ding-liang-wu-li-orliang-gang/">
-        </link>
-        <updated>2020-12-10T11:23:52.000Z</updated>
-        <content type="html"><![CDATA[<p>对于细棒：</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>用量纲进行一些定量分析：</mtext><mspace linebreak="newline"></mspace><mrow><mo fence="true">[</mo><mi>I</mi><mo fence="true">]</mo></mrow><mtext> </mtext><mtext> </mtext><mo>=</mo><mtext> </mtext><mtext> </mtext><msup><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">L</mi></mrow><mn>2</mn></msup><mo>⇒</mo><mi>I</mi><mtext> </mtext><mtext> </mtext><mo>=</mo><mtext> </mtext><mtext> </mtext><mi>m</mi><msup><mi>l</mi><mn>2</mn></msup><mi mathvariant="normal">Φ</mi><mrow><mo fence="true">{</mo><mi mathvariant="normal">Π</mi><mo fence="true">}</mo></mrow><mo separator="true">;</mo><mspace linebreak="newline"></mspace><mtext>要注意到，</mtext><mi mathvariant="normal">Φ</mi><mrow><mo fence="true">{</mo><mi mathvariant="normal">Π</mi><mo fence="true">}</mo></mrow><mtext>是无量纲比值参量；（是齐次式）</mtext><mspace linebreak="newline"></mspace><mtext>我们记</mtext><mi>k</mi><mtext> </mtext><mtext> </mtext><mo>=</mo><mtext> </mtext><mtext> </mtext><mi mathvariant="normal">Φ</mi><mrow><mo fence="true">{</mo><mi mathvariant="normal">Π</mi><mo fence="true">}</mo></mrow><mo separator="true">,</mo><mi>I</mi><mtext> </mtext><mtext> </mtext><mo>=</mo><mtext> </mtext><mtext> </mtext><mi>k</mi><mtext> </mtext><mtext> </mtext><mi>m</mi><msup><mi>l</mi><mn>2</mn></msup><mo separator="true">,</mo><mtext>于是</mtext><mi>k</mi><mo>=</mo><mi>k</mi><mrow><mo fence="true">(</mo><mi>s</mi><mi>h</mi><mi>a</mi><mi>p</mi><mi>e</mi><mo fence="true">)</mo></mrow><mo separator="true">;</mo><mspace linebreak="newline"></mspace><mtext>如果要在物理上刻画出</mtext><mi>k</mi><mtext>，利用的比较多的是</mtext><mi>η</mi><mo separator="true">,</mo><mi>σ</mi><mo separator="true">,</mo><mi>ρ</mi><mtext>进行积分的策略；</mtext><mspace linebreak="newline"></mspace><mtext>其实是求出</mtext><msub><mi>I</mi><mi>c</mi></msub><mtext>等量，此处用量纲来解，显然就直接利用</mtext><msub><mi>I</mi><mi>c</mi></msub><mtext>等量就可以了；</mtext><mspace linebreak="newline"></mspace><mtext>于是，联立更多方程：</mtext><mspace linebreak="newline"></mspace><mi>C</mi><mtext>在细棒的中点处，由平行轴定理：</mtext><mspace linebreak="newline"></mspace><mi>I</mi><mtext> </mtext><mtext> </mtext><mo>=</mo><mtext> </mtext><mtext> </mtext><mrow><mo fence="true">(</mo><mi>k</mi><mo>+</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo fence="true">)</mo></mrow><mi>m</mi><msup><mi>l</mi><mn>2</mn></msup><mspace linebreak="newline"></mspace><mtext>现在进行质心的翻译：</mtext><mspace linebreak="newline"></mspace><mtext>对半每一段</mtext><mfrac><mi>m</mi><mn>2</mn></mfrac><mo separator="true">,</mo><mfrac><mi>l</mi><mn>2</mn></mfrac><mo separator="true">,</mo><mtext>他们绕原中点，现断点的</mtext><mi>O</mi><mtext>的转动惯量：</mtext><mspace linebreak="newline"></mspace><msubsup><mi>I</mi><mn>2</mn><mo mathvariant="normal">′</mo></msubsup><mtext> </mtext><mtext> </mtext><mo>=</mo><mtext> </mtext><mtext> </mtext><msubsup><mi>I</mi><mn>1</mn><mo mathvariant="normal">′</mo></msubsup><mtext> </mtext><mtext> </mtext><mo>=</mo><mtext> </mtext><mtext> </mtext><mfrac><mn>1</mn><mn>8</mn></mfrac><mrow><mo fence="true">(</mo><mi>k</mi><mo>+</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo fence="true">)</mo></mrow><mi>m</mi><msup><mi>l</mi><mn>2</mn></msup><mspace linebreak="newline"></mspace><mi>I</mi><mtext> </mtext><mtext> </mtext><mo>=</mo><mtext> </mtext><mtext> </mtext><msubsup><mi>I</mi><mn>1</mn><mo mathvariant="normal">′</mo></msubsup><mtext> </mtext><mtext> </mtext><mo>+</mo><mtext> </mtext><mtext> </mtext><msubsup><mi>I</mi><mn>2</mn><mo mathvariant="normal">′</mo></msubsup><mtext> </mtext><mtext> </mtext><mo>=</mo><mtext> </mtext><mtext> </mtext><mfrac><mn>2</mn><mn>8</mn></mfrac><mrow><mo fence="true">(</mo><mi>k</mi><mo>+</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo fence="true">)</mo></mrow><mi>m</mi><msup><mi>l</mi><mn>2</mn></msup><mspace linebreak="newline"></mspace><mtext>回代得到</mtext><mi>I</mi><mtext> </mtext><mtext> </mtext><mo>=</mo><mtext> </mtext><mtext> </mtext><mfrac><mn>1</mn><mn>12</mn></mfrac><mi>m</mi><msup><mi>l</mi><mn>2</mn></msup><mo separator="true">;</mo><msub><mi>I</mi><mi>c</mi></msub><mtext> </mtext><mtext> </mtext><mo>=</mo><mtext> </mtext><mtext> </mtext><mfrac><mn>1</mn><mn>3</mn></mfrac><mi>m</mi><msup><mi>l</mi><mn>2</mn></msup><mspace linebreak="newline"></mspace><mtext>在舒幼生的力学中也能找到不少这样的求转动惯量的题目</mtext><mspace linebreak="newline"></mspace><mspace linebreak="newline"></mspace></mrow><annotation encoding="application/x-tex">\text{用量纲进行一些定量分析：}
-\\
-\left[ I \right] \,\,=\,\,\mathrm{ML}^2\Rightarrow I\,\,=\,\,ml^2\Phi \left\{ \Pi \right\} ;
-\\
-\text{要注意到，}\Phi \left\{ \Pi \right\} \text{是无量纲比值参量；（是齐次式）}
-\\
-\text{我们记}k\,\,=\,\,\Phi \left\{ \Pi \right\} , I\,\,=\,\,k\,\,ml^2,\text{于是}k=k\left( shape \right) ;
-\\
-\text{如果要在物理上刻画出}k\text{，利用的比较多的是}\eta ,\sigma ,\rho \text{进行积分的策略；}
-\\
-\text{其实是求出}I_c\text{等量，此处用量纲来解，显然就直接利用}I_c\text{等量就可以了；}
-\\
-\text{于是} \text{，联立更多方程：}
-\\
-C\text{在细棒的中点处，由平行轴定理：}
-\\
-I\,\,=\,\,\left( k+\frac{1}{4} \right) ml^2
-\\
-\text{现在进行质心的翻译：}
-\\
-\text{对半每一段}\frac{m}{2},\frac{l}{2},\text{他们绕原中点，现断点的}O\text{的转动惯量：}
-\\
-I_2&#x27;\,\,=\,\,I_1&#x27;\,\,=\,\,\frac{1}{8}\left( k+\frac{1}{4} \right) ml^2
-\\
-I\,\, =\,\,I_1&#x27;\,\,+\,\,I_2&#x27;\,\,=\,\,\frac{2}{8}\left( k+\frac{1}{4} \right) ml^2
-\\
-\text{回代得到}I\,\,=\,\,\frac{1}{12}ml^2;I_c\,\,=\,\,\frac{1}{3}ml^2
-\\
-\text{在舒幼生的力学中也能找到不少这样的求转动惯量的题目}
-\\
 
-\\
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord cjk_fallback">用量纲进行一些定量分析：</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">[</span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mclose delimcenter" style="top:0em;">]</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="base"><span class="strut" style="height:0.887338em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">M</span><span class="mord mathrm">L</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.887338em;"><span style="top:-3.1362300000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="base"><span class="strut" style="height:1.1141079999999999em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord">Φ</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">{</span><span class="mord">Π</span><span class="mclose delimcenter" style="top:0em;">}</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord cjk_fallback">要注意到，</span></span><span class="mord">Φ</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">{</span><span class="mord">Π</span><span class="mclose delimcenter" style="top:0em;">}</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord text"><span class="mord cjk_fallback">是无量纲比值参量；（是齐次式）</span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord cjk_fallback">我们记</span></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">Φ</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">{</span><span class="mord">Π</span><span class="mclose delimcenter" style="top:0em;">}</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="base"><span class="strut" style="height:1.0585479999999998em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">m</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord text"><span class="mord cjk_fallback">于是</span></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathdefault">s</span><span class="mord mathdefault">h</span><span class="mord mathdefault">a</span><span class="mord mathdefault">p</span><span class="mord mathdefault">e</span><span class="mclose delimcenter" style="top:0em;">)</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord text"><span class="mord cjk_fallback">如果要在物理上刻画出</span></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord text"><span class="mord cjk_fallback">，利用的比较多的是</span></span><span class="mord mathdefault" style="margin-right:0.03588em;">η</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">ρ</span><span class="mord text"><span class="mord cjk_fallback">进行积分的策略；</span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord text"><span class="mord cjk_fallback">其实是求出</span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord text"><span class="mord cjk_fallback">等量，此处用量纲来解，显然就直接利用</span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord text"><span class="mord cjk_fallback">等量就可以了；</span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord cjk_fallback">于是</span></span><span class="mord text"><span class="mord cjk_fallback">，联立更多方程：</span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord text"><span class="mord cjk_fallback">在细棒的中点处，由平行轴定理：</span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="base"><span class="strut" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">4</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">m</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord cjk_fallback">现在进行质心的翻译：</span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:2.05744em;vertical-align:-0.686em;"></span><span class="mord text"><span class="mord cjk_fallback">对半每一段</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.10756em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord text"><span class="mord cjk_fallback">他们绕原中点，现断点的</span></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord text"><span class="mord cjk_fallback">的转动惯量：</span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1.048892em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8018919999999999em;"><span style="top:-2.4530000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="base"><span class="strut" style="height:1.048892em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8018919999999999em;"><span style="top:-2.4530000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="base"><span class="strut" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">8</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">4</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">m</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="base"><span class="strut" style="height:1.048892em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8018919999999999em;"><span style="top:-2.4530000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="base"><span class="strut" style="height:1.048892em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8018919999999999em;"><span style="top:-2.4530000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="base"><span class="strut" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">8</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">4</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">m</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord cjk_fallback">回代得到</span></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathdefault">m</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathdefault">m</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord cjk_fallback">在舒幼生的力学中也能找到不少这样的求转动惯量的题目</span></span></span><span class="mspace newline"></span><span class="mspace newline"></span></span></span></span></p>
-<p>参考：<br>
-赵凯华《定性与半定量物理》</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Py_collections|3.10的类型注释更新]]></title>
-        <id>https://https://github.com/Egg12138/post/py_collectionsor310-de-lei-xing-zhu-shi-geng-xin/</id>
-        <link href="https://https://github.com/Egg12138/post/py_collectionsor310-de-lei-xing-zhu-shi-geng-xin/">
-        </link>
-        <updated>2020-11-29T01:05:15.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>引入&quot;|&quot;操作符，like &quot;or&quot;<br>
-def foo(x <em>int | float</em>):<br>
-return x *math.pi<br>
-foo(1) #pass foo(1.22)#pass foo('a string text')# annotation error</p>
-</blockquote>
-<p>还有一个比较号，之前遇到过错误的，就是类型的alias别名<br>
-这次引入了新方法解决了<br>
-text = &quot;has been defined&quot;<br>
-from typing_extensions import TypeAlias<br>
-TempType: TypeAlias = &quot;T_T&quot;<br>
-or<br>
-TempType: TypeAlias = text, TempType要被识别为一个类型名，这个很重要</p>
-<blockquote>
-<p>Zip的严格匹配False, True,（等长标记）<br>
-x有n个，y有n-1个，过去zip(x,y)进行列表化，list(zip(x,y))后，得到的是n-1对。。<br>
-但是现在可以严格化，匹配等长<br>
-zip(x,y).strict = True     ，放在Try  except里面，就可以实现比较简洁的等长匹配结构</p>
-</blockquote>
-<blockquote></blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Py_collections|字符串相关]]></title>
-        <id>https://https://github.com/Egg12138/post/py_collectionsorzheng-shi-tou-ru-format-de-huai-bao/</id>
-        <link href="https://https://github.com/Egg12138/post/py_collectionsorzheng-shi-tou-ru-format-de-huai-bao/">
-        </link>
-        <updated>2020-11-27T03:07:47.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="正式投入format怀抱">正式投入format怀抱</h2>
-<blockquote></blockquote>
-<pre><code>在一次getsocketbyname()的测试中，我先用Format来运行，很正常，然后输出了hostname + ip,很明显不是string,
-然后我用%s试了一次……果然报错了。不过这个案例不重要……
-这篇文章也不会是我自己主笔，靠的ctrl+C和Ctrl+v (2333333333)
-</code></pre>
-<p>string objs have one uni BIOperation :the % modulo.,which is also known<br>
-as 'formatting or interpolation' operator.</p>
-<p>If format requires a single argument, values may be a single non-tuple object. 5 Otherwise, values must be a tuple with exactly the number of items specified by the format string, or a single mapping object (for example, a dictionary.</p>
-<p>it's syntax is complicated...<br>
-print('%(language)s has %(number)03d quote types.' %<br>
-{'language': &quot;Python&quot;, &quot;number&quot;: 2})<br>
-Python has 002 quote types.</p>
-<p>here 03d is familiar,right?  03d ==&gt; 3fig  integer, #我们总要声明%格式化对象的类型</p>
-<p>文章主体来自一个国内blog,和python doc</p>
-<!-- For more -->
-<blockquote>
-<p>自从Python2.6引入了format这个格式化字符串的方法之后，我认为%还是format这根本就不算个问题。<br>
-# 定义一个坐标值<br>
-c = (250, 250)<br>
-# 使用%来格式化<br>
-s1 = &quot;敌人坐标：%s&quot; % c<br>
-上面的代码很明显会抛出一个如下的TypeError：</p>
-</blockquote>
-<pre><code>TypeError: not all arguments converted during string formatting
+    <div class="layout-totop d-none"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
 
-像这类格式化的需求我们需要写成下面的格式才行：
-# 定义一个坐标值
-c = (250, 250)
-# 使用%丑陋的格式化...
-s1 = &quot;敌人坐标：%s&quot; % (c,)
-而使用format就不会存在上面的问题：　　
+    	<div class="layout-footer">
 
-# 定义一个坐标值
-c = (250, 250)
-# 使用format格式化
-s2 = &quot;敌人坐标：{}&quot;.format(c)
-很显然，format比%方便多了。　　
-</code></pre>
-<p>blogger输入一个tuple c，用%(c)格式化的时候%s,无法be converted!<br>
-%(c,)才行 ，它 传递一个元组</p>
-<blockquote>
-<p>在使用%插入多个变量时，tuple是不可避免的，这样会让代码冗杂<br>
-它还不能正确地现实元组和字典</p>
-</blockquote>
-<p>而format语法：<br>
-print(&quot;{}:{}&quot;.format(host, gethostbyname()))清晰易读<br>
-注意，在不是f-strings的时候，不能在{}内输入东西？<br>
-f-strings把变量放在里面，大大提高了代码可读性</p>
-<h5 id="f-strings">f-strings</h5>
-<p>name = 'xxx'<br>
-age = 18<br>
-uni = 'SYSU'<br>
-city = 'Zhuhal','China'</p>
-<p>可以看一下<br>
-text0 =&quot;My name is %s,aged%d.I am educated in %s, %s&quot;%(name,age,uni,city)<br>
-text1='Ma name is {},aged{}.I am educated in {},{}'.format(name,age,uni,city)<br>
-textf = f&quot;My name is {name},aged{age}.I am educated in {uni},{city}&quot;</p>
-<hr>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[|菜狗算法入门|开心数]]></title>
-        <id>https://https://github.com/Egg12138/post/orcai-gou-suan-fa-ru-men-orkai-xin-shu/</id>
-        <link href="https://https://github.com/Egg12138/post/orcai-gou-suan-fa-ru-men-orkai-xin-shu/">
-        </link>
-        <updated>2020-11-24T00:08:40.000Z</updated>
-        <content type="html"><![CDATA[<p>A happy number is defined by the following process:<br>
-Starting with any positive integer, replace the number by the sum of the squares of its digits in base-ten, and repeat the process until the number either equals 1 (where it will stay), or it loops endlessly in a cycle that does not include 1. Those numbers for which this process ends in 1 are happy numbers, while those that do not end in 1 are unhappy numbers.</p>
-<p>Given a list of numbers, classify each of them as happy or unhappy.<br>
-思路其实蛮简单，但是我一开始写的程序time out了，算法的时间复杂度太高。<br>
-n = int(input())<br>
-def getsum(num):<br>
-rest = divmod(num,10)       #会return一个list，包含整数商和余数<br>
-t0 = rest[0]<br>
-t1 = rest[1]<br>
-return t0<strong>2+t1</strong>2</p>
-<p>for i in range(n):<br>
-x = int(input())<br>
-if x == 1:<br>
-print(&quot;%d 😃&quot; %(x))<br>
-break</p>
-<p>else:</p>
-<pre><code>tempsum = getsum(x)
-ali = []
-     while True:
-        ali.append(tempsum)
-        tempsum = getsum(tempsum)
-        if tempsum in ali == True:
-            print(&quot;%d :(&quot; %(x))
-            break
-        elif tempsum == 1:
-            print(&quot;%d :)&quot; %(x))
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+					<div class="footer">
+						<div class="row">
+							<div class="col-12 col-md-9">
+								<div class="footer-copy">
+									
+									Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+									<div class="footer-icp d-none d-sm-inline-block">
+										<span class="px-2">⋅</span>
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 d-none d-md-block">
+								<div class="footer-links">
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-            break
-</code></pre>
-<h1 id="write-an-answer-using-print">Write an answer using print</h1>
-<p>这是一份愚蠢的代码。<br>
-我们来看看要怎么优化</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[|菜狗算法| 时间复杂度]]></title>
-        <id>https://https://github.com/Egg12138/post/orsuan-fa-or-liang-shu-he-ha-xi-biao-you-hua-shi-jian-fu-za-du/</id>
-        <link href="https://https://github.com/Egg12138/post/orsuan-fa-or-liang-shu-he-ha-xi-biao-you-hua-shi-jian-fu-za-du/">
-        </link>
-        <updated>2020-11-22T15:59:42.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<h2 id="两数和哈希表优化时间复杂度">两数和，哈希表优化时间复杂度</h2>
-<p>先看一下leetcode提供的一个解法。<br>
-我也是这个思路（因为考虑到暴力枚举连代码行数都很多……）</p>
-<p>但是这里有一个优化，就是在返回序列上面，<br>
-leetcode提供 的答案里面直接用enumerate(nums) &gt;&gt;return 一个hashtable<br>
-我则因为不会标准的hashtable，手动地用index 遍历 len(nums),,再判断  Target - number0 in List....</p>
-<blockquote>
-<pre><code>  class Solution:
-</code></pre>
-</blockquote>
-<pre><code>def twoSum(self, nums: List[int], target: int) -&gt; List[int]:
-    hashtable = dict()
-    for i, num in enumerate(nums):
-        if target - num in hashtable:
-            return [hashtable[target - num], i]
-        hashtable[nums[i]] = i
-    return []
-</code></pre>
-<blockquote>
-<pre><code>  作者：LeetCode-Solution
-  链接：https://leetcode-cn.com/problems/two-sum/solution/
-   liang-shu-zhi-he-by-leetcode-solution/
-  来源：力扣（LeetCode）
-  著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-</code></pre>
-</blockquote>
-<h2 id="队列有筛选表">队列有筛选表</h2>
-<p>from collections import deque<br>
-from time import time<br>
-def main1(n):<br>
-leftadd = n+100<br>
-q = []<br>
-q.append(n^3)<br>
-q.append(n^2)<br>
-print(q)<br>
-q.append('_')<br>
-for i in range(len(q)-1):<br>
-q[-i-1] = q[-i-2]<br>
-q[0] = leftadd</p>
-<h1 id="像左部添加元素的操作就需要遍历数组on">像左部添加元素的操作就需要遍历数组，O(n)</h1>
-<p>def main(n):<br>
-q = deque()<br>
-q.append(n^3)<br>
-q.append(n^2)<br>
-print(q)<br>
-q.appendleft(n+100)<br>
-q.popleft()</p>
-<h1 id="这几个单独的操作时间复杂度都是o1">这几个单独的操作时间复杂度都是O(1)</h1>
-<p>s = time()<br>
-for i in range(10):<br>
-main(i)<br>
-e = time()<br>
-print(e-s)<br>
-s=time()<br>
-for i in range(10):<br>
-main1(i)<br>
-e=time()<br>
-print(e-s)<br>
-p</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Ver.0.0.1 宿舍公约]]></title>
-        <id>https://https://github.com/Egg12138/post/ver001-su-she-gong-yue/</id>
-        <link href="https://https://github.com/Egg12138/post/ver001-su-she-gong-yue/">
-        </link>
-        <updated>2020-10-28T07:50:28.000Z</updated>
-        <summary type="html"><![CDATA[<center>宿舍公约草案
-<p><strong>ⅰ作息和生活篇</strong></center><br>
-/作息</p>
-<pre><code>1.熄灯允许时间为23:30-7:00？8:00？和12:00-14:00。该时段内，若宿舍成员数大于1，成员可在不引起争议的前提下熄灯。宿舍仅一人时，熄灯不受限制。
-2.一般情况下，噪声盖过三档风扇的噪声即为过大。须禁止。
-3.有室友睡眠时，噪声盖过一档风扇即为过大。须禁止
-</code></pre>
-<p>/生活噪声</p>
-<pre><code>4.床具噪音，肖和黄的宿舍床因结构问题噪声较大，需限制上下床动作幅度：
-    不得全掌贴地跳跃下床
-    上床事人体重心尽量偏向过道
-**有必要对门进行维修，门的噪声过大**
-5.有宿舍成员睡眠时，某些行为需受限，包括但不限于：
-开柜幅度减小、开拉门速度减慢、卫生间闭门开水、底噪走路、湿拖鞋走路不用全掌直接着地的方式、不在阳台和卫生间之外的场所洗漱。    
-</code></pre>
-<p>/生活洗漱</p>
-<pre><code>6.非特殊情况下，洗衣机不允许放入：内裤、鞋、袜、纸类和其他洗衣无关的物体。
+	</div>
 
-7.洗衣机尽量一次洗完当日衣服。
-8.一般情况下，室内允许挂置干燥物品，不允许晾晒任何纺织品。
-9.最后一名更衣的宿舍成员有义务启动洗衣机。
-10.对于拖延不晾晒的成员的衣物，若有干扰阳台活动的，其他成员可以合理地移动该衣物，但需要声明。
-11.当日不清洁衣物者，需提前告知。
-</code></pre>
-<p>/水电物质</p>
-<pre><code>1.宿舍购置物品本学年由俊哲同学负责，大学四年轮流来负责，顺序可参考宿舍打扫卫生的顺序。允许同学们申请负责或不负责该项事务，但需自己找好另一位同学来填补空缺。是否准许需通过群体表决。
-2.打水倒垃圾等，原则上轮流进行，满则倒，水空则换。不作严格要求。
-</code></pre>
-<center>ⅱ宿舍面貌和卫生篇</center>
-<p>宿舍面貌的维护包括但不限于：<br>
-宿舍（含卫生间和阳台）保洁、宿舍垃圾倾倒、堆积杂物（快递盒等）定期清理、宿舍气味。</p>
-<p>/保洁<br>
-1.保洁轮流进行：</p>
-<pre><code>        周一肖俊哲，
-        周三贺天楷，
-        周五黄肖鸿，
-        周日罗丁溢。
+	<script type="text/javascript" src='https://https://github.com/Egg12138/media/scripts/main.js'></script>
+	
 
-遗忘者，需要调整补做。
-2.保洁基本内容：扫地和拖地。不定期统一进行宿舍扫除：
-暂定每月15号进行，包含四项基本内容：扫地，拖地，阳台清洁，厕所清洁。每个人负责一项。
-</code></pre>
-<p>/垃圾卫生</p>
-<pre><code>3.不允许在宿舍他人领域就餐。
-4.宿舍就餐必须及时清洗餐具。
-5.及时处理易腐败物质。
-6.个人快递盒，外卖盒，包裹包装等归属个人垃圾，不允许长时间挤占过道空间。
-</code></pre>
-<center>ⅲ其他的个人权利与义务篇</center>
-<pre><code>1.宿舍成员有在协商后、或按照宿舍内习惯不影响他人权利的前提下进行不受干扰的个人行为的权利.
-2.宿舍成员有个人隐私信息和个人隐私空间的所有权。
-宿舍成员不得在未经取得对方允许的的情况下查看其他宿舍成员的物件，包括但不限于：笔记本，电子产品，抽屉等。
-**空调遥控器需要放到外部**
-宿舍成员不得在未经对方允许的情况下侵入其他宿舍成员的个人空间：床位、桌位和衣柜
-对于洗衣机内衣物
-3.宿舍成员有义务共同保持宿舍卫生
-4.不谈论各人成绩，绩点等。宿舍时生活的场所。各位宿舍成员有保持求同存异观念的义务。
-5，各位同学有权讨论问题，相互请教，但有义务保持适度，不可一问不可收拾。
-</code></pre>
-]]></summary>
-        <content type="html"><![CDATA[<center>宿舍公约草案
-<p><strong>ⅰ作息和生活篇</strong></center><br>
-/作息</p>
-<pre><code>1.熄灯允许时间为23:30-7:00？8:00？和12:00-14:00。该时段内，若宿舍成员数大于1，成员可在不引起争议的前提下熄灯。宿舍仅一人时，熄灯不受限制。
-2.一般情况下，噪声盖过三档风扇的噪声即为过大。须禁止。
-3.有室友睡眠时，噪声盖过一档风扇即为过大。须禁止
-</code></pre>
-<p>/生活噪声</p>
-<pre><code>4.床具噪音，肖和黄的宿舍床因结构问题噪声较大，需限制上下床动作幅度：
-    不得全掌贴地跳跃下床
-    上床事人体重心尽量偏向过道
-**有必要对门进行维修，门的噪声过大**
-5.有宿舍成员睡眠时，某些行为需受限，包括但不限于：
-开柜幅度减小、开拉门速度减慢、卫生间闭门开水、底噪走路、湿拖鞋走路不用全掌直接着地的方式、不在阳台和卫生间之外的场所洗漱。    
-</code></pre>
-<p>/生活洗漱</p>
-<pre><code>6.非特殊情况下，洗衣机不允许放入：内裤、鞋、袜、纸类和其他洗衣无关的物体。
+  </div>
+</body>
 
-7.洗衣机尽量一次洗完当日衣服。
-8.一般情况下，室内允许挂置干燥物品，不允许晾晒任何纺织品。
-9.最后一名更衣的宿舍成员有义务启动洗衣机。
-10.对于拖延不晾晒的成员的衣物，若有干扰阳台活动的，其他成员可以合理地移动该衣物，但需要声明。
-11.当日不清洁衣物者，需提前告知。
-</code></pre>
-<p>/水电物质</p>
-<pre><code>1.宿舍购置物品本学年由俊哲同学负责，大学四年轮流来负责，顺序可参考宿舍打扫卫生的顺序。允许同学们申请负责或不负责该项事务，但需自己找好另一位同学来填补空缺。是否准许需通过群体表决。
-2.打水倒垃圾等，原则上轮流进行，满则倒，水空则换。不作严格要求。
-</code></pre>
-<center>ⅱ宿舍面貌和卫生篇</center>
-<p>宿舍面貌的维护包括但不限于：<br>
-宿舍（含卫生间和阳台）保洁、宿舍垃圾倾倒、堆积杂物（快递盒等）定期清理、宿舍气味。</p>
-<p>/保洁<br>
-1.保洁轮流进行：</p>
-<pre><code>        周一肖俊哲，
-        周三贺天楷，
-        周五黄肖鸿，
-        周日罗丁溢。
-
-遗忘者，需要调整补做。
-2.保洁基本内容：扫地和拖地。不定期统一进行宿舍扫除：
-暂定每月15号进行，包含四项基本内容：扫地，拖地，阳台清洁，厕所清洁。每个人负责一项。
-</code></pre>
-<p>/垃圾卫生</p>
-<pre><code>3.不允许在宿舍他人领域就餐。
-4.宿舍就餐必须及时清洗餐具。
-5.及时处理易腐败物质。
-6.个人快递盒，外卖盒，包裹包装等归属个人垃圾，不允许长时间挤占过道空间。
-</code></pre>
-<center>ⅲ其他的个人权利与义务篇</center>
-<pre><code>1.宿舍成员有在协商后、或按照宿舍内习惯不影响他人权利的前提下进行不受干扰的个人行为的权利.
-2.宿舍成员有个人隐私信息和个人隐私空间的所有权。
-宿舍成员不得在未经取得对方允许的的情况下查看其他宿舍成员的物件，包括但不限于：笔记本，电子产品，抽屉等。
-**空调遥控器需要放到外部**
-宿舍成员不得在未经对方允许的情况下侵入其他宿舍成员的个人空间：床位、桌位和衣柜
-对于洗衣机内衣物
-3.宿舍成员有义务共同保持宿舍卫生
-4.不谈论各人成绩，绩点等。宿舍时生活的场所。各位宿舍成员有保持求同存异观念的义务。
-5，各位同学有权讨论问题，相互请教，但有义务保持适度，不可一问不可收拾。
-</code></pre>
-<!-- more -->
-]]></content>
-    </entry>
-</feed>
+</html>
