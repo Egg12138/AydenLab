@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<title>Py_collections|字符串相关 - Gridea</title>
+<title>辩|| 灌论 - Gridea</title>
 <meta name="description" content="温故而知新">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -130,85 +130,40 @@
                     <div class="col-12 col-lg-10">
                       <div class="layout-post-main m-right m-md-right">
                         <div class="layout-post-header">
-                          <h1 class="layout-post-title">Py_collections|字符串相关</h1>
+                          <h1 class="layout-post-title">辩|| 灌论</h1>
                           <div class="layout-post-meta">
                             <div class="item">
                               
                             </div>
                             <div class="item">
-                              <span>2020-11-27</span>
+                              <span>2020-12-29</span>
                             </div>
                           </div>
                         </div>
                         <div class="layout-post-content">
                           <div class="layout-post-item">
                             
-                            <h2 id="正式投入format怀抱">正式投入format怀抱</h2>
-<blockquote></blockquote>
-<pre><code>在一次getsocketbyname()的测试中，我先用Format来运行，很正常，然后输出了hostname + ip,很明显不是string,
-然后我用%s试了一次……果然报错了。不过这个案例不重要……
-这篇文章也不会是我自己主笔，靠的ctrl+C和Ctrl+v (2333333333)
+                            <pre><code>&gt;   关键一、是由于自己想的论点，前因后果，自己最明白。故自己提问，往往会质疑的「太有水准」。
+那些（对你而言）太基本、太天真、太粗糙、太琐碎或答案太理所当然的问题，你当然不会问。
+于是，队友也不会答。
+好比你说：「比起行万里路，读万卷书的好处，是知识比较全面。」
+然后，你开始跟队友（学弟妹）们攻防起书本里的知识哪里哪里全面？全面有什么什么好处？可
+以怎么怎么解决人类生死存亡的大问题……行万里路，又是如何如何的见树不见林？
+结果比赛时，对手搔搔头，问到：「抱歉，请问您方所谓的『知识』，到底是什么意思？」
+信不信，恰恰正是这种蠢问题，会让你的宝贝队友（学弟妹）听完一愣！
+当下，他们只好凭一己之常识，临场回应——而同队中，这或许重要或许不重要的常识落差，便
+是口径不统一，弹道走偏的开始。
+常常，我们会觉得队友（学弟妹）很笨，不能理解他们怎么会**「在这么简单的问题上」**犯错？
+有时，实在冤枉
 </code></pre>
-<p>string objs have one uni BIOperation :the % modulo.,which is also known<br>
-as 'formatting or interpolation' operator.</p>
-<p>If format requires a single argument, values may be a single non-tuple object. 5 Otherwise, values must be a tuple with exactly the number of items specified by the format string, or a single mapping object (for example, a dictionary.</p>
-<p>it's syntax is complicated...<br>
-print('%(language)s has %(number)03d quote types.' %<br>
-{'language': &quot;Python&quot;, &quot;number&quot;: 2})<br>
-Python has 002 quote types.</p>
-<p>here 03d is familiar,right?  03d ==&gt; 3fig  integer, #我们总要声明%格式化对象的类型</p>
-<p>文章主体来自一个国内blog,和python doc</p>
-<!-- For more -->
-<blockquote>
-<p>自从Python2.6引入了format这个格式化字符串的方法之后，我认为%还是format这根本就不算个问题。<br>
-# 定义一个坐标值<br>
-c = (250, 250)<br>
-# 使用%来格式化<br>
-s1 = &quot;敌人坐标：%s&quot; % c<br>
-上面的代码很明显会抛出一个如下的TypeError：</p>
-</blockquote>
-<pre><code>TypeError: not all arguments converted during string formatting
-
-像这类格式化的需求我们需要写成下面的格式才行：
-# 定义一个坐标值
-c = (250, 250)
-# 使用%丑陋的格式化...
-s1 = &quot;敌人坐标：%s&quot; % (c,)
-而使用format就不会存在上面的问题：　　
-
-# 定义一个坐标值
-c = (250, 250)
-# 使用format格式化
-s2 = &quot;敌人坐标：{}&quot;.format(c)
-很显然，format比%方便多了。　　
-</code></pre>
-<p>blogger输入一个tuple c，用%(c)格式化的时候%s,无法be converted!<br>
-%(c,)才行 ，它 传递一个元组</p>
-<blockquote>
-<p>在使用%插入多个变量时，tuple是不可避免的，这样会让代码冗杂<br>
-它还不能正确地现实元组和字典</p>
-</blockquote>
-<p>而format语法：<br>
-print(&quot;{}:{}&quot;.format(host, gethostbyname()))清晰易读<br>
-注意，在不是f-strings的时候，不能在{}内输入东西？<br>
-f-strings把变量放在里面，大大提高了代码可读性</p>
-<h5 id="f-strings">f-strings</h5>
-<p>name = 'xxx'<br>
-age = 18<br>
-uni = 'SYSU'<br>
-city = 'Zhuhal','China'</p>
-<p>可以看一下<br>
-text0 =&quot;My name is %s,aged%d.I am educated in %s, %s&quot;%(name,age,uni,city)<br>
-text1='Ma name is {},aged{}.I am educated in {},{}'.format(name,age,uni,city)<br>
-textf = f&quot;My name is {name},aged{age}.I am educated in {uni},{city}&quot;</p>
-<hr>
+<p>少爷讲的这段话确实很对。以后的备赛和学习，都要回归到最基础的地方去。</p>
 
                           </div>
                         </div>
                         <div class="layout-post-social">
                           <div class="item reader">
-                            <div id="/post/py_collectionsorzheng-shi-tou-ru-format-de-huai-bao/" class="leancloud-visitors view"
-                              data-flag-title="Py_collections|字符串相关">
+                            <div id="/post/bian-or-guan-lun/" class="leancloud-visitors view"
+                              data-flag-title="辩|| 灌论">
                               <span class="post-meta-item-text">阅读 </span>
                               <span class="leancloud-visitors-count"></span>
                             </div>
@@ -223,31 +178,8 @@ textf = f&quot;My name is {name},aged{age}.I am educated in {uni},{city}&quot;</
                               <div class="card-content col-12">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/py_collectionsor310-de-lei-xing-zhu-shi-geng-xin/" class="title">
-                                      <h4>Py_collections|3.10的类型注释更新</h4>
-                                    </a>
-                                  </div>
-                                  <div class="inner">
-                                    <div class="abstract">
-                                      
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="card-footer">
-                                  <div class="item"><span>上一篇</span></div>
-                                  <div class="item">2020-11-29</div>
-                                </div>
-                              </div>
-                              
-                            </div>
-
-                            <div class="post-card row">
-                              
-                              <div class="card-content col-12">
-                                <div class="card-body">
-                                  <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/orcai-gou-suan-fa-ru-men-orkai-xin-shu/" class="title">
-                                      <h4>|菜狗算法入门|开心数</h4>
+                                    <a href="https://https://github.com/Egg12138/post/py_collectionsoryi-xie-nei-zhi-guan-jian-zi/" class="title">
+                                      <h4>Py_collections|一些内置关键字 模块</h4>
                                     </a>
                                   </div>
                                   <div class="inner">
@@ -258,12 +190,11 @@ textf = f&quot;My name is {name},aged{age}.I am educated in {uni},{city}&quot;</
                                 </div>
                                 <div class="card-footer">
                                   <div class="item"><span>下一篇</span></div>
-                                  <div class="item">2020-11-24</div>
+                                  <div class="item">2020-12-11</div>
                                 </div>
                               </div>
                               
                             </div>
-
                             
                           </div>
                         </div>
@@ -276,17 +207,7 @@ textf = f&quot;My name is {name},aged{age}.I am educated in {uni},{city}&quot;</
                     <div class="col-12 col-lg-2 d-none d-lg-block">
                       <div class="layout-post-sidebar">
                         <div class="layout-sidebar-item">
-                          <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E6%AD%A3%E5%BC%8F%E6%8A%95%E5%85%A5format%E6%80%80%E6%8A%B1">正式投入format怀抱</a><br>
-*<br>
-*<br>
-* <a href="#f-strings">f-strings</a></li>
-</ul>
-</li>
-</ul>
-
+                          
                         </div>
                       </div>
                     </div>

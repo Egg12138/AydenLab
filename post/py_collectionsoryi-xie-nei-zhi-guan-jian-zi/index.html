@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<title>Py_collections|字符串相关 - Gridea</title>
+<title>Py_collections|一些内置关键字 模块 - Gridea</title>
 <meta name="description" content="温故而知新">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -130,85 +130,67 @@
                     <div class="col-12 col-lg-10">
                       <div class="layout-post-main m-right m-md-right">
                         <div class="layout-post-header">
-                          <h1 class="layout-post-title">Py_collections|字符串相关</h1>
+                          <h1 class="layout-post-title">Py_collections|一些内置关键字 模块</h1>
                           <div class="layout-post-meta">
                             <div class="item">
                               
                             </div>
                             <div class="item">
-                              <span>2020-11-27</span>
+                              <span>2020-12-11</span>
                             </div>
                           </div>
                         </div>
                         <div class="layout-post-content">
                           <div class="layout-post-item">
                             
-                            <h2 id="正式投入format怀抱">正式投入format怀抱</h2>
-<blockquote></blockquote>
-<pre><code>在一次getsocketbyname()的测试中，我先用Format来运行，很正常，然后输出了hostname + ip,很明显不是string,
-然后我用%s试了一次……果然报错了。不过这个案例不重要……
-这篇文章也不会是我自己主笔，靠的ctrl+C和Ctrl+v (2333333333)
-</code></pre>
-<p>string objs have one uni BIOperation :the % modulo.,which is also known<br>
-as 'formatting or interpolation' operator.</p>
-<p>If format requires a single argument, values may be a single non-tuple object. 5 Otherwise, values must be a tuple with exactly the number of items specified by the format string, or a single mapping object (for example, a dictionary.</p>
-<p>it's syntax is complicated...<br>
-print('%(language)s has %(number)03d quote types.' %<br>
-{'language': &quot;Python&quot;, &quot;number&quot;: 2})<br>
-Python has 002 quote types.</p>
-<p>here 03d is familiar,right?  03d ==&gt; 3fig  integer, #我们总要声明%格式化对象的类型</p>
-<p>文章主体来自一个国内blog,和python doc</p>
-<!-- For more -->
+                            <h2 id="yield与生成器">yield与生成器</h2>
 <blockquote>
-<p>自从Python2.6引入了format这个格式化字符串的方法之后，我认为%还是format这根本就不算个问题。<br>
-# 定义一个坐标值<br>
-c = (250, 250)<br>
-# 使用%来格式化<br>
-s1 = &quot;敌人坐标：%s&quot; % c<br>
-上面的代码很明显会抛出一个如下的TypeError：</p>
-</blockquote>
-<pre><code>TypeError: not all arguments converted during string formatting
-
-像这类格式化的需求我们需要写成下面的格式才行：
-# 定义一个坐标值
-c = (250, 250)
-# 使用%丑陋的格式化...
-s1 = &quot;敌人坐标：%s&quot; % (c,)
-而使用format就不会存在上面的问题：　　
-
-# 定义一个坐标值
-c = (250, 250)
-# 使用format格式化
-s2 = &quot;敌人坐标：{}&quot;.format(c)
-很显然，format比%方便多了。　　
+<pre><code>  “不执行函数代码，而是返回一个generator对象，这个对象是可迭代对象，
+      具有next()方法，调用一次next方法执行到yield那里的时候暂停一下，返回一次计算的值(用法类似return)，
+      当再次调用next()方法时，接着yield下面代码循环执行知直到又碰到yield，
+      返回下一个循环计算的值从而实现动态生成值。
 </code></pre>
-<p>blogger输入一个tuple c，用%(c)格式化的时候%s,无法be converted!<br>
-%(c,)才行 ，它 传递一个元组</p>
-<blockquote>
-<p>在使用%插入多个变量时，tuple是不可避免的，这样会让代码冗杂<br>
-它还不能正确地现实元组和字典</p>
 </blockquote>
-<p>而format语法：<br>
-print(&quot;{}:{}&quot;.format(host, gethostbyname()))清晰易读<br>
-注意，在不是f-strings的时候，不能在{}内输入东西？<br>
-f-strings把变量放在里面，大大提高了代码可读性</p>
-<h5 id="f-strings">f-strings</h5>
-<p>name = 'xxx'<br>
-age = 18<br>
-uni = 'SYSU'<br>
-city = 'Zhuhal','China'</p>
-<p>可以看一下<br>
-text0 =&quot;My name is %s,aged%d.I am educated in %s, %s&quot;%(name,age,uni,city)<br>
-text1='Ma name is {},aged{}.I am educated in {},{}'.format(name,age,uni,city)<br>
-textf = f&quot;My name is {name},aged{age}.I am educated in {uni},{city}&quot;</p>
-<hr>
+<p>在Pythoncookbook4.3中，作者给出了比较好的机制展示：</p>
+<p><code>def c(n):</code>while n &gt; 0:<br>
+<code>print(&quot;Count from:&quot;,n)</code>n -= 1<br>
+<code>print('Done')</code>c(5)<br>
+这是定义一个常规的函数，当然用for最快，此处是为了对比<br>
+现在：</p>
+<p><code>def countdown(n):</code>        print(&quot;Countfrom:&quot;, n)<br>
+<code>while n&gt;0:</code>            yield n<br>
+<code>n -= 1</code>        print('Done')</p>
+<h2 id="sys-module">sys module</h2>
+<p>常用单元<br>
+sys.argv：以列表的方式获取运行 Python 程序的命令行参数存放其中。其中 sys.argv[0] 通常就是指该 Python程序本身，sys.argv[1] 代表第一个参数，sys.argv[2] 代表第二个参数，以此类推。类似于 Shell 中的 $0、$1、$2</p>
+<p>import sys<br>
+print('程序名称为：{}，第一个参数为：{}，第二个参数为：{}'.format(sys.argv[0], sys.argv[1], sys.argv[2]))<br>
+sys.byteorder：显示本地字节序的指示符。如果本地字节序的大端模式，则该属性返回big，否则返回little</p>
+<p>sys.copyright：该属性返回与 Python 解释器有关的版权信息</p>
+<p>sys.executable：该属性返回 Python 解释器在磁盘上的存储路径</p>
+<p>sys.exit()：通过引发SystemExit异常来退出程序，将其放在try块中不能阻止finally块的执行。</p>
+<p>sys.flags：该只读属性返回运行Python命令时指定的旗标</p>
+<p>sys.getfilesystemencodiing()：返回在当前系统中保存文件所用的字符集</p>
+<p>sys.getrefcount()：返回指定对象的引用计数。</p>
+<p>sys.getrecursionlimit()：返回Python解释器当前支持的递归深度。该属性可通过setrecursionlimit()方法重新设置</p>
+<p>sys.getswitchinterval()：返回在当前Python解释器中线程切换的时间间隔。该属性可通过setswitchinterval()函数改变</p>
+<p>sys.implementation：返回当前Python解释器的实现</p>
+<p>sys.maxsize：返回Python整数支持的最大值。在32位平台上，该属性值为 2 ×× 31-1；在64位平台上，该属性值为 2 ×× 63-1</p>
+<p>sys.path：该属性指定Python查找模块的路径列表。程序可通过修改该属性来动态增加Python加载模块的路径</p>
+<p>sys.platfrom：返回Python解释器所在的平台的标识符</p>
+<p>sys.stdin：返回系统的标准输入流——一个类文件对象</p>
+<p>sys.stdout：返回系统的标准输出流——一个类文件对象</p>
+<p>sys.stderr：返回系统的错误输出流——一个类文件对象</p>
+<p>sys.version：返回当前Python解释器的版本信息</p>
+<p>sys.winver：返回当前Python解释器的主版本号</p>
+<p>sys.copyright：返回当前Python解释器的版权信息</p>
 
                           </div>
                         </div>
                         <div class="layout-post-social">
                           <div class="item reader">
-                            <div id="/post/py_collectionsorzheng-shi-tou-ru-format-de-huai-bao/" class="leancloud-visitors view"
-                              data-flag-title="Py_collections|字符串相关">
+                            <div id="/post/py_collectionsoryi-xie-nei-zhi-guan-jian-zi/" class="leancloud-visitors view"
+                              data-flag-title="Py_collections|一些内置关键字 模块">
                               <span class="post-meta-item-text">阅读 </span>
                               <span class="leancloud-visitors-count"></span>
                             </div>
@@ -223,8 +205,8 @@ textf = f&quot;My name is {name},aged{age}.I am educated in {uni},{city}&quot;</
                               <div class="card-content col-12">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/py_collectionsor310-de-lei-xing-zhu-shi-geng-xin/" class="title">
-                                      <h4>Py_collections|3.10的类型注释更新</h4>
+                                    <a href="https://https://github.com/Egg12138/post/bian-or-guan-lun/" class="title">
+                                      <h4>辩|| 灌论</h4>
                                     </a>
                                   </div>
                                   <div class="inner">
@@ -235,7 +217,7 @@ textf = f&quot;My name is {name},aged{age}.I am educated in {uni},{city}&quot;</
                                 </div>
                                 <div class="card-footer">
                                   <div class="item"><span>上一篇</span></div>
-                                  <div class="item">2020-11-29</div>
+                                  <div class="item">2020-12-29</div>
                                 </div>
                               </div>
                               
@@ -246,8 +228,8 @@ textf = f&quot;My name is {name},aged{age}.I am educated in {uni},{city}&quot;</
                               <div class="card-content col-12">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/orcai-gou-suan-fa-ru-men-orkai-xin-shu/" class="title">
-                                      <h4>|菜狗算法入门|开心数</h4>
+                                    <a href="https://https://github.com/Egg12138/post/ban-ding-liang-wu-li-orliang-gang/" class="title">
+                                      <h4>半定量物理|量纲</h4>
                                     </a>
                                   </div>
                                   <div class="inner">
@@ -258,7 +240,7 @@ textf = f&quot;My name is {name},aged{age}.I am educated in {uni},{city}&quot;</
                                 </div>
                                 <div class="card-footer">
                                   <div class="item"><span>下一篇</span></div>
-                                  <div class="item">2020-11-24</div>
+                                  <div class="item">2020-12-10</div>
                                 </div>
                               </div>
                               
@@ -279,10 +261,8 @@ textf = f&quot;My name is {name},aged{age}.I am educated in {uni},{city}&quot;</
                           <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E6%AD%A3%E5%BC%8F%E6%8A%95%E5%85%A5format%E6%80%80%E6%8A%B1">正式投入format怀抱</a><br>
-*<br>
-*<br>
-* <a href="#f-strings">f-strings</a></li>
+<li><a href="#yield%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8">yield与生成器</a></li>
+<li><a href="#sys-module">sys module</a></li>
 </ul>
 </li>
 </ul>
