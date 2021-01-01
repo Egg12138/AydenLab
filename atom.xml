@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://https://github.com/Egg12138</id>
     <title>Gridea</title>
-    <updated>2020-12-29T16:24:12.110Z</updated>
+    <updated>2021-01-01T13:23:59.049Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://https://github.com/Egg12138"/>
     <link rel="self" href="https://https://github.com/Egg12138/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://https://github.com/Egg12138/images/avatar.png</logo>
     <icon>https://https://github.com/Egg12138/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2021, Gridea</rights>
     <entry>
         <title type="html"><![CDATA[力学||简单汇编一下振动的微分方程的几种解]]></title>
         <id>https://https://github.com/Egg12138/post/li-xue-orjian-dan-hui-bian-yi-xia-zu-ni-zhen-dong-de-wei-fen-fang-cheng-de-ji-chong-jie/</id>
@@ -214,7 +214,7 @@ import argparse<br>
 </code></pre>
 <h3 id="argparse模块">ARGPARSE模块</h3>
 <p>先讨论 'argparse'<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>库，这个词是解析器的意思，顾名思义</p>
-<h5 id="框架">框架</h5>
+<h4 id="框架">框架</h4>
 <pre><code>'''python3
 import argparse
 
@@ -233,7 +233,10 @@ print(args.accumulate(args.integers))'''
 获解析器对象：argparse.ArgumentParser<br>
 利用解析器对象内建方法，添加参数解析规则：add_argument<br>
 利用解析器对象内建方法，开始解析参数，获取解析结果对象：parse_args<br>
-从解析结果对象中，获取参数值：parse_args<br>
+从解析结果对象中，获取参数值：parse_args</p>
+<p>在命令行中可以愉快有玩耍parse_args，可以及时获得反馈，<br>
+比如我创建一个parse:<br>
+Namespace(Love='siqilin', foo='a')为初始，现在可以直接，在命令行中parse.parse_args('-Love agirl',split())  此处的method是str数据类型的属性mathod<br>
 <br></br><br>
 usage: PROG [-h] [--foo [FOO]] bar [bar ...]  #prog程序名 and usage</p>
 <pre><code>bar help                                    #description功能描述
@@ -333,8 +336,7 @@ And that's how you'd foo a bar #epilog补充描述字段，拿来收尾也很好
 </table>
 <h5 id="代码部分">代码部分</h5>
 <ul>
-<li>
-<p>构建解析器实例对象</p>
+<li>构建解析器实例对象
 <ul>
 <li>`parser = argparse.ArugumentParser(description='Optional参数')<br>生成这个对象之后就可以给parser对象添加参数属性</br></li>
 <li>class argparse.ArgumentParser(prog=None, usage=None, description=None, epilog=None, parents=[], formatter_class=argparse.HelpFormatter, prefix_chars='-', fromfile_prefix_chars=None, argument_default=None, conflict_handler='error', add_help=True, allow_abbrev=True)</li>
@@ -353,31 +355,37 @@ And that's how you'd foo a bar #epilog补充描述字段，拿来收尾也很好
 </ul>
 </li>
 <li>metavar</li>
-<li>name or flags：也就是在使用参数的时候使用的符号，--foo 或者 -f</li>
-<li>action：根据我的理解，这个属性可以选择参数在只提供符号而不输入实际的值的时候给予一个默认的值</li>
-<li>nargs：这个属性规定了参数可以输入的个数</li>
-<li>const：这属性跟 action 属性一起使用</li>
-<li>default：这属性就是给参数设置一个默认值</li>
-<li>type：这个属性规定了参数的数据类型</li>
-<li>choices：这个属性给参数限定了一个选择的迭代，参数只能在这个范围内选择参数的值，否则报错</li>
-<li>required：参数的值为必填</li>
+<li>name or flags：也就是在使用参数的时候使用的符号，--foo 或者 -f这样的预定为optional argument。 解析器会自行完成这份工作。bar,+bar则自动成为positional aruguments,</li>
+<li>action：根据我的理解，这个属性可以选择参数在只提供符号而不输入实际的值的时候给予一个默认的值<br>action的default action是 'Store'</li>
+<li>nargs：这个属性规定了参数可以输入的个数,nargs默认为1，所以默认值为1的时候输入的量不能带空格（那样的话，会杯视为下一个参数命令） narg=+会类似*kargs</li>
 </ul>
 </li>
-<li>
-<p>filling 一个parser</p>
+</ul>
+<p><code>parser = argparse.ArgumentParser(prog='PROG')</code><br>
+<code>parser.add_argument('foo', nargs='+')</code><br>
+<code>parser.parse_args(['a', 'b'])</code><br>
+<code>Namespace(foo=['a', 'b'])</code><br>
+<code>parser.parse_args([])</code><br>
+<code>usage: PROG [-h] foo [foo ...]</code><br>
+<code>PROG: error: the following arguments are required: foo</code><br>
+* const：这属性跟 action 属性一起使用<br>
+* default：这属性就是给参数设置一个默认值<br>
+* type：这个属性规定了参数的数据类型<br>
+* choices：这个属性给参数限定了一个选择的迭代，参数只能在这个范围内选择参数的值，否则报错<br>
+* required：参数的值为必填</p>
+<ul>
+<li>filling 一个parser
 <ul>
 <li>making calls to add_argument():</li>
 </ul>
 </li>
-<li>
-<p>基本info的存储和使用的调用</p>
+<li>基本info的存储和使用的调用
 <ul>
 <li>making calls to parse_args()</li>
 <li>args=parer.parse_args()</li>
 </ul>
 </li>
-<li>
-<p>prefix_chars</p>
+<li>prefix_chars
 <ul>
 <li>+a: add_argument('+a')会出现在positional arguments一栏，</li>
 <li>++a:同+a理</li>
