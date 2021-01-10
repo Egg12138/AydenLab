@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://https://github.com/Egg12138</id>
     <title>Gridea</title>
-    <updated>2021-01-01T13:23:59.049Z</updated>
+    <updated>2021-01-10T06:11:38.528Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://https://github.com/Egg12138"/>
     <link rel="self" href="https://https://github.com/Egg12138/atom.xml"/>
@@ -10,6 +10,64 @@
     <logo>https://https://github.com/Egg12138/images/avatar.png</logo>
     <icon>https://https://github.com/Egg12138/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[C||simple-and-requently-used header files]]></title>
+        <id>https://https://github.com/Egg12138/post/corsimple-and-requently-used-header-files/</id>
+        <link href="https://https://github.com/Egg12138/post/corsimple-and-requently-used-header-files/">
+        </link>
+        <updated>2021-01-10T05:38:00.000Z</updated>
+        <content type="html"><![CDATA[<p>std=standard</p>
+<p>###<center> FILE: stdio.h     standard I/O</center></p>
+<pre><code>int printf(const char *,...);
+int scanf(const char *,...);
+int getchar();  // read an charactor from the terminal
+void putchar(char ch);  //output ch to the terminal
+</code></pre>
+<p>FILE *fopen(const char *file_path,const char *format);  open'file_path' as format format.</p>
+<h3 id="centerfilestdlibh-standard-librarycenter"><center>FILE:stdlib.h    standard library</center></h3>
+<p>void <em>calloc(size_t n,size_t size);<br>
+/</em><br>
+<em>在内存中连续分配n个长度为size的空间，并且return分配空间 首地址的指针<br>
+**e.g.</em>: int *iList = (int *)alloc(10,sizeof(int)):<br>
+<em>申请了大小为10 * sizeof(int)字节的连续空间</em>/</p>
+<p>void <em>malloc(size_t size);<br>
+/</em> 申请大小为size的连续空间 返回void    指针指向这段内存的初始地址，<br>
+e.g: double <em>dList = (double</em>)malloce(sizeof(double) * 12);<br>
+申请到大小为12 * sizeof(double)字节的空间</p>
+<p>void free(void *ptr);<br>
+/*释放pointer ,ptr所指向的内存空间<br>
+<em>free(ptr);  ..使用calloc/malloc 申请的内存要free掉，否则会堆积</em>/</p>
+<h3 id="file-stringh-stringstr">FILE:  string.h     string=str</h3>
+<p>size_t strlen(const char *str);  return str pointD string长度，通过暴力遍历计数</p>
+<p>bool strcmp(const char *strl,const char *str2);</p>
+<p>char *strcat(char *str1, const char *str2); 这里的cat感觉功能上和bash shell的cat好像，应该是一个玩意儿，add。但是在terminal shell中cat还可以直接打开看单个文本文件。</p>
+<p>char *strcpy(char *src,const char *dst)  //copy the data in dst(dest) to src</p>
+<h3 id="ps">PS</h3>
+<p>碎片的东西，放一点进来；</p>
+<p>函数名前的 “ * ” 号，表示函数返回一个地址值；</p>
+<pre><code>int *locate(){  //函数locate（）返回值保存在指针变量return中
+    ......
+}
+</code></pre>
+<p>c++的标准在98年确定，在那之前已经有一些库大量使用。<br>
+新标准中，推出了名称空间的概念，既是为了方便人们使用新标准的同时，不用大量修改之前的代码，对之前的代码兼容，同时可以有效的避免名称冲突。<br>
+旧标准中以.h结尾<br>
+新标准没有.h<br>
+旧标准中可以直接包含c的库文件，编译器会附带c的兼容库实现<br>
+新标准中有一样的c库子模块支持，命名方式变更为：原stdio.h，新cstdio，即前面+c，后面去掉.h</p>
+<p>C++语言也没有原生的字符串类型。C++语言通过C++标准库提供的string类型实现对字符串类型的支持。string类的特性如下：<br>
+A、string直接支持字符串连接<br>
+B、string直接支持字符串的大小比较<br>
+C、string直接支持子串查找和提取<br>
+D、string直接支持字符串的插入和替换</p>
+<p>extern int i; //声明，不是定义<br>
+int i; //声明，也是定义<br>
+定义只能出现在一处。也就是说，不管是 int a 还是 int a=0 都只能出现一次，而 extern int a 可以出现很多次。<br>
+当你要引用一个全局变量的时候，你就要声明 extern int a 这时候 extern 不能省略，因为省略了，就变成 int a 这是一个定义，不是声明。</p>
+<p>下次做一个基础符号作用，是时候开始重新学C 了。<br>
+<a href="https://en.cppreference.com/w/c/header">CPPreference-C standard library header</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[力学||简单汇编一下振动的微分方程的几种解]]></title>
         <id>https://https://github.com/Egg12138/post/li-xue-orjian-dan-hui-bian-yi-xia-zu-ni-zhen-dong-de-wei-fen-fang-cheng-de-ji-chong-jie/</id>
@@ -718,134 +776,6 @@ main1(i)<br>
 e=time()<br>
 print(e-s)<br>
 p</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Ver.0.0.1 宿舍公约]]></title>
-        <id>https://https://github.com/Egg12138/post/ver001-su-she-gong-yue/</id>
-        <link href="https://https://github.com/Egg12138/post/ver001-su-she-gong-yue/">
-        </link>
-        <updated>2020-10-28T07:50:28.000Z</updated>
-        <summary type="html"><![CDATA[<center>宿舍公约草案
-<p><strong>ⅰ作息和生活篇</strong></center><br>
-/作息</p>
-<pre><code>1.熄灯允许时间为23:30-7:00？8:00？和12:00-14:00。该时段内，若宿舍成员数大于1，成员可在不引起争议的前提下熄灯。宿舍仅一人时，熄灯不受限制。
-2.一般情况下，噪声盖过三档风扇的噪声即为过大。须禁止。
-3.有室友睡眠时，噪声盖过一档风扇即为过大。须禁止
-</code></pre>
-<p>/生活噪声</p>
-<pre><code>4.床具噪音，肖和黄的宿舍床因结构问题噪声较大，需限制上下床动作幅度：
-    不得全掌贴地跳跃下床
-    上床事人体重心尽量偏向过道
-**有必要对门进行维修，门的噪声过大**
-5.有宿舍成员睡眠时，某些行为需受限，包括但不限于：
-开柜幅度减小、开拉门速度减慢、卫生间闭门开水、底噪走路、湿拖鞋走路不用全掌直接着地的方式、不在阳台和卫生间之外的场所洗漱。    
-</code></pre>
-<p>/生活洗漱</p>
-<pre><code>6.非特殊情况下，洗衣机不允许放入：内裤、鞋、袜、纸类和其他洗衣无关的物体。
-
-7.洗衣机尽量一次洗完当日衣服。
-8.一般情况下，室内允许挂置干燥物品，不允许晾晒任何纺织品。
-9.最后一名更衣的宿舍成员有义务启动洗衣机。
-10.对于拖延不晾晒的成员的衣物，若有干扰阳台活动的，其他成员可以合理地移动该衣物，但需要声明。
-11.当日不清洁衣物者，需提前告知。
-</code></pre>
-<p>/水电物质</p>
-<pre><code>1.宿舍购置物品本学年由俊哲同学负责，大学四年轮流来负责，顺序可参考宿舍打扫卫生的顺序。允许同学们申请负责或不负责该项事务，但需自己找好另一位同学来填补空缺。是否准许需通过群体表决。
-2.打水倒垃圾等，原则上轮流进行，满则倒，水空则换。不作严格要求。
-</code></pre>
-<center>ⅱ宿舍面貌和卫生篇</center>
-<p>宿舍面貌的维护包括但不限于：<br>
-宿舍（含卫生间和阳台）保洁、宿舍垃圾倾倒、堆积杂物（快递盒等）定期清理、宿舍气味。</p>
-<p>/保洁<br>
-1.保洁轮流进行：</p>
-<pre><code>        周一肖俊哲，
-        周三贺天楷，
-        周五黄肖鸿，
-        周日罗丁溢。
-
-遗忘者，需要调整补做。
-2.保洁基本内容：扫地和拖地。不定期统一进行宿舍扫除：
-暂定每月15号进行，包含四项基本内容：扫地，拖地，阳台清洁，厕所清洁。每个人负责一项。
-</code></pre>
-<p>/垃圾卫生</p>
-<pre><code>3.不允许在宿舍他人领域就餐。
-4.宿舍就餐必须及时清洗餐具。
-5.及时处理易腐败物质。
-6.个人快递盒，外卖盒，包裹包装等归属个人垃圾，不允许长时间挤占过道空间。
-</code></pre>
-<center>ⅲ其他的个人权利与义务篇</center>
-<pre><code>1.宿舍成员有在协商后、或按照宿舍内习惯不影响他人权利的前提下进行不受干扰的个人行为的权利.
-2.宿舍成员有个人隐私信息和个人隐私空间的所有权。
-宿舍成员不得在未经取得对方允许的的情况下查看其他宿舍成员的物件，包括但不限于：笔记本，电子产品，抽屉等。
-**空调遥控器需要放到外部**
-宿舍成员不得在未经对方允许的情况下侵入其他宿舍成员的个人空间：床位、桌位和衣柜
-对于洗衣机内衣物
-3.宿舍成员有义务共同保持宿舍卫生
-4.不谈论各人成绩，绩点等。宿舍时生活的场所。各位宿舍成员有保持求同存异观念的义务。
-5，各位同学有权讨论问题，相互请教，但有义务保持适度，不可一问不可收拾。
-</code></pre>
-]]></summary>
-        <content type="html"><![CDATA[<center>宿舍公约草案
-<p><strong>ⅰ作息和生活篇</strong></center><br>
-/作息</p>
-<pre><code>1.熄灯允许时间为23:30-7:00？8:00？和12:00-14:00。该时段内，若宿舍成员数大于1，成员可在不引起争议的前提下熄灯。宿舍仅一人时，熄灯不受限制。
-2.一般情况下，噪声盖过三档风扇的噪声即为过大。须禁止。
-3.有室友睡眠时，噪声盖过一档风扇即为过大。须禁止
-</code></pre>
-<p>/生活噪声</p>
-<pre><code>4.床具噪音，肖和黄的宿舍床因结构问题噪声较大，需限制上下床动作幅度：
-    不得全掌贴地跳跃下床
-    上床事人体重心尽量偏向过道
-**有必要对门进行维修，门的噪声过大**
-5.有宿舍成员睡眠时，某些行为需受限，包括但不限于：
-开柜幅度减小、开拉门速度减慢、卫生间闭门开水、底噪走路、湿拖鞋走路不用全掌直接着地的方式、不在阳台和卫生间之外的场所洗漱。    
-</code></pre>
-<p>/生活洗漱</p>
-<pre><code>6.非特殊情况下，洗衣机不允许放入：内裤、鞋、袜、纸类和其他洗衣无关的物体。
-
-7.洗衣机尽量一次洗完当日衣服。
-8.一般情况下，室内允许挂置干燥物品，不允许晾晒任何纺织品。
-9.最后一名更衣的宿舍成员有义务启动洗衣机。
-10.对于拖延不晾晒的成员的衣物，若有干扰阳台活动的，其他成员可以合理地移动该衣物，但需要声明。
-11.当日不清洁衣物者，需提前告知。
-</code></pre>
-<p>/水电物质</p>
-<pre><code>1.宿舍购置物品本学年由俊哲同学负责，大学四年轮流来负责，顺序可参考宿舍打扫卫生的顺序。允许同学们申请负责或不负责该项事务，但需自己找好另一位同学来填补空缺。是否准许需通过群体表决。
-2.打水倒垃圾等，原则上轮流进行，满则倒，水空则换。不作严格要求。
-</code></pre>
-<center>ⅱ宿舍面貌和卫生篇</center>
-<p>宿舍面貌的维护包括但不限于：<br>
-宿舍（含卫生间和阳台）保洁、宿舍垃圾倾倒、堆积杂物（快递盒等）定期清理、宿舍气味。</p>
-<p>/保洁<br>
-1.保洁轮流进行：</p>
-<pre><code>        周一肖俊哲，
-        周三贺天楷，
-        周五黄肖鸿，
-        周日罗丁溢。
-
-遗忘者，需要调整补做。
-2.保洁基本内容：扫地和拖地。不定期统一进行宿舍扫除：
-暂定每月15号进行，包含四项基本内容：扫地，拖地，阳台清洁，厕所清洁。每个人负责一项。
-</code></pre>
-<p>/垃圾卫生</p>
-<pre><code>3.不允许在宿舍他人领域就餐。
-4.宿舍就餐必须及时清洗餐具。
-5.及时处理易腐败物质。
-6.个人快递盒，外卖盒，包裹包装等归属个人垃圾，不允许长时间挤占过道空间。
-</code></pre>
-<center>ⅲ其他的个人权利与义务篇</center>
-<pre><code>1.宿舍成员有在协商后、或按照宿舍内习惯不影响他人权利的前提下进行不受干扰的个人行为的权利.
-2.宿舍成员有个人隐私信息和个人隐私空间的所有权。
-宿舍成员不得在未经取得对方允许的的情况下查看其他宿舍成员的物件，包括但不限于：笔记本，电子产品，抽屉等。
-**空调遥控器需要放到外部**
-宿舍成员不得在未经对方允许的情况下侵入其他宿舍成员的个人空间：床位、桌位和衣柜
-对于洗衣机内衣物
-3.宿舍成员有义务共同保持宿舍卫生
-4.不谈论各人成绩，绩点等。宿舍时生活的场所。各位宿舍成员有保持求同存异观念的义务。
-5，各位同学有权讨论问题，相互请教，但有义务保持适度，不可一问不可收拾。
-</code></pre>
-<!-- more -->
 ]]></content>
     </entry>
 </feed>

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<title>摘|| 加缪的去英雄主义 - Gridea</title>
+<title>C||simple-and-requently-used header files - Gridea</title>
 <meta name="description" content="温故而知新">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -130,45 +130,86 @@
                     <div class="col-12 col-lg-10">
                       <div class="layout-post-main m-right m-md-right">
                         <div class="layout-post-header">
-                          <h1 class="layout-post-title">摘|| 加缪的去英雄主义</h1>
+                          <h1 class="layout-post-title">C||simple-and-requently-used header files</h1>
                           <div class="layout-post-meta">
                             <div class="item">
-                               <a href="https://https://github.com/Egg12138/tag/zhai/" class="post--keyword"
-                                data-title="摘" data-type="post_tag" data-term-id="39">摘</a>
-                               <a href="https://https://github.com/Egg12138/tag/jia-mou/" class="post--keyword"
-                                data-title="加缪" data-type="post_tag" data-term-id="39">加缪</a>
-                               <a href="https://https://github.com/Egg12138/tag/wen-xue/" class="post--keyword"
-                                data-title="文学" data-type="post_tag" data-term-id="39">文学</a>
-                               <a href="https://https://github.com/Egg12138/tag/ren-xing/" class="post--keyword"
-                                data-title="人性" data-type="post_tag" data-term-id="39">人性</a>
-                               <a href="https://https://github.com/Egg12138/tag/fan-si/" class="post--keyword"
-                                data-title="反思" data-type="post_tag" data-term-id="39">反思</a>
+                               <a href="https://https://github.com/Egg12138/tag/c/" class="post--keyword"
+                                data-title="c" data-type="post_tag" data-term-id="39">c</a>
+                               <a href="https://https://github.com/Egg12138/tag/cpp/" class="post--keyword"
+                                data-title="cpp" data-type="post_tag" data-term-id="39">cpp</a>
+                               <a href="https://https://github.com/Egg12138/tag/zong-jie-lei/" class="post--keyword"
+                                data-title="总结类" data-type="post_tag" data-term-id="39">总结类</a>
+                               <a href="https://https://github.com/Egg12138/tag/xue-xi/" class="post--keyword"
+                                data-title="学习" data-type="post_tag" data-term-id="39">学习</a>
+                               <a href="https://https://github.com/Egg12138/tag/ji-lu/" class="post--keyword"
+                                data-title="记录" data-type="post_tag" data-term-id="39">记录</a>
                               
                             </div>
                             <div class="item">
-                              <span>2020-09-30</span>
+                              <span>2021-01-10</span>
                             </div>
                           </div>
                         </div>
                         <div class="layout-post-content">
                           <div class="layout-post-item">
                             
-                            <p class="with-img"><img src="https://https://github.com/Egg12138/post-images/zhai-or-jia-mou-0.jpg"
-                                class="attachment-full size-full wp-post-image" alt="摘|| 加缪的去英雄主义" /></p>
-                            
-                            <blockquote>
-<pre><code>  但是笔者更愿意相信，过分重视高尚行为，结果反而会变成对罪恶简洁而有力的褒扬。因为那样做会让人猜想，高尚行为如此可贵只因它寥若晨星，所以狠心和冷漠才是人类行为更经常的动力。而这种想法正式笔者不能苟同的。人世间的 罪恶几乎总是由愚昧造成，人如果缺乏教育，好心也可能同恶意一样造成损害。好人比恶人多，而实际上那并非症结之所在。人有无知和更无知的区别，着'就叫道德或不道德，最令人厌恶的不道德是愚昧无知，无知的人认为自己无所不知，因而自认有权杀人。杀人凶手的心灵是盲目的，而没有远见卓识就不会有真正的善和高尚的爱—《鼠疫》
+                            <p>std=standard</p>
+<p>###<center> FILE: stdio.h     standard I/O</center></p>
+<pre><code>int printf(const char *,...);
+int scanf(const char *,...);
+int getchar();  // read an charactor from the terminal
+void putchar(char ch);  //output ch to the terminal
 </code></pre>
-</blockquote>
-<p>如果善都需要过分地强调与歌颂，那是很虚伪的、很没有温情的！因为善是我们都应该做的，不是需要克服多少艰难就应该被表现出来的的。里厄医生等人，他们的所作所为是职责之所在，是当下之最优解，不需要捧起来说英雄。</p>
-<p>对抗疫情，医生上前，这就是医生的职责，我们尊重他们，传承善，而不需要将别人高高捧起，这不是冷漠，这是人文情怀</p>
+<p>FILE *fopen(const char *file_path,const char *format);  open'file_path' as format format.</p>
+<h3 id="centerfilestdlibh-standard-librarycenter"><center>FILE:stdlib.h    standard library</center></h3>
+<p>void <em>calloc(size_t n,size_t size);<br>
+/</em><br>
+<em>在内存中连续分配n个长度为size的空间，并且return分配空间 首地址的指针<br>
+**e.g.</em>: int *iList = (int *)alloc(10,sizeof(int)):<br>
+<em>申请了大小为10 * sizeof(int)字节的连续空间</em>/</p>
+<p>void <em>malloc(size_t size);<br>
+/</em> 申请大小为size的连续空间 返回void    指针指向这段内存的初始地址，<br>
+e.g: double <em>dList = (double</em>)malloce(sizeof(double) * 12);<br>
+申请到大小为12 * sizeof(double)字节的空间</p>
+<p>void free(void *ptr);<br>
+/*释放pointer ,ptr所指向的内存空间<br>
+<em>free(ptr);  ..使用calloc/malloc 申请的内存要free掉，否则会堆积</em>/</p>
+<h3 id="file-stringh-stringstr">FILE:  string.h     string=str</h3>
+<p>size_t strlen(const char *str);  return str pointD string长度，通过暴力遍历计数</p>
+<p>bool strcmp(const char *strl,const char *str2);</p>
+<p>char *strcat(char *str1, const char *str2); 这里的cat感觉功能上和bash shell的cat好像，应该是一个玩意儿，add。但是在terminal shell中cat还可以直接打开看单个文本文件。</p>
+<p>char *strcpy(char *src,const char *dst)  //copy the data in dst(dest) to src</p>
+<h3 id="ps">PS</h3>
+<p>碎片的东西，放一点进来；</p>
+<p>函数名前的 “ * ” 号，表示函数返回一个地址值；</p>
+<pre><code>int *locate(){  //函数locate（）返回值保存在指针变量return中
+    ......
+}
+</code></pre>
+<p>c++的标准在98年确定，在那之前已经有一些库大量使用。<br>
+新标准中，推出了名称空间的概念，既是为了方便人们使用新标准的同时，不用大量修改之前的代码，对之前的代码兼容，同时可以有效的避免名称冲突。<br>
+旧标准中以.h结尾<br>
+新标准没有.h<br>
+旧标准中可以直接包含c的库文件，编译器会附带c的兼容库实现<br>
+新标准中有一样的c库子模块支持，命名方式变更为：原stdio.h，新cstdio，即前面+c，后面去掉.h</p>
+<p>C++语言也没有原生的字符串类型。C++语言通过C++标准库提供的string类型实现对字符串类型的支持。string类的特性如下：<br>
+A、string直接支持字符串连接<br>
+B、string直接支持字符串的大小比较<br>
+C、string直接支持子串查找和提取<br>
+D、string直接支持字符串的插入和替换</p>
+<p>extern int i; //声明，不是定义<br>
+int i; //声明，也是定义<br>
+定义只能出现在一处。也就是说，不管是 int a 还是 int a=0 都只能出现一次，而 extern int a 可以出现很多次。<br>
+当你要引用一个全局变量的时候，你就要声明 extern int a 这时候 extern 不能省略，因为省略了，就变成 int a 这是一个定义，不是声明。</p>
+<p>下次做一个基础符号作用，是时候开始重新学C 了。<br>
+<a href="https://en.cppreference.com/w/c/header">CPPreference-C standard library header</a></p>
 
                           </div>
                         </div>
                         <div class="layout-post-social">
                           <div class="item reader">
-                            <div id="/post/zhai-or-jia-mou-0/" class="leancloud-visitors view"
-                              data-flag-title="摘|| 加缪的去英雄主义">
+                            <div id="/post/corsimple-and-requently-used-header-files/" class="leancloud-visitors view"
+                              data-flag-title="C||simple-and-requently-used header files">
                               <span class="post-meta-item-text">阅读 </span>
                               <span class="leancloud-visitors-count"></span>
                             </div>
@@ -183,31 +224,8 @@
                               <div class="card-content col-12">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/bian-or2019-xin-guo-bian-dong-wu-ai-ding-bao-qian-ban-bu-fen-de-jian-dan-hui-gu/" class="title">
-                                      <h4>辩||2019新国辩 东吴-爱丁堡前半部分的简单回顾</h4>
-                                    </a>
-                                  </div>
-                                  <div class="inner">
-                                    <div class="abstract">
-                                      
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="card-footer">
-                                  <div class="item"><span>上一篇</span></div>
-                                  <div class="item">2020-10-17</div>
-                                </div>
-                              </div>
-                              
-                            </div>
-
-                            <div class="post-card row">
-                              
-                              <div class="card-content col-12">
-                                <div class="card-body">
-                                  <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/py_collectionornetwork-programmingor0/" class="title">
-                                      <h4>Py_Collection||Network Programming||0</h4>
+                                    <a href="https://https://github.com/Egg12138/post/li-xue-orjian-dan-hui-bian-yi-xia-zu-ni-zhen-dong-de-wei-fen-fang-cheng-de-ji-chong-jie/" class="title">
+                                      <h4>力学||简单汇编一下振动的微分方程的几种解</h4>
                                     </a>
                                   </div>
                                   <div class="inner">
@@ -218,12 +236,11 @@
                                 </div>
                                 <div class="card-footer">
                                   <div class="item"><span>下一篇</span></div>
-                                  <div class="item">2020-09-29</div>
+                                  <div class="item">2020-12-29</div>
                                 </div>
                               </div>
                               
                             </div>
-
                             
                           </div>
                         </div>
@@ -236,7 +253,20 @@
                     <div class="col-12 col-lg-2 d-none d-lg-block">
                       <div class="layout-post-sidebar">
                         <div class="layout-sidebar-item">
-                          
+                          <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#centerfilestdlibh-standard-librarycenter"><center>FILE:stdlib.h    standard library</center></a></li>
+<li><a href="#file-stringh-stringstr">FILE:  string.h     string=str</a></li>
+<li><a href="#ps">PS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
                         </div>
                       </div>
                     </div>
