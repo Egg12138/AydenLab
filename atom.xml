@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://https://github.com/Egg12138</id>
     <title>Gridea</title>
-    <updated>2021-01-10T06:11:38.528Z</updated>
+    <updated>2021-01-29T16:08:16.829Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://https://github.com/Egg12138"/>
     <link rel="self" href="https://https://github.com/Egg12138/atom.xml"/>
@@ -10,6 +10,61 @@
     <logo>https://https://github.com/Egg12138/images/avatar.png</logo>
     <icon>https://https://github.com/Egg12138/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[raw.githubusercontent.com的DNS污染小状况]]></title>
+        <id>https://https://github.com/Egg12138/post/rawgithubusercontentcom-de-dns-wu-ran-xiao-zhuang-kuang/</id>
+        <link href="https://https://github.com/Egg12138/post/rawgithubusercontentcom-de-dns-wu-ran-xiao-zhuang-kuang/">
+        </link>
+        <updated>2021-01-24T16:45:44.000Z</updated>
+        <content type="html"><![CDATA[<p>175.44.115.198是我当时的ip<br>
+在hosts中add:<br>
+175.44.115.198 raw.githubusercontent.com</p>
+<p>因为PC上的vpn太慢了，手机端的浏览器不能提取url的文件。所以只能从pc搞。<br>
+不翻墙，只能改hosts。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C||My wrong-doings---0]]></title>
+        <id>https://https://github.com/Egg12138/post/cormy-wrong-doings-0/</id>
+        <link href="https://https://github.com/Egg12138/post/cormy-wrong-doings-0/">
+        </link>
+        <updated>2021-01-17T03:59:38.000Z</updated>
+        <content type="html"><![CDATA[<p>#字符串方面<br>
+char name[40];<br>
+char newname[1];</p>
+<p>printf( name, PARISE)<br>
+print( newname ,name)<br>
+first,scanf name = Egg12138<br>
+then,scanf newname =Aydenegg<br>
+output--&gt;<br>
+异常表现：<br>
+Hi,ydenegg(A没了）(本该是Egg12138,),PARISE words....<br>
+在newname and name ouput中<br>
+Hello,Aydenegg. ydenegg这里的问题就在于，newname正确接收并且存储了Aydenegg但是name的Egg12138成为了无首字母的ydenegg;</p>
+<p>查资料前先测试一下：<br>
+取消大写字母:依旧<br>
+改变数组大小为32：有效<br>
+char name[40];<br>
+char newname[32];</p>
+<p>现在压缩数组的大小，Aydenegg为8字母，改成8和7分别比较，尝试后发现只有char newname[1]的时候才会这样，并且字节长度我输入一个字母也如此</p>
+<p>所以char [1]可能已经不是一个表卓的数组了，<br>
+把char name[40] .--&gt; char name[1] output也一样……</p>
+<p>查询：</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我的大一上]]></title>
+        <id>https://https://github.com/Egg12138/post/wo-de-da-yi-shang/</id>
+        <link href="https://https://github.com/Egg12138/post/wo-de-da-yi-shang/">
+        </link>
+        <updated>2021-01-10T06:11:42.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="心态很好的地方">心态很好的地方</h3>
+<p>没有”被碾压“感。dalao很多，但是没有被碾压感，心里往往只有敬佩。那种卷的、一切都要靠疯狂竞争的心态在我心里没有位置，在我们学院也不是很严重（但是相当多人还是为了绩点和综测患得患失）</p>
+<h3 id="最后谈一下内卷">最后谈一下内卷</h3>
+<p>周围人对这个词的误解<br>
+不是说竞争就教卷了，恶竞也和卷不一样。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[C||simple-and-requently-used header files]]></title>
         <id>https://https://github.com/Egg12138/post/corsimple-and-requently-used-header-files/</id>
@@ -601,181 +656,6 @@ x有n个，y有n-1个，过去zip(x,y)进行列表化，list(zip(x,y))后，得�
 zip(x,y).strict = True     ，放在Try  except里面，就可以实现比较简洁的等长匹配结构</p>
 </blockquote>
 <blockquote></blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Py_collections|字符串相关]]></title>
-        <id>https://https://github.com/Egg12138/post/py_collectionsorzheng-shi-tou-ru-format-de-huai-bao/</id>
-        <link href="https://https://github.com/Egg12138/post/py_collectionsorzheng-shi-tou-ru-format-de-huai-bao/">
-        </link>
-        <updated>2020-11-27T03:07:47.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="正式投入format怀抱">正式投入format怀抱</h2>
-<blockquote></blockquote>
-<pre><code>在一次getsocketbyname()的测试中，我先用Format来运行，很正常，然后输出了hostname + ip,很明显不是string,
-然后我用%s试了一次……果然报错了。不过这个案例不重要……
-这篇文章也不会是我自己主笔，靠的ctrl+C和Ctrl+v (2333333333)
-</code></pre>
-<p>string objs have one uni BIOperation :the % modulo.,which is also known<br>
-as 'formatting or interpolation' operator.</p>
-<p>If format requires a single argument, values may be a single non-tuple object. 5 Otherwise, values must be a tuple with exactly the number of items specified by the format string, or a single mapping object (for example, a dictionary.</p>
-<p>it's syntax is complicated...<br>
-print('%(language)s has %(number)03d quote types.' %<br>
-{'language': &quot;Python&quot;, &quot;number&quot;: 2})<br>
-Python has 002 quote types.</p>
-<p>here 03d is familiar,right?  03d ==&gt; 3fig  integer, #我们总要声明%格式化对象的类型</p>
-<p>文章主体来自一个国内blog,和python doc</p>
-<!-- For more -->
-<blockquote>
-<p>自从Python2.6引入了format这个格式化字符串的方法之后，我认为%还是format这根本就不算个问题。<br>
-# 定义一个坐标值<br>
-c = (250, 250)<br>
-# 使用%来格式化<br>
-s1 = &quot;敌人坐标：%s&quot; % c<br>
-上面的代码很明显会抛出一个如下的TypeError：</p>
-</blockquote>
-<pre><code>TypeError: not all arguments converted during string formatting
-
-像这类格式化的需求我们需要写成下面的格式才行：
-# 定义一个坐标值
-c = (250, 250)
-# 使用%丑陋的格式化...
-s1 = &quot;敌人坐标：%s&quot; % (c,)
-而使用format就不会存在上面的问题：　　
-
-# 定义一个坐标值
-c = (250, 250)
-# 使用format格式化
-s2 = &quot;敌人坐标：{}&quot;.format(c)
-很显然，format比%方便多了。　　
-</code></pre>
-<p>blogger输入一个tuple c，用%(c)格式化的时候%s,无法be converted!<br>
-%(c,)才行 ，它 传递一个元组</p>
-<blockquote>
-<p>在使用%插入多个变量时，tuple是不可避免的，这样会让代码冗杂<br>
-它还不能正确地现实元组和字典</p>
-</blockquote>
-<p>而format语法：<br>
-print(&quot;{}:{}&quot;.format(host, gethostbyname()))清晰易读<br>
-注意，在不是f-strings的时候，不能在{}内输入东西？<br>
-f-strings把变量放在里面，大大提高了代码可读性</p>
-<h5 id="f-strings">f-strings</h5>
-<p>name = 'xxx'<br>
-age = 18<br>
-uni = 'SYSU'<br>
-city = 'Zhuhal','China'</p>
-<p>可以看一下<br>
-text0 =&quot;My name is %s,aged%d.I am educated in %s, %s&quot;%(name,age,uni,city)<br>
-text1='Ma name is {},aged{}.I am educated in {},{}'.format(name,age,uni,city)<br>
-textf = f&quot;My name is {name},aged{age}.I am educated in {uni},{city}&quot;</p>
-<hr>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[|菜狗算法入门|开心数]]></title>
-        <id>https://https://github.com/Egg12138/post/orcai-gou-suan-fa-ru-men-orkai-xin-shu/</id>
-        <link href="https://https://github.com/Egg12138/post/orcai-gou-suan-fa-ru-men-orkai-xin-shu/">
-        </link>
-        <updated>2020-11-24T00:08:40.000Z</updated>
-        <content type="html"><![CDATA[<p>A happy number is defined by the following process:<br>
-Starting with any positive integer, replace the number by the sum of the squares of its digits in base-ten, and repeat the process until the number either equals 1 (where it will stay), or it loops endlessly in a cycle that does not include 1. Those numbers for which this process ends in 1 are happy numbers, while those that do not end in 1 are unhappy numbers.</p>
-<p>Given a list of numbers, classify each of them as happy or unhappy.<br>
-思路其实蛮简单，但是我一开始写的程序time out了，算法的时间复杂度太高。<br>
-n = int(input())<br>
-def getsum(num):<br>
-rest = divmod(num,10)       #会return一个list，包含整数商和余数<br>
-t0 = rest[0]<br>
-t1 = rest[1]<br>
-return t0<strong>2+t1</strong>2</p>
-<p>for i in range(n):<br>
-x = int(input())<br>
-if x == 1:<br>
-print(&quot;%d 😃&quot; %(x))<br>
-break</p>
-<p>else:</p>
-<pre><code>tempsum = getsum(x)
-ali = []
-     while True:
-        ali.append(tempsum)
-        tempsum = getsum(tempsum)
-        if tempsum in ali == True:
-            print(&quot;%d :(&quot; %(x))
-            break
-        elif tempsum == 1:
-            print(&quot;%d :)&quot; %(x))
-
-            break
-</code></pre>
-<h1 id="write-an-answer-using-print">Write an answer using print</h1>
-<p>这是一份愚蠢的代码。<br>
-我们来看看要怎么优化</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[|菜狗算法| 时间复杂度]]></title>
-        <id>https://https://github.com/Egg12138/post/orsuan-fa-or-liang-shu-he-ha-xi-biao-you-hua-shi-jian-fu-za-du/</id>
-        <link href="https://https://github.com/Egg12138/post/orsuan-fa-or-liang-shu-he-ha-xi-biao-you-hua-shi-jian-fu-za-du/">
-        </link>
-        <updated>2020-11-22T15:59:42.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<h2 id="两数和哈希表优化时间复杂度">两数和，哈希表优化时间复杂度</h2>
-<p>先看一下leetcode提供的一个解法。<br>
-我也是这个思路（因为考虑到暴力枚举连代码行数都很多……）</p>
-<p>但是这里有一个优化，就是在返回序列上面，<br>
-leetcode提供 的答案里面直接用enumerate(nums) &gt;&gt;return 一个hashtable<br>
-我则因为不会标准的hashtable，手动地用index 遍历 len(nums),,再判断  Target - number0 in List....</p>
-<blockquote>
-<pre><code>  class Solution:
-</code></pre>
-</blockquote>
-<pre><code>def twoSum(self, nums: List[int], target: int) -&gt; List[int]:
-    hashtable = dict()
-    for i, num in enumerate(nums):
-        if target - num in hashtable:
-            return [hashtable[target - num], i]
-        hashtable[nums[i]] = i
-    return []
-</code></pre>
-<blockquote>
-<pre><code>  作者：LeetCode-Solution
-  链接：https://leetcode-cn.com/problems/two-sum/solution/
-   liang-shu-zhi-he-by-leetcode-solution/
-  来源：力扣（LeetCode）
-  著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-</code></pre>
-</blockquote>
-<h2 id="队列有筛选表">队列有筛选表</h2>
-<p>from collections import deque<br>
-from time import time<br>
-def main1(n):<br>
-leftadd = n+100<br>
-q = []<br>
-q.append(n^3)<br>
-q.append(n^2)<br>
-print(q)<br>
-q.append('_')<br>
-for i in range(len(q)-1):<br>
-q[-i-1] = q[-i-2]<br>
-q[0] = leftadd</p>
-<h1 id="像左部添加元素的操作就需要遍历数组on">像左部添加元素的操作就需要遍历数组，O(n)</h1>
-<p>def main(n):<br>
-q = deque()<br>
-q.append(n^3)<br>
-q.append(n^2)<br>
-print(q)<br>
-q.appendleft(n+100)<br>
-q.popleft()</p>
-<h1 id="这几个单独的操作时间复杂度都是o1">这几个单独的操作时间复杂度都是O(1)</h1>
-<p>s = time()<br>
-for i in range(10):<br>
-main(i)<br>
-e = time()<br>
-print(e-s)<br>
-s=time()<br>
-for i in range(10):<br>
-main1(i)<br>
-e=time()<br>
-print(e-s)<br>
-p</p>
 ]]></content>
     </entry>
 </feed>

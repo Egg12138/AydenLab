@@ -33,7 +33,7 @@
 						<div class="logo">
 							<a href="https://https://github.com/Egg12138">
 								<img class="logo"
-									src="https://https://github.com/Egg12138/media/images/site_avatar.png?v=1610259085284"
+									src="https://https://github.com/Egg12138/media/images/site_avatar.png?v=1611936489754"
 									alt="">
 							</a>
 						</div>
@@ -72,7 +72,7 @@
 							<div class="search-lightbox">
 								<div class="search-body">
 
-									<form id="gridea-search-form" data-update="1610259085284" action="/search/" class="search-form">
+									<form id="gridea-search-form" data-update="1611936489754" action="/search/" class="search-form">
 										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
 										<button type="submit" class="submit" aria-label="Submit">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -201,7 +201,57 @@ city = 'Zhuhal','China'</p>
 text0 =&quot;My name is %s,aged%d.I am educated in %s, %s&quot;%(name,age,uni,city)<br>
 text1='Ma name is {},aged{}.I am educated in {},{}'.format(name,age,uni,city)<br>
 textf = f&quot;My name is {name},aged{age}.I am educated in {uni},{city}&quot;</p>
-<hr>
+<p>f-string采用 {content:format} 设置字符串格式，其中 content 是替换并填入字符串的内容，可以是变量、表达式或函数等，format是格式描述符。采用默认格式时不必指定 {:format}，如上面例子所示只写 {content} 即可。</p>
+<pre><code>nval = self.next and self.next.value or None
+    return f&quot;[{self.value}:{repr(nval)}]&quot;
+</code></pre>
+<p>f-string大括号内也可填入lambda表达式，但lambda表达式的 : 会被f-string误认为是表达式与格式描述符之间的分隔符，为避免歧义，需要将lambda表达式置于括号 () 内：</p>
+<pre><code>&gt;&gt;&gt; f'result is {lambda x: x ** 2 + 1 (2)}'
+File &quot;&lt;fstring&gt;&quot;, line 1
+    (lambda x)
+            ^
+SyntaxError: unexpected EOF while parsing
+
+&gt;&gt;&gt; f'result is {(lambda x: x ** 2 + 1) (2)}'
+'result is 5'
+&gt;&gt;&gt; f'result is {(lambda x: x ** 2 + 1) (2):&lt;+7.2f}'
+'result is +5.00  '
+---
+</code></pre>
+<h3 id="class中的__repr__str">Class中的__repr__&amp;<strong>str</strong></h3>
+<p>class Car():<br>
+'' def <strong>init</strong>(self,color):<br>
+self.color = color</p>
+<pre><code>def __repr__(self):
+    return '__repr__ for Car'
+
+def __str__(self):
+    return '__str__ for Car'
+
+mC = Car('red')
+mC
+print(mC)
+str(mC)
+str([mC]) ''
+</code></pre>
+<p>在print(mC)时，返回__str__内容<br>
+而在call mC时，返回__repr__内容。<br>
+所以在命令行中直接调用mC的得到结果就是‘<strong>repr</strong> for Car'</p>
+<p>如果没有__repr__，在命令行中直接call mC会弹出内存地址，总归不那么舒适。</p>
+<p>打印或直接调用 str() 方法也能得到相同的结果，因为 <strong>str</strong> 的默认实现就是调用 <strong>repr</strong> 方法。上面的(str([mC]))的结果就是'<strong>repr</strong> for Car'<br>
+print(mC)<br>
+print(str(mC))<br>
+print(str([mC]))<br>
+print(type(mC))<br>
+print(type([mC]))<br>
+repr(mC)</p>
+<p>》》》分别对应的输出<br>
+<strong>str</strong> for Car<br>
+<strong>str</strong> for Car<br>
+[<strong>repr</strong> for Car]<br>
+&lt;class '<strong>main</strong>.Car'&gt;<br>
+&lt;class 'list'&gt;<br>
+'<strong>repr</strong> for Car'</p>
 
                           </div>
                         </div>
@@ -282,7 +332,11 @@ textf = f&quot;My name is {name},aged{age}.I am educated in {uni},{city}&quot;</
 <li><a href="#%E6%AD%A3%E5%BC%8F%E6%8A%95%E5%85%A5format%E6%80%80%E6%8A%B1">正式投入format怀抱</a><br>
 *<br>
 *<br>
-* <a href="#f-strings">f-strings</a></li>
+* <a href="#f-strings">f-strings</a>
+<ul>
+<li><a href="#class%E4%B8%AD%E7%9A%84__repr__str">Class中的__repr__&amp;<strong>str</strong></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

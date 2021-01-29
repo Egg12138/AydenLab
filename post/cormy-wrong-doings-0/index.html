@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<title>Py_collections|3.10的类型注释更新 - Gridea</title>
+<title>C||My wrong-doings---0 - Gridea</title>
 <meta name="description" content="温故而知新">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -130,46 +130,47 @@
                     <div class="col-12 col-lg-10">
                       <div class="layout-post-main m-right m-md-right">
                         <div class="layout-post-header">
-                          <h1 class="layout-post-title">Py_collections|3.10的类型注释更新</h1>
+                          <h1 class="layout-post-title">C||My wrong-doings---0</h1>
                           <div class="layout-post-meta">
                             <div class="item">
                               
                             </div>
                             <div class="item">
-                              <span>2020-11-29</span>
+                              <span>2021-01-17</span>
                             </div>
                           </div>
                         </div>
                         <div class="layout-post-content">
                           <div class="layout-post-item">
                             
-                            <blockquote>
-<p>引入&quot;|&quot;操作符，like &quot;or&quot;<br>
-def foo(x <em>int | float</em>):<br>
-return x *math.pi<br>
-foo(1) #pass foo(1.22)#pass foo('a string text')# annotation error</p>
-</blockquote>
-<p>还有一个比较号，之前遇到过错误的，就是类型的alias别名<br>
-这次引入了新方法解决了<br>
-text = &quot;has been defined&quot;<br>
-from typing_extensions import TypeAlias<br>
-TempType: TypeAlias = &quot;T_T&quot;<br>
-or<br>
-TempType: TypeAlias = text, TempType要被识别为一个类型名，这个很重要</p>
-<blockquote>
-<p>Zip的严格匹配False, True,（等长标记）<br>
-x有n个，y有n-1个，过去zip(x,y)进行列表化，list(zip(x,y))后，得到的是n-1对。。<br>
-但是现在可以严格化，匹配等长<br>
-zip(x,y).strict = True     ，放在Try  except里面，就可以实现比较简洁的等长匹配结构</p>
-</blockquote>
-<blockquote></blockquote>
+                            <p>#字符串方面<br>
+char name[40];<br>
+char newname[1];</p>
+<p>printf( name, PARISE)<br>
+print( newname ,name)<br>
+first,scanf name = Egg12138<br>
+then,scanf newname =Aydenegg<br>
+output--&gt;<br>
+异常表现：<br>
+Hi,ydenegg(A没了）(本该是Egg12138,),PARISE words....<br>
+在newname and name ouput中<br>
+Hello,Aydenegg. ydenegg这里的问题就在于，newname正确接收并且存储了Aydenegg但是name的Egg12138成为了无首字母的ydenegg;</p>
+<p>查资料前先测试一下：<br>
+取消大写字母:依旧<br>
+改变数组大小为32：有效<br>
+char name[40];<br>
+char newname[32];</p>
+<p>现在压缩数组的大小，Aydenegg为8字母，改成8和7分别比较，尝试后发现只有char newname[1]的时候才会这样，并且字节长度我输入一个字母也如此</p>
+<p>所以char [1]可能已经不是一个表卓的数组了，<br>
+把char name[40] .--&gt; char name[1] output也一样……</p>
+<p>查询：</p>
 
                           </div>
                         </div>
                         <div class="layout-post-social">
                           <div class="item reader">
-                            <div id="/post/py_collectionsor310-de-lei-xing-zhu-shi-geng-xin/" class="leancloud-visitors view"
-                              data-flag-title="Py_collections|3.10的类型注释更新">
+                            <div id="/post/cormy-wrong-doings-0/" class="leancloud-visitors view"
+                              data-flag-title="C||My wrong-doings---0">
                               <span class="post-meta-item-text">阅读 </span>
                               <span class="leancloud-visitors-count"></span>
                             </div>
@@ -184,8 +185,8 @@ zip(x,y).strict = True     ，放在Try  except里面，就可以实现比较简
                               <div class="card-content col-12">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/ban-ding-liang-wu-li-orliang-gang/" class="title">
-                                      <h4>半定量物理|量纲</h4>
+                                    <a href="https://https://github.com/Egg12138/post/rawgithubusercontentcom-de-dns-wu-ran-xiao-zhuang-kuang/" class="title">
+                                      <h4>raw.githubusercontent.com的DNS污染小状况</h4>
                                     </a>
                                   </div>
                                   <div class="inner">
@@ -196,7 +197,7 @@ zip(x,y).strict = True     ，放在Try  except里面，就可以实现比较简
                                 </div>
                                 <div class="card-footer">
                                   <div class="item"><span>上一篇</span></div>
-                                  <div class="item">2020-12-10</div>
+                                  <div class="item">2021-01-25</div>
                                 </div>
                               </div>
                               
@@ -207,8 +208,8 @@ zip(x,y).strict = True     ，放在Try  except里面，就可以实现比较简
                               <div class="card-content col-12">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/py_collectionsorzheng-shi-tou-ru-format-de-huai-bao/" class="title">
-                                      <h4>Py_collections|字符串相关</h4>
+                                    <a href="https://https://github.com/Egg12138/post/wo-de-da-yi-shang/" class="title">
+                                      <h4>我的大一上</h4>
                                     </a>
                                   </div>
                                   <div class="inner">
@@ -219,7 +220,7 @@ zip(x,y).strict = True     ，放在Try  except里面，就可以实现比较简
                                 </div>
                                 <div class="card-footer">
                                   <div class="item"><span>下一篇</span></div>
-                                  <div class="item">2020-11-27</div>
+                                  <div class="item">2021-01-10</div>
                                 </div>
                               </div>
                               
