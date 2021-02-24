@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<title>C语法基础| - Gridea</title>
+<title>C语法基础表达和语句| - Gridea</title>
 <meta name="description" content="温故而知新">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -33,7 +33,7 @@
 						<div class="logo">
 							<a href="https://https://github.com/Egg12138">
 								<img class="logo"
-									src="https://https://github.com/Egg12138/media/images/site_avatar.png?v=1612625708184"
+									src="https://https://github.com/Egg12138/media/images/site_avatar.png?v=1614180183679"
 									alt="">
 							</a>
 						</div>
@@ -72,7 +72,7 @@
 							<div class="search-lightbox">
 								<div class="search-body">
 
-									<form id="gridea-search-form" data-update="1612625708184" action="/search/" class="search-form">
+									<form id="gridea-search-form" data-update="1614180183679" action="/search/" class="search-form">
 										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
 										<button type="submit" class="submit" aria-label="Submit">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -130,7 +130,7 @@
                     <div class="col-12 col-lg-10">
                       <div class="layout-post-main m-right m-md-right">
                         <div class="layout-post-header">
-                          <h1 class="layout-post-title">C语法基础|</h1>
+                          <h1 class="layout-post-title">C语法基础表达和语句|</h1>
                           <div class="layout-post-meta">
                             <div class="item">
                                <a href="https://https://github.com/Egg12138/tag/c/" class="post--keyword"
@@ -150,7 +150,7 @@
                           <div class="layout-post-item">
                             
                             <p class="with-img"><img src="https://https://github.com/Egg12138/post-images/c-yu-fa-ji-chu-orbian-liang.jpg"
-                                class="attachment-full size-full wp-post-image" alt="C语法基础|" /></p>
+                                class="attachment-full size-full wp-post-image" alt="C语法基础表达和语句|" /></p>
                             
                             <p>data object</p>
 <p>lvalue, a label, some are modifiable, some are not.<br>
@@ -172,7 +172,11 @@ c=t=j=68;  OK,赋值顺序是68--&gt;j,t,c右至左<br>
 left-value = operate(l-value0,l-value1,...,l-valueN) ,operate(...)整体依然是个r-value;</p>
 <h4 id="对齐宽度">对齐宽度</h4>
 <p>abc<br>
-1 对齐到C，宽度应该市%3而不是%2</p>
+1 对齐到C，宽度应该市%3而不是%2<br>
+1       $xx此处'&amp;'显然作为字符，1，2，3，4可以为循环体中的算子，%4d ---count是可以的，<br>
+2       $xx<br>
+3       $xx<br>
+4       $xx</p>
 <h4 id="截断truncation">截断truncation</h4>
 <pre><code>int:5/4 =&gt; 1; 6/3 = &gt; 2, 7/4 =&gt; 1;
 float: 7./4 值上= 7./4. =&gt; 1.75(%.2f)
@@ -187,14 +191,57 @@ float: 7./4 值上= 7./4. =&gt; 1.75(%.2f)
 <code>&lt;=&gt; while (shoe &lt; 42) {........++shoe}</code>//根据下面的，这里判断的是递增后的shoe是否&lt; 42，即鞋码41为最后一个判断。 shoe++ &lt; 42则shoe达到42码时为最后一次循环。</li>
 </ul>
  <center> >       即，shoe++会让shoe在与42比较之后再+1  </center>
+        **递增、比较与使用的顺序**
+        while shoe++ < 45
+            printf(shoe)
+        ** 此时先比较，(值优先)，再递增==>did第一个完整语句，再传递给printf**
+        while shoe < 45
+        shoe++
+        printf...
 <pre><code>    post_incresment
     ``a_post = a++: a_post = previous a and a += 1``,可以保留旧a，有时候返回旧a挺有用的。
     ``pre_b = ++b: pre_b = new_b =b =previous b +1``
     pre_incresment;
 </code></pre>
 <p>decrement operator同理</p>
+<ul>
+<li>for语句灵活<br>
+for的initialize不一定是赋值语句<br>
+for (printf(&quot;xxxx&quot;);test;update)   <strong>update一定是在循环体执行完之后才进行的</strong><br>
+<code>for (printf(&quot;A!\n&quot;);ch!='2';)</code><br>
+<code>scanf(&quot;%c&quot;,&amp;ch);</code><br>
+<code>printf(&quot;I like it!\n&quot;);</code><br>
+还可以写成：<br>
+<code>for (printf....;ch!=...;scanf(&quot;%c&quot;,&amp;ch))</code> printf(i like it!)<code></code> printf(Label)``<br>
+发现输出有问题:</li>
+</ul>
+<p>A!<br>
+Ilike it<br>
+[two figures]<br>
+I like it!<br>
+I like it!<br>
+[three figures]<br>
+I like it!<br>
+I like it<br>
+I like it<br>
+[fours figs: 1324]<br>
+则输出2个Ilikt it，然后输出Label，<br>
+可见，这里的sacnf会将输入转化成n个fig<br>
+发现bug，是忘了给循环体加入{}:<br>
+加入后：<br>
+A!<br>
+[sacnf   abcs]<br>
+I like it!<br>
+Current cn is:a I like it!<br>
+Current cn is:b I like it!<br>
+Current cn is:c I like it!<br>
+Current cn is:s I like it!<br>
+Current cn is:</p>
 <!-- more -->
-<p>混乱：<br>
+<p>那么显然是声明时没有声明为数组……<br>
+于是声明修改<br>
+char ch[4]加上scanf(&quot;%s&quot;,ch)在<strong>c的ISO中数组名就代表该数组的起始地址</strong><br>
+混乱：<br>
 dev-c++的TDM-GC 4.9.2下，<br>
 n = 3<br>
 <code>y = n++ + n++;</code><br>
@@ -205,15 +252,86 @@ output:<br>
 y = 7(3+4), n =5<br>
 y=12(5+7),n=7，都是比previous n大了2，<br>
 可以看到再一个地方，编译器递增完立刻使用n，然后继续下一个递增。但是再别的编译器旧不一样了。这个结果C标准没定义，<br>
-<strong>要避开这种混乱，Don't be too clever!</strong></p>
+<strong>要避开这种混乱，Don't be too clever!</strong><br>
+这就是这种混乱的没有完整表达式的语句的问题4-</p>
 <!-- more -->
+<h4 id="变量初始化">变量初始化</h4>
+<p>int sec; scanf%d==&gt;sec; while(sec &gt;0)[..scanf%d=sec]<br>
+这是很标准的方式，若不对sec进行初始化，int sec后，sec的垃圾值恰好就是0，直接都不会进入循坏！<br>
+所以要么<br>
+* int sec = a number&gt;0<br>
+* 再while前面再添sacnf</p>
+<h4 id="io">I/O</h4>
+<p>回车也是算input<br>
+在一个loop内，scanf--&gt; count++<br>
+但是scanf会读取我两个字符，导致一个loop内，count会递增两次！</p>
+<h5 id="缓冲">缓冲</h5>
+<p>从键盘输入的所有字符被存到一个缓冲区,在调用getchar,getch,getche,scanf等函数时,电脑从这个缓冲区取,而不一定正好是在这个时候键盘输入的.(如果上次从键盘的输入和程序中要求的内容不一致时).清空之后,就是直接从这个时候由键盘输入的字符中读取了.</p>
+<ul>
+<li>fflush(stdin);（放在input之前就行，但是可能有的标准里没有这个语法，但不会报错）</li>
+<li>getchar()单个地读取缓冲区的数据，在inut之前插入getchar();或使用while((getchar())!='\n');读取缓冲区字符直到结束后丢弃</li>
+</ul>
+<p>看</p>
+<ul>
+<li>Situation 0直接get &amp; put<br>
+<code>#include &lt;stdio.h&gt;</code><br>
+<code>int main(void)</code><br>
+<code>{</code><br>
+<code>char c;</code><br>
+<code>c = getchar();</code><br>
+<code>putchar(c);</code></li>
+</ul>
+<p><code>system(&quot;pause&quot;);</code></p>
+<p><code>return 0;</code><br>
+<code>}</code><br>
+IO和运行，<br>
+123as<br>
+1请按任意键继续. . .<br>
+这段程序只会从键盘里读取一个字符<br>
+整个过程大概如下：<br>
+keyboard Input&quot;123as+Enter&quot;--&gt; Buffer : &quot;123as+Enter&quot; --getchar() read &quot;1&quot;--&gt;Assignment &quot;1&quot; to c --&gt; Putchar c onto screen  --&gt; release &quot;1&quot;, leaving &quot;23as+Enter&quot; in the Buffer.</p>
+<ul>
+<li>Situation 1在循环体中，看上面一例的细节<br>
+<code>char c;</code><br>
+<code>printf(&quot;The test is beginning&quot;);</code></li>
+</ul>
+<p><code>while ((c = getchar())!='3')</code><br>
+<code>{</code>  putchar(c);<code></code>  }``</p>
+<p><code>system(&quot;pause&quot;);</code></p>
+<p>结果：<br>
+The test is beginning<br>
+2<br>
+&gt;2<br>
+22<br>
+&gt;22<br>
+11<br>
+&gt;11<br>
+1256456<br>
+&gt;1256456<br>
+123<br>
+&gt;12请按任意键继续. . .很显然这里执行的显然是”伪整体读取“，”仍然是<br>
+getchar()会从输入缓冲区去读取内容，也就是说我们把所有的内容都输入完成（输入完成之前就已经在缓冲区了，不需要等待Enter）并且按下了Enter键后，while循环才开始工作，每一次getchar()从输入缓冲区读取一个字符，然后如果不是换行符就输出。</p>
+<p>另一说法：<br>
+当我们输入txt的时候，不必去考虑如何分割开这些东西<br>
+我们的程序算法是<br>
+while (input != STOP sign)<br>
+{<br>
+words++;/<em>这个是递增符</em>/<br>
+然后判断input这个单字母是否有特殊情况<br>
+}</p>
+<h5 id="三类缓冲区类型">三类缓冲区类型</h5>
+<ul>
+<li>全缓冲；</li>
+<li>行缓冲；</li>
+<li>无缓冲；</li>
+</ul>
 
                           </div>
                         </div>
                         <div class="layout-post-social">
                           <div class="item reader">
                             <div id="/post/c-yu-fa-ji-chu-orbian-liang/" class="leancloud-visitors view"
-                              data-flag-title="C语法基础|">
+                              data-flag-title="C语法基础表达和语句|">
                               <span class="post-meta-item-text">阅读 </span>
                               <span class="leancloud-visitors-count"></span>
                             </div>
@@ -257,8 +375,20 @@ y=12(5+7),n=7，都是比previous n大了2，<br>
                                   </div>
                                   <div class="inner">
                                     <div class="abstract">
-                                      <p>使用单链表（ex_13)<br>
-这次没有顺序表的表演了</p>
+                                      <h2 id="先复习数组">先复习数组</h2>
+<p>int score[10]建了一个10容量的整型数组<br>
+for   idx=0,idx++<br>
+printf score[idx]<br>
+注意到score[0]默认值为-1，（gcc4.9.2下）<br>
+scanf的一些易错：</p>
+<ul>
+<li>scanf(&quot;%d\n&quot;,&amp;a) ,scanf()中不允许使用换行</li>
+<li>scanf(%7.2f,&amp;a),scanf()中不允许控制精度</li>
+<li>scanf(&quot;%d&quot;,a),scanf()忘记加取d地址运算符</li>
+<li>scanf(&quot;a=%d&quot;,&amp;a),scanf的一般格式 scanf(格式控制字符串，参数地址表)，所以不能在%d前面加a<br>
+使用单链表（ex_13)<br>
+这次没有顺序表的表演了</li>
+</ul>
 <h3 id="线性表">线性表</h3>
 <h4 id="顺序表">顺序表</h4>
 <h4 id="链表linkedlist">链表LinkedList</h4>
@@ -297,6 +427,13 @@ y=12(5+7),n=7，都是比previous n大了2，<br>
 <li><a href="#%E5%AF%B9%E9%BD%90%E5%AE%BD%E5%BA%A6">对齐宽度</a></li>
 <li><a href="#%E6%88%AA%E6%96%ADtruncation">截断truncation</a></li>
 <li><a href="#%E7%81%B5%E6%B4%BB%E4%B9%8B%E5%A4%84">灵活之处</a></li>
+<li><a href="#%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96">变量初始化</a></li>
+<li><a href="#io">I/O</a>
+<ul>
+<li><a href="#%E7%BC%93%E5%86%B2">缓冲</a></li>
+<li><a href="#%E4%B8%89%E7%B1%BB%E7%BC%93%E5%86%B2%E5%8C%BA%E7%B1%BB%E5%9E%8B">三类缓冲区类型</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

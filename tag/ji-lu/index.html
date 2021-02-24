@@ -35,7 +35,7 @@
 						<div class="logo">
 							<a href="https://https://github.com/Egg12138">
 								<img class="logo"
-									src="https://https://github.com/Egg12138/media/images/site_avatar.png?v=1612625708184"
+									src="https://https://github.com/Egg12138/media/images/site_avatar.png?v=1614180183679"
 									alt="">
 							</a>
 						</div>
@@ -74,7 +74,7 @@
 							<div class="search-lightbox">
 								<div class="search-body">
 
-									<form id="gridea-search-form" data-update="1612625708184" action="/search/" class="search-form">
+									<form id="gridea-search-form" data-update="1614180183679" action="/search/" class="search-form">
 										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
 										<button type="submit" class="submit" aria-label="Submit">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -146,12 +146,67 @@
 
 
 
+
+
         <div class="layout-content">
   <div class="layout-content-main">
     <div class="container">
       <div class="row justify-content-lg-center">
         <div class="col-12 col-lg-9">
           <div class="card-list">
+            
+            
+            <article class="card">
+              <div class="card-item row">
+                
+                  <div class="card-content col-12">
+                    <div class="card-body">
+                      <div class="header">
+                        <a class="title" href="https://https://github.com/Egg12138/post/xi-tong-da-jian-ji-lu/">
+                          <h3>系统搭建记录</h3>
+                        </a>
+                      </div>
+                      <div class="inner">
+                        <div class="abstract">
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="item">
+                        
+                        <a href="https://https://github.com/Egg12138/tag/linux/" class="tag" data-title="linux">
+                          linux
+                        </a>
+                        
+                        <a href="https://https://github.com/Egg12138/tag/unix/" class="tag" data-title="unix">
+                          unix
+                        </a>
+                        
+                        <a href="https://https://github.com/Egg12138/tag/windows/" class="tag" data-title="windows">
+                          windows
+                        </a>
+                        
+                        <a href="https://https://github.com/Egg12138/tag/xue-xi/" class="tag" data-title="学习">
+                          学习
+                        </a>
+                        
+                        <a href="https://https://github.com/Egg12138/tag/shi-jian/" class="tag" data-title="实践">
+                          实践
+                        </a>
+                        
+                        <a href="https://https://github.com/Egg12138/tag/ji-lu/" class="tag" data-title="记录">
+                          记录
+                        </a>
+                        
+                      </div>
+                      <div class="item">2021-02-12</div>
+                    </div>
+                  </div>
+                
+              </div>
+            </article>
+            
             
             
             <article class="card">
@@ -202,7 +257,7 @@
                   <div class="card-body">
                     <div class="header">
                       <a class="title" href="https://https://github.com/Egg12138/post/c-yu-fa-ji-chu-orbian-liang/">
-                        <h3>C语法基础|</h3>
+                        <h3>C语法基础表达和语句|</h3>
                       </a>
                     </div>
                     <div class="inner d-none d-sm-block">
@@ -227,7 +282,11 @@ c=t=j=68;  OK,赋值顺序是68--&gt;j,t,c右至左<br>
 left-value = operate(l-value0,l-value1,...,l-valueN) ,operate(...)整体依然是个r-value;</p>
 <h4 id="对齐宽度">对齐宽度</h4>
 <p>abc<br>
-1 对齐到C，宽度应该市%3而不是%2</p>
+1 对齐到C，宽度应该市%3而不是%2<br>
+1       $xx此处'&amp;'显然作为字符，1，2，3，4可以为循环体中的算子，%4d ---count是可以的，<br>
+2       $xx<br>
+3       $xx<br>
+4       $xx</p>
 <h4 id="截断truncation">截断truncation</h4>
 <pre><code>int:5/4 =&gt; 1; 6/3 = &gt; 2, 7/4 =&gt; 1;
 float: 7./4 值上= 7./4. =&gt; 1.75(%.2f)
@@ -242,12 +301,52 @@ float: 7./4 值上= 7./4. =&gt; 1.75(%.2f)
 <code>&lt;=&gt; while (shoe &lt; 42) {........++shoe}</code>//根据下面的，这里判断的是递增后的shoe是否&lt; 42，即鞋码41为最后一个判断。 shoe++ &lt; 42则shoe达到42码时为最后一次循环。</li>
 </ul>
  <center> >       即，shoe++会让shoe在与42比较之后再+1  </center>
+        **递增、比较与使用的顺序**
+        while shoe++ < 45
+            printf(shoe)
+        ** 此时先比较，(值优先)，再递增==>did第一个完整语句，再传递给printf**
+        while shoe < 45
+        shoe++
+        printf...
 <pre><code>    post_incresment
     ``a_post = a++: a_post = previous a and a += 1``,可以保留旧a，有时候返回旧a挺有用的。
     ``pre_b = ++b: pre_b = new_b =b =previous b +1``
     pre_incresment;
 </code></pre>
 <p>decrement operator同理</p>
+<ul>
+<li>for语句灵活<br>
+for的initialize不一定是赋值语句<br>
+for (printf(&quot;xxxx&quot;);test;update)   <strong>update一定是在循环体执行完之后才进行的</strong><br>
+<code>for (printf(&quot;A!\n&quot;);ch!='2';)</code><br>
+<code>scanf(&quot;%c&quot;,&amp;ch);</code><br>
+<code>printf(&quot;I like it!\n&quot;);</code><br>
+还可以写成：<br>
+<code>for (printf....;ch!=...;scanf(&quot;%c&quot;,&amp;ch))</code> printf(i like it!)<code></code> printf(Label)``<br>
+发现输出有问题:</li>
+</ul>
+<p>A!<br>
+Ilike it<br>
+[two figures]<br>
+I like it!<br>
+I like it!<br>
+[three figures]<br>
+I like it!<br>
+I like it<br>
+I like it<br>
+[fours figs: 1324]<br>
+则输出2个Ilikt it，然后输出Label，<br>
+可见，这里的sacnf会将输入转化成n个fig<br>
+发现bug，是忘了给循环体加入{}:<br>
+加入后：<br>
+A!<br>
+[sacnf   abcs]<br>
+I like it!<br>
+Current cn is:a I like it!<br>
+Current cn is:b I like it!<br>
+Current cn is:c I like it!<br>
+Current cn is:s I like it!<br>
+Current cn is:</p>
 
                       </div>
                     </div>
