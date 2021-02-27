@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<title>Operating System|| Compiler - Gridea</title>
+<title>Operating System|| Interpreter, Parser, Lexer and Compiler - Gridea</title>
 <meta name="description" content="温故而知新">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -33,7 +33,7 @@
 						<div class="logo">
 							<a href="https://https://github.com/Egg12138">
 								<img class="logo"
-									src="https://https://github.com/Egg12138/media/images/site_avatar.png?v=1614231657490"
+									src="https://https://github.com/Egg12138/media/images/site_avatar.png?v=1614444948055"
 									alt="">
 							</a>
 						</div>
@@ -72,7 +72,7 @@
 							<div class="search-lightbox">
 								<div class="search-body">
 
-									<form id="gridea-search-form" data-update="1614231657490" action="/search/" class="search-form">
+									<form id="gridea-search-form" data-update="1614444948055" action="/search/" class="search-form">
 										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
 										<button type="submit" class="submit" aria-label="Submit">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -130,9 +130,25 @@
                     <div class="col-12 col-lg-10">
                       <div class="layout-post-main m-right m-md-right">
                         <div class="layout-post-header">
-                          <h1 class="layout-post-title">Operating System|| Compiler</h1>
+                          <h1 class="layout-post-title">Operating System|| Interpreter, Parser, Lexer and Compiler</h1>
                           <div class="layout-post-meta">
                             <div class="item">
+                               <a href="https://https://github.com/Egg12138/tag/cs/" class="post--keyword"
+                                data-title="CS" data-type="post_tag" data-term-id="39">CS</a>
+                               <a href="https://https://github.com/Egg12138/tag/cao-zuo-xi-tong/" class="post--keyword"
+                                data-title="操作系统" data-type="post_tag" data-term-id="39">操作系统</a>
+                               <a href="https://https://github.com/Egg12138/tag/linux/" class="post--keyword"
+                                data-title="linux" data-type="post_tag" data-term-id="39">linux</a>
+                               <a href="https://https://github.com/Egg12138/tag/unix/" class="post--keyword"
+                                data-title="unix" data-type="post_tag" data-term-id="39">unix</a>
+                               <a href="https://https://github.com/Egg12138/tag/windows/" class="post--keyword"
+                                data-title="windows" data-type="post_tag" data-term-id="39">windows</a>
+                               <a href="https://https://github.com/Egg12138/tag/python/" class="post--keyword"
+                                data-title="python" data-type="post_tag" data-term-id="39">python</a>
+                               <a href="https://https://github.com/Egg12138/tag/zhuan-shu/" class="post--keyword"
+                                data-title="转述" data-type="post_tag" data-term-id="39">转述</a>
+                               <a href="https://https://github.com/Egg12138/tag/ji-lu/" class="post--keyword"
+                                data-title="记录" data-type="post_tag" data-term-id="39">记录</a>
                               
                             </div>
                             <div class="item">
@@ -158,13 +174,60 @@
 <code>ADD_TWO_VALUES</code><br>
 <code>PRINT_ANSWER</code><br>
 It's a <em>stack</em> machine, which must manipulate stacks to add two numbers</p>
+<p>看到class Interpreter中<br>
+（用基于stack的方式来构建interpreter：这里我们喜欢用pop，<br>
+比如我们在stack中存储了a,b我们现在要调用a+b，就必须先弹出a，让b<br>
+成为顶部，再弹出b。pop的运算效率本身也比较高，而且每次都能清除用过的对象）<br>
+to-execute{<br>
+instructions[ (load value, 0and1 , load name a and b, add vlauels,]<br>
+numbers[7,5]就是七次+1，五次+1<br>
+names一一对应<br>
+}</p>
+<p>To keep track of what names are bound to what values, we'll add an environment dictionary to the <strong>init</strong><br>
+** def <strong>init</strong>(self)😗*<br>
+<code>self.stack = []</code><br>
+<code>self.environment = {}</code><br>
+** def LOAD_VALUE（接收参数value）**<br>
+<code>将参数append倒stack去</code><br>
+确实是个stack结构呢！<br>
+** def ADD_TWO_VALUES**<br>
+<code>依次弹出读取stack的值，</code><br>
+然后，<br>
+<code>把运算结棍return 回 stack的顶部</code><br>
+** def PRINT_ANSWER **<br>
+运算完成并且在stakc中完成存储后，现在再把答案弹出即可！ print answer可以作用其他很多运算的结果输出method，所以独立出来</p>
+<p>** def STORE_NAME（接收self，以及name）**<br>
+stack弹出——所以要先有LOAD value！，stack存储的也多是value</p>
+<p><code>stack弹出赋给var</code>， 于是name对应的值就应该是var，<br>
+正好<code>作为dictionary存储到环境变量</code><br>
+<code>self.environment[name] = var</code></p>
+<p>** def LOAD_NAME(self, name)**<br>
+是store的逆过程，把env里的键值对的value存储到stack中<br>
+<code>var = self.enr[name]</code><br>
+<code>self.stack.append(var)</code></p>
+<p>** def parser(待解析的命令和参数以及参数命令dic)**<br>
+&quot;&quot;&quot; Understand what the argument to each instruction means.&quot;&quot;&quot;<br>
+有关value的：<br>
+<code>numbers = [&quot;LOAD_VALUE&quot;]</code><br>
+<code>names = [&quot;LOAD_NAME&quot;, &quot;STORE_NAME&quot;]</code></p>
+<pre><code>    进行parsing，将输入的命令instruction分配到位
+        if i in numbers
+            argument = to-exe[&quot;numbers][argument]如果命令是属于数字录入的，那就将argument赋成to-exe字典中的&quot;numbers&quot;列表对应的数字
+        elif i in names:
+            对变量名操作，就可以再tp-exe[&quot;names][argument]里面搞
+            比如：
+</code></pre>
+<p>to-exe:<br>
+{ &quot;numbers&quot;: [7, 5, 8],<br>
+&quot;names&quot;: [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]   }<br>
+我们传递参数parser(&quot;LOAD_VALUE&quot;, arg=9，to-exe)参数解析后发现instruction对应于&quot;numbers&quot;,那么arg就被赋值为to-exe中的&quot;numbers&quot;:[arg]总觉得很奇怪……应该index回out of the range！</p>
 
                           </div>
                         </div>
                         <div class="layout-post-social">
                           <div class="item reader">
                             <div id="/post/operating-systemor-compiler/" class="leancloud-visitors view"
-                              data-flag-title="Operating System|| Compiler">
+                              data-flag-title="Operating System|| Interpreter, Parser, Lexer and Compiler">
                               <span class="post-meta-item-text">阅读 </span>
                               <span class="leancloud-visitors-count"></span>
                             </div>
@@ -174,6 +237,29 @@ It's a <em>stack</em> machine, which must manipulate stacks to add two numbers</
                         <div class="layout-post-navigation">
                           <div class="navigation-list">
                             
+                            <div class="post-card row">
+                              
+                              <div class="card-content col-12">
+                                <div class="card-body">
+                                  <div class="header">
+                                    <a href="https://https://github.com/Egg12138/post/error-analysis-and-uncertainties-in-physical-measurementsor-some-questions/" class="title">
+                                      <h4>Error Analysis &amp; Uncertainties in Physical Measurements|| Some questions</h4>
+                                    </a>
+                                  </div>
+                                  <div class="inner">
+                                    <div class="abstract">
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="item"><span>上一篇</span></div>
+                                  <div class="item">2021-02-25</div>
+                                </div>
+                              </div>
+                              
+                            </div>
+
                             <div class="post-card row">
                               
                               <div class="card-content col-12">
@@ -196,6 +282,7 @@ It's a <em>stack</em> machine, which must manipulate stacks to add two numbers</
                               </div>
                               
                             </div>
+
                             
                           </div>
                         </div>

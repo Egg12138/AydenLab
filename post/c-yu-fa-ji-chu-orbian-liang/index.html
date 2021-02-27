@@ -33,7 +33,7 @@
 						<div class="logo">
 							<a href="https://https://github.com/Egg12138">
 								<img class="logo"
-									src="https://https://github.com/Egg12138/media/images/site_avatar.png?v=1614231657490"
+									src="https://https://github.com/Egg12138/media/images/site_avatar.png?v=1614444948055"
 									alt="">
 							</a>
 						</div>
@@ -72,7 +72,7 @@
 							<div class="search-lightbox">
 								<div class="search-body">
 
-									<form id="gridea-search-form" data-update="1614231657490" action="/search/" class="search-form">
+									<form id="gridea-search-form" data-update="1614444948055" action="/search/" class="search-form">
 										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
 										<button type="submit" class="submit" aria-label="Submit">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -310,7 +310,8 @@ The test is beginning<br>
 &gt;1256456<br>
 123<br>
 &gt;12请按任意键继续. . .很显然这里执行的显然是”伪整体读取“，”仍然是<br>
-getchar()会从输入缓冲区去读取内容，也就是说我们把所有的内容都输入完成（输入完成之前就已经在缓冲区了，不需要等待Enter）并且按下了Enter键后，while循环才开始工作，每一次getchar()从输入缓冲区读取一个字符，然后如果不是换行符就输出。</p>
+getchar由宏实现：#define getchar() getc(stdin)。getchar有一个int型的返回值，当程序调用getchar时，程序就等着用户按键。</p>
+<p>用户输入的字符被存放在键盘缓冲区中，直到用户按回车为止，当用户键入回车之后，getchar才开始从stdin流中每次弹出并且读入一个字符。</p>
 <p>另一说法：<br>
 当我们输入txt的时候，不必去考虑如何分割开这些东西<br>
 我们的程序算法是<br>
@@ -319,12 +320,15 @@ while (input != STOP sign)<br>
 words++;/<em>这个是递增符</em>/<br>
 然后判断input这个单字母是否有特殊情况<br>
 }</p>
+<p><strong>getchar()本身就是用来接受单个字符或者数组，要录入多个就输入数组</strong></p>
 <h5 id="三类缓冲区类型">三类缓冲区类型</h5>
 <ul>
 <li>全缓冲；</li>
 <li>行缓冲；</li>
 <li>无缓冲；</li>
 </ul>
+<h4 id="条件">条件</h4>
+<p>switch要注意到，如果没有适当地break或者coninue，各种switch的cases都会被执行……</p>
 
                           </div>
                         </div>
@@ -434,6 +438,7 @@ scanf的一些易错：</p>
 <li><a href="#%E4%B8%89%E7%B1%BB%E7%BC%93%E5%86%B2%E5%8C%BA%E7%B1%BB%E5%9E%8B">三类缓冲区类型</a></li>
 </ul>
 </li>
+<li><a href="#%E6%9D%A1%E4%BB%B6">条件</a></li>
 </ul>
 </li>
 </ul>
