@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<title>关于社团/会的问题 - Gridea</title>
+<title>Regular Expression - Gridea</title>
 <meta name="description" content="温故而知新">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -130,60 +130,82 @@
                     <div class="col-12 col-lg-10">
                       <div class="layout-post-main m-right m-md-right">
                         <div class="layout-post-header">
-                          <h1 class="layout-post-title">关于社团/会的问题</h1>
+                          <h1 class="layout-post-title">Regular Expression</h1>
                           <div class="layout-post-meta">
                             <div class="item">
-                               <a href="https://https://github.com/Egg12138/tag/gao-xiao/" class="post--keyword"
-                                data-title="高校" data-type="post_tag" data-term-id="39">高校</a>
-                               <a href="https://https://github.com/Egg12138/tag/she-hui-guan-xi/" class="post--keyword"
-                                data-title="社会关系" data-type="post_tag" data-term-id="39">社会关系</a>
-                               <a href="https://https://github.com/Egg12138/tag/shi-jian/" class="post--keyword"
-                                data-title="实践" data-type="post_tag" data-term-id="39">实践</a>
-                               <a href="https://https://github.com/Egg12138/tag/fan-si/" class="post--keyword"
-                                data-title="反思" data-type="post_tag" data-term-id="39">反思</a>
-                               <a href="https://https://github.com/Egg12138/tag/ji-lu/" class="post--keyword"
-                                data-title="记录" data-type="post_tag" data-term-id="39">记录</a>
                               
                             </div>
                             <div class="item">
-                              <span>2020-09-16</span>
+                              <span>2021-03-02</span>
                             </div>
                           </div>
                         </div>
                         <div class="layout-post-content">
                           <div class="layout-post-item">
                             
-                            <p class="with-img"><img src="https://https://github.com/Egg12138/post-images/guan-yu-she-tuan-hui-de-wen-ti.png"
-                                class="attachment-full size-full wp-post-image" alt="关于社团/会的问题" /></p>
-                            
-                            <h2 id="首先我要明确我要加入大约两个忙碌程度中等的社团">首先，我要明确我要加入大约两个忙碌程度中等的社团。</h2>
-<h2 id="其次我需要明确还有哪些约式的爱好者社团将这些社团安排好使适应1-2个的主社团部门和课业安排">其次，我需要明确还有哪些”约“式的爱好者社团，将这些社团安排好，使适应1-2个的主社团/部门和课业安排</h2>
-<h3 id="组织策划办事的">组织策划办事的</h3>
-<pre><code>* 物天学生会的学术部门
-*  中大GBT的活动策划（舞台控制等等a）------特点是考试周一般没有活动
-*  团委 志愿组(活动不少)
+                            <p><s>正点表达式</s><br>
+先测试几个markdown语法，我还不经常用的语法</p>
+<pre><code>Markdown里面的四个\~是啥？好像是一种比引号引用看起来更舒服的引用
 </code></pre>
-<h3 id="后台编辑的但是没有程序设计和网站运维的">后台编辑的（但是没有程序设计和网站运维的……）</h3>
-<pre><code>* 物天新媒体 的编辑
-* 中大GBT的宣传，-----
+<p>三个`代码块</p>
+<pre><code class="language-python3">from time import time
+import hash
+print(&quot;Indran Mi Fans!&quot;)
 </code></pre>
-<h3 id="学习性的">学习性的</h3>
-<pre><code>* 物天新媒体中心 ，编辑稿件
-* 中大GBT的制作方面,------&gt;Photoshop等图像处理
+<p>在Gridea里面似乎和选中后tab效果一样……？</p>
+<pre><code>from time import time
+import hash
+print(&quot;Indran Mi Fans!&quot;)
 </code></pre>
-<h3 id="爱好">爱好</h3>
-<pre><code>* 辩论(! 时间花费很多 !)
-* 跑步的(零散时间，可以)
-* 羽毛球队（进去多被虐虐，可以）
-* Happy Coding!(没什么项目……，可以加吧)
-* （ 游泳千万别忘了）</code></pre>
+<p>以下主要是在我装的WSLubuntu18.04上面运行<br>
+root在C:\Users\Shaw\下</p>
+<h3 id="search-in-files">Search In Files.</h3>
+<h4 id="qgrepq"><q>grep</q></h4>
+<p><code>~ $ grep python *</code><br>
+输出<br>
+...<br>
+grep: Nutstore: Is a directory<br>
+grep: OneDrive: Is a directory<br>
+grep: PCManger: Is a directory<br>
+grep: Pictures: Is a directory<br>
+grep: PrintHood: Is a directory<br>
+grep: Python38: Is a directory<br>
+grep: Recent: Is a directory<br>
+...<br>
+empty.py:print(&quot;This is my first python prog edited in Vim!&quot;)<br>
+linux_empty_1py.py:print(&quot;This is my first python prog edited in Vim!&quot;)  // 可以很清晰地看到这能够访问到文件内容<br>
+grep: ntuser.dat.LOG1: Permission denied<br>
+grep: ntuser.dat.LOG2: Permission denied<br>
+grep: source: Is a directory</p>
+<p>直接点，输入grep print *</p>
+<p>grep: UIDowner: Is a directory<br>
+Untitled-1.c:    printf(&quot;Hellp World&quot;);<br>
+grep: Videos: Is a directory<br>
+grep: WordfastPro: Is a directory<br>
+empty.py:print(&quot;This is my first python prog edited in Vim!&quot;)<br>
+empty.py:print(&quot;Type in vim is so comfortable...&quot;)<br>
+empty.py:print(emd-start)<br>
+empty.py:print(&quot;You will find this prog runs faster than it did in Windows platform!&quot;)<br>
+Binary file ex_5.11.1.o matches<br>
+ex_5.11.1.s:    call    <strong>print</strong>f<br>
+ex_5.11.1.s:    call    <strong>print</strong>f<br>
+ex_5.11.1.s:    .def    <strong>print</strong>f; .scl    2;      .type   32;     .endef<br>
+linux_empty_1py.py:print(&quot;This is my first python prog edited in Vim!&quot;)<br>
+linux_empty_1py.py:print(&quot;Type in vim is so comfortable...&quot;)<br>
+linux_empty_1py.py:print(emd-start)<br>
+grep: ntuser.dat.LOG1: Permission denied</p>
+<hr>
+<p>man grep有大量的参数说明，测试常用的：</p>
+<ul>
+<li>-c 计算匹配的行数</li>
+</ul>
 
                           </div>
                         </div>
                         <div class="layout-post-social">
                           <div class="item reader">
-                            <div id="/post/guan-yu-she-tuan-hui-de-wen-ti/" class="leancloud-visitors view"
-                              data-flag-title="关于社团/会的问题">
+                            <div id="/post/regular-expression/" class="leancloud-visitors view"
+                              data-flag-title="Regular Expression">
                               <span class="post-meta-item-text">阅读 </span>
                               <span class="leancloud-visitors-count"></span>
                             </div>
@@ -198,31 +220,8 @@
                               <div class="card-content col-12">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/py_collectionornetwork-programmingor0/" class="title">
-                                      <h4>Py_Collection||Network Programming||0</h4>
-                                    </a>
-                                  </div>
-                                  <div class="inner">
-                                    <div class="abstract">
-                                      
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="card-footer">
-                                  <div class="item"><span>上一篇</span></div>
-                                  <div class="item">2020-09-29</div>
-                                </div>
-                              </div>
-                              
-                            </div>
-
-                            <div class="post-card row">
-                              
-                              <div class="card-content col-12">
-                                <div class="card-body">
-                                  <div class="header">
-                                    <a href="https://https://github.com/Egg12138/post/guan-yu-zhong-da-de-yi-xie-xin-xi/" class="title">
-                                      <h4>关于中大的一些信息</h4>
+                                    <a href="https://https://github.com/Egg12138/post/hui-bian-python-xiang-guan/" class="title">
+                                      <h4>汇编python相关</h4>
                                     </a>
                                   </div>
                                   <div class="inner">
@@ -233,12 +232,11 @@
                                 </div>
                                 <div class="card-footer">
                                   <div class="item"><span>下一篇</span></div>
-                                  <div class="item">2020-09-11</div>
+                                  <div class="item">2021-02-27</div>
                                 </div>
                               </div>
                               
                             </div>
-
                             
                           </div>
                         </div>
@@ -254,13 +252,13 @@
                           <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E9%A6%96%E5%85%88%E6%88%91%E8%A6%81%E6%98%8E%E7%A1%AE%E6%88%91%E8%A6%81%E5%8A%A0%E5%85%A5%E5%A4%A7%E7%BA%A6%E4%B8%A4%E4%B8%AA%E5%BF%99%E7%A2%8C%E7%A8%8B%E5%BA%A6%E4%B8%AD%E7%AD%89%E7%9A%84%E7%A4%BE%E5%9B%A2">首先，我要明确我要加入大约两个忙碌程度中等的社团。</a></li>
-<li><a href="#%E5%85%B6%E6%AC%A1%E6%88%91%E9%9C%80%E8%A6%81%E6%98%8E%E7%A1%AE%E8%BF%98%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BA%A6%E5%BC%8F%E7%9A%84%E7%88%B1%E5%A5%BD%E8%80%85%E7%A4%BE%E5%9B%A2%E5%B0%86%E8%BF%99%E4%BA%9B%E7%A4%BE%E5%9B%A2%E5%AE%89%E6%8E%92%E5%A5%BD%E4%BD%BF%E9%80%82%E5%BA%941-2%E4%B8%AA%E7%9A%84%E4%B8%BB%E7%A4%BE%E5%9B%A2%E9%83%A8%E9%97%A8%E5%92%8C%E8%AF%BE%E4%B8%9A%E5%AE%89%E6%8E%92">其次，我需要明确还有哪些”约“式的爱好者社团，将这些社团安排好，使适应1-2个的主社团/部门和课业安排</a>
+<li>
 <ul>
-<li><a href="#%E7%BB%84%E7%BB%87%E7%AD%96%E5%88%92%E5%8A%9E%E4%BA%8B%E7%9A%84">组织策划办事的</a></li>
-<li><a href="#%E5%90%8E%E5%8F%B0%E7%BC%96%E8%BE%91%E7%9A%84%E4%BD%86%E6%98%AF%E6%B2%A1%E6%9C%89%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%92%8C%E7%BD%91%E7%AB%99%E8%BF%90%E7%BB%B4%E7%9A%84">后台编辑的（但是没有程序设计和网站运维的……）</a></li>
-<li><a href="#%E5%AD%A6%E4%B9%A0%E6%80%A7%E7%9A%84">学习性的</a></li>
-<li><a href="#%E7%88%B1%E5%A5%BD">爱好</a></li>
+<li><a href="#search-in-files">Search In Files.</a>
+<ul>
+<li><a href="#qgrepq"><q>grep</q></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
